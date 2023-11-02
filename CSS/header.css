@@ -14,15 +14,18 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 10%;
+    padding: 5px 5%;
 }
 
-li, a, button {
-    font-weight: 500;
-    font-size: 16px;
+header li, a, button {
+    font-size: 18px;
     color: #edf0f1;
     text-decoration: none;
 
+}
+
+header li a {
+    font-weight: 900;
 }
 
 .header-logo {
@@ -80,6 +83,6 @@ li, a, button {
     border-radius: 4px;
 }
 #header-reservation button:hover {
-    color: #001F3F;
+    color: black;
     background-color: #fff;
 }
