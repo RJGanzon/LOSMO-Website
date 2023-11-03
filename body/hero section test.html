@@ -4,18 +4,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box;}
-
-img {
+body{
+  overflow:hidden;
+  margin:0px;
+}
+.hero {
   vertical-align: middle;
   height: 500px;
+  object-fit:cover;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width:100%;
   position: relative;
   display: inline-block;
   margin: auto;
+  background-color:black;
 }
 
 /* Caption text */
@@ -24,7 +29,7 @@ img {
   font-size: 20px;
   padding: 25px;
   position: absolute;
-  margin-top: -300px;
+  margin-top: -200px;
   width: 100%;
   text-align: right;
 }
@@ -42,7 +47,7 @@ img {
 }
 
 .active, .dot:hover {
-  background-color: black;
+  background-color: #eb19b0;
 }
 
 .slide {
@@ -71,38 +76,34 @@ img {
 <section class="slideshow-container">
 
 <article class="mySlides fade">
-  <img src="img1.jpg" style="width:100%">
+  <img class="hero" src="img1.jpg" style="width:100%">
 </article>
 
 <article class="mySlides fade">
-  <img src="img2.png" style="width:100%">
+  <img class="hero" src="img2.jpg" style="width:100%">
 </article>
 
 <article class="mySlides fade">
-  <img src="img3.png" style="width:100%">
+  <img class="hero" src="img3.jpg" style="width:100%">
 </article>
 
-<article class="text">"Work Hard Not Smart"</article>
+<article class="text">"Every day's a party"</article>
 <br>
-<article class="text">BAT NASA SIDE HELLO WORLD??</article>
+<article class="text">Home for great food, game-changing drinks, and good vibes.</article>
 
 <article class = "slide">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="showSlides(1)"></span> 
+    <span class="dot" onclick="showSlides(2)"></span> 
+    <span class="dot" onclick="showSlides(3)"></span> 
 </article>
 </section>
 
 
 <p> Hello World </p>
 <script>
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
   let i;
@@ -113,13 +114,19 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  } 
   
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
 }
 </script>
 
