@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 5px;
     box-sizing: border-box;
     background-color: black;
     display: flex;
@@ -46,6 +46,8 @@ header li a {
     position: relative;
     padding: 0 10px;
     letter-spacing: 0.5px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 3px;
 }
 
 .header-nav li a:after {
@@ -69,6 +71,7 @@ header li a {
 
 
 #header-reservation button {
+    font-family: 'PT Sans Narrow', sans-serif;
     transition: all .5s ease;
     cursor: pointer;
     color: #fff;
@@ -80,6 +83,8 @@ header li a {
     padding: 10px;
     outline: none;
     border-radius: 4px;
+    letter-spacing: 3px;
+    font-weight: 600;
 }
 #header-reservation button:hover {
     color: black;
