@@ -3,10 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box;}
 body{
   overflow:hidden;
   margin:0px;
+  background-color: black;
 }
 .hero {
   vertical-align: middle;
@@ -29,9 +29,9 @@ body{
   font-size: 20px;
   padding: 25px;
   position: absolute;
-  margin-top: -200px;
+  margin-top: -400px;
   width: 100%;
-  text-align: right;
+  text-align: left;
 }
 
 /* The dots/bullets/indicators */
@@ -46,7 +46,7 @@ body{
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active, .dot:hover{
   background-color: #eb19b0;
 }
 
@@ -64,15 +64,48 @@ body{
   animation-duration: 1.5s;
 }
 
+.hero-link{
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  color: white;
+}
+
+.hero-link:hover {
+  background-color: #eb19b0;
+}
+
 @keyframes fade {
   from {opacity: .5} 
   to {opacity: 1}
 }
 
+.text {
+  margin-left:80px;
+  margin-bottom:0px;
+}
+p {
+  font-size:18px;
+  margin:0px;
+  font-family: Helvetica, sans-serif;
+}
+h2 {
+  margin-top:10px;
+  margin-bottom:10px;
+  font-family:Verdana;
+}
+a {
+  margin-left:0;
+  margin-right:5px;
+}
 </style>
 </head>
 <body>
-<p> Hello Mars </p>
+<p style="color: white;"> Hello Mars </p>
 <section class="slideshow-container">
 
 <article class="mySlides fade">
@@ -87,23 +120,36 @@ body{
   <img class="hero" src="img3.jpg" style="width:100%">
 </article>
 
-<article class="text">"Every day's a party"</article>
-<br>
-<article class="text">Home for great food, game-changing drinks, and good vibes.</article>
+<article class="text">
+  <p>LOSMO FOOD & DRINKS</p>
+  <h2>
+  READY TO GET LOST <br>
+  IN THE MOMENT? <br>
+  </h2>
+  <p>Here everyday's a party. Home for great food,<br>
+  game-changing drinks,and good vibes.</p><br>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link"><img src="loc.png" style="height: 18px; width: 15px;"> Location</a> 
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link">Get a Table</a>
+</article>
 
 <article class = "slide">
-    <span class="dot" onclick="showSlides(1)"></span> 
-    <span class="dot" onclick="showSlides(2)"></span> 
-    <span class="dot" onclick="showSlides(3)"></span> 
+    <span class="dot" onclick="currentSlide(0);"></span> 
+    <span class="dot" onclick="currentSlide(1);"></span> 
+    <span class="dot" onclick="currentSlide(2);"></span> 
 </article>
 </section>
 
+<p style="color: white;"> Hello World </p>
 
-<p> Hello World </p>
-<script>
+
+<script type="text/javascript">
 let slideIndex = 0;
 showSlides(slideIndex);
+setInterval(showSlides, 5000);
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
 function showSlides(n) {
   let i;
@@ -116,18 +162,17 @@ function showSlides(n) {
   }
 
   slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  } 
+  if (slideIndex > slides.length) {slideIndex = 1} 
   
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000);
 }
+
+
 </script>
 
 </body>
