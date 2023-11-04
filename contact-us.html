@@ -8,21 +8,61 @@ body{
 .contact{
     position: absolute;
     width: 100%;
-    background-color: gray;
-    height: 200px;
+    background-color: black;
+    height: 450px;
 }
 
 .form, .social-media{
-    position: absolute;
     background-color: #ebdbb2;
     display: inline-block;
+    margin: 10px;
     padding: 10px;
-    width: 100px;
+    width: 900px;
+}
+
+.contact-container{
+    position: absolute;
     left: 0;
     right: 0;
-    text-align: center;
     margin: auto;
+    margin-top: 30px;
 }
+
+.form{
+    padding: 10px;
+    height: 100%;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+
+input[type=text], textarea {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  border-bottom: black solid 4px;
+  margin-bottom: 10px;
+  margin-top: 3px;
+  background-color: #ebdbb2;
+  resize: none;
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: #eb19b0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 
 </style>
 </head>
@@ -30,14 +70,31 @@ body{
 <body>
 
 <section class="contact">
+    <section class="contact-container">
     <article class="form">
-        <p> Hello World</p>
+        <form action="#">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="Full Name" placeholder="Name">
+        
+            <label for="email">Email </label>
+            <input type="text" id="email" name="Email" placeholder="Email">
+
+            <label for="num">Number </label>
+            <input type="text" id="num" name="Number" placeholder="Number">
+        
+        
+            <label for="message">Message</label>
+            <input type="text" id="message" name="Message" placeholder="Message">
+        
+            <input type="submit" value="Send">
+        </form>
     </article>
     
 
     <article class="social-media">
         <p> Hello World</p>
     </article>
+    </section>
 </section>
 
 </body>
