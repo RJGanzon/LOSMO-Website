@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation Form</title>
+    <style>
+        body {
+            background-color: #1b1b1b;
+            margin: 0;
+            font-family: Helvetica;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width: 750px;
+            padding: 20px;
+            background-color: rgba(215, 175, 203, 0.8);
+            border-radius: 10px;
+            animation: glowing 2s ease-in-out infinite;
+            box-shadow: 0 0 10px #eb19b0, 0 0 20px #eb19b0, 0 0 30px #eb19b0, 0 0 40px #eb19b0;
+        }
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 10px #eb19b0, 0 0 20px #eb19b0, 0 0 30px #eb19b0, 0 0 40px #eb19b0;
+            }
+            50% {
+                box-shadow: none;
+            }
+            100% {
+                box-shadow: 0 0 10px #eb19b0, 0 0 20px #eb19b0, 0 0 30px #eb19b0, 0 0 40px #eb19b0;
+            }
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #fff;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            margin: 10px 0 5px;
+            color: #fff;
+        }
+        .form-container input,
+        .form-container textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .form-container input[type="text"],
+        .form-container textarea {
+            width: calc(100% - 20px);
+        }
+        .form-container input[type="submit"] {
+            margin-top: 20px;
+            background-color: #eb19b0;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.5s;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #d616a7;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Reservation Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+
+            <label for="ey">Ey:</label>
+            <input type="ey" id="ey" name="ey" placeholder="ey">
+
+            <label for="ey">Ey:</label>
+            <textarea id="ey" name="ey" placeholder="ey"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
