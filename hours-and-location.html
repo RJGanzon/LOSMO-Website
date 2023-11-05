@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body{
-                margin: 0;
-            }
+<head>
+<style>
+    body{
+        margin: 0;
+    }
+    .hours-container{
+        padding:25px;
+        width: 450px;
+        display: inline-block;
+        text-align: center;
+        background-color: gray;
+    }
+    ul.hours{
+        list-style-type: none;
+        padding: 0%;
+    }
+    iframe.gmaps{
+        position: absolute;
+        width: 450px; 
+        height: 400px;
+        border:0;
+        right: 0;
+    }
+</style>
+</head>
 
-        </style>
-        <title>hours and locations</title>
-    </head>
+    <title>hours and loc</title>
+
 <body>
-    <section id="hours">
-        <article id="hours">
-        <h1>Hours and Location</h1>
-            <p>
-                Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga
+
+    <section class="hours-container">
+        <article>
+        <h1>Hours And Location</h1>
+            <p>Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga
                 <br>
                 contact.losmo@gmail.com
             </p>
-            <ul>
-                <li>MONDAY<br>
+            <ul class="hours">
+                <li><b>MONDAY</b><br>
                 CLOSED</li>
-                <li>TUESDAY - THURSDAY<br>
+                <li><b>TUESDAY - THURSDAY</b><br>
                 5:00 pm - 2:00 am</li>
-                <li>FRIDAY - SATURDAY<br>
+                <li><b>FRIDAY - SATURDAY</b><br>
                 5:00 pm - 4:00 am</li>
-                <li>SUNDAY<br>
+                <li><b>SUNDAY</b><br>
                 5:00 pm - 3:00 am</li>
             </ul>
         </article>
     </section>
-</body>
 
+    <section>
+        <article class="gmaps">
+            <iframe class="gmaps" src="https://maps.google.com/maps?q=losmo&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+        </article>
+    </section>
+
+
+</body>
 </html>
