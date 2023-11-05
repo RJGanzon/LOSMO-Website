@@ -3,9 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box;}
 body{
-  overflow:hidden;
   margin:0px;
   background-color: black;
 }
@@ -17,6 +15,7 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
+  overflow:hidden;
   width:100%;
   position: relative;
   display: inline-block;
@@ -37,6 +36,7 @@ body{
 
 /* The dots/bullets/indicators */
 .dot {
+  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -46,7 +46,7 @@ body{
   transition: background-color 0.6s ease;
 }
 
-.active {
+.active, .dot:hover{
   background-color: #eb19b0;
 }
 
@@ -105,7 +105,7 @@ a {
 </style>
 </head>
 <body>
-<p> Hello Mars </p>
+<p style="color: white;"> Hello Mars </p>
 <section class="slideshow-container">
 
 <article class="mySlides fade">
@@ -133,17 +133,23 @@ a {
 </article>
 
 <article class = "slide">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
+    <span class="dot" onclick="currentSlide(0);"></span> 
+    <span class="dot" onclick="currentSlide(1);"></span> 
+    <span class="dot" onclick="currentSlide(2);"></span> 
 </article>
 </section>
 
+<p style="color: white;"> Hello World </p>
 
-<p> Hello World </p>
-<script>
+
+<script type="text/javascript">
 let slideIndex = 0;
 showSlides(slideIndex);
+setInterval(showSlides, 5000);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
 function showSlides(n) {
   let i;
@@ -164,8 +170,9 @@ function showSlides(n) {
   
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000);
 }
+
+
 </script>
 
 </body>
