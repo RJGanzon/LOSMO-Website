@@ -15,7 +15,7 @@ body{
 .form, .social-media{
     position: absolute;
     color: white;
-    background-color: #ebdbb2;
+    background-color: black;
     left: 0;
     right: 0;
     margin: auto;
@@ -69,17 +69,19 @@ input[type=submit] {
 }
 
 .contact-icons{
-    margin-right: 150px;
+    margin-right: 200px;
     padding: 10px;
     height: 50px;
     width: 50px;
 }
 
 .contact-links{
-    margin-left: 150px;
-    padding: 10px;
+    display: inline-block;
+    padding: 28px;
+    margin-left: 120px;
     text-decoration: none;
     color: white;
+    z-index: 1;
 }
 
 </style>
@@ -111,15 +113,15 @@ input[type=submit] {
     <article class="social-media">
         <p> Or you can send us a private message on any of your social media accounts.</p>
         <article class="icons-links">
-        <img class="contact-icons" src="Images/fbIcon.svg"><br>
-        <img class="contact-icons" src="Images/igIcon.svg"><br>
-        <img class="contact-icons" src="Images/tiktokIcon.svg"><br>
+            <a href="https://www.instagram.com/losmo.ph/?hl=en"> <img class="contact-icons" src="Images/fbIcon.svg"> </a><br>
+            <a href="https://www.facebook.com/losmo.ph"> <img class="contact-icons" src="Images/igIcon.svg"> </a><br>
+            <a href="https://www.tiktok.com/@partyatlosmo"> <img class="contact-icons" src="Images/tiktokIcon.svg"> </a><br>
         </article>
 
         <article class="icons-links">
-        <a class="contact-links" href="https://www.instagram.com/losmo.ph/?hl=en"> @losmo.ph </a><br>
-        <a class="contact-links" href="https://www.facebook.com/losmo.ph"> LOSMO Food and Drinks</a><br>
-        <a class="contact-links" href="https://www.tiktok.com/@partyatlosmo"> @partylosmo </a><br>
+            <a class="contact-links" href="https://www.instagram.com/losmo.ph/?hl=en"> @losmo.ph </a><br>
+            <a class="contact-links" href="https://www.facebook.com/losmo.ph"> LOSMO Food and Drinks</a><br>
+            <a class="contact-links" href="https://www.tiktok.com/@partyatlosmo"> @partylosmo </a><br>
         </article>
     </article>
 </section>
