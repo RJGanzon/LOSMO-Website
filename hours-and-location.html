@@ -17,11 +17,15 @@
         padding: 0%;
     }
     iframe.gmaps{
-        position: absolute;
         width: 450px; 
         height: 400px;
         border:0;
-        right: 0;
+
+    }
+    
+    .gmaps-container{
+        position: absolute;
+        top: 0;
     }
 </style>
 </head>
@@ -50,7 +54,7 @@
         </article>
     </section>
 
-    <section>
+    <section class = "gmaps-container">
         <article class="gmaps">
             <iframe class="gmaps" src="https://maps.google.com/maps?q=losmo&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
         </article>
