@@ -21,25 +21,17 @@ body{
     margin: auto;
     padding: 10px;
     width: 900px;
-}
-
-.contact-container{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .form{
-    margin-left: 0;
+    margin-left: 25px;
 }
 
 .social-media{
     text-align: center;
     margin-right: 25px;
-    height: 351px;
+    height: 352px;
 }
 
 
@@ -52,7 +44,7 @@ body{
 
 
 input[type=text], textarea {
-    color:white;
+    color: #eb19b0;
     width: 100%;
     border: none;
     border-bottom: white solid 2px;
@@ -88,17 +80,16 @@ hr {
 <body>
 
 <section class="contact">
-    <section class="contact-container">
     <article class="form">
         <form action="#">
             <label for="fname">Name</label>
-            <input type="text" id="fname" name="Full Name" placeholder="Name">
+            <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
         
             <label for="email">Email </label>
-            <input type="text" id="email" name="Email" placeholder="Email">
+            <input type="text" id="email" name="Email" placeholder="Email*" required>
 
             <label for="num">Number </label>
-            <input type="text" id="num" name="Number" placeholder="Number">
+            <input type="text" id="num" name="Number" placeholder="Number*" required>
         
         
             <label for="message">Message</label>
@@ -112,7 +103,6 @@ hr {
     <article class="social-media">
         <p> Or you can send us a private message on any of your social media accounts.</p>
     </article>
-    </section>
 </section>
 
 </body>
