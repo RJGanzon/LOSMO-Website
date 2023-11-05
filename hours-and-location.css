@@ -2,7 +2,8 @@
 body{
     margin: 0;
     font-family: 'PT Sans Narrow', sans-serif;
-    color: antiquewhite;
+    color: white;
+    background-color: black;
 }
 .hours-and-location{
     margin-top: 50px;
@@ -10,9 +11,10 @@ body{
 .hours-container{
     padding:25px;
     width: 450px;
-    height: 350px;
+    height: 345.5px;
     text-align: center;
     background-color: black;
+    border-style: solid;
 
     float: left;
     margin-left: 10px;
