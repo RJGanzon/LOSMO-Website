@@ -115,7 +115,7 @@ body {
     margin-right:5px;
   }
 
-  .text, p, h2, a {
+  .slideshow-container h2, .hero-link {
     text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
     letter-spacing: 3px; 
   }

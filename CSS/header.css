@@ -26,7 +26,7 @@ header li, a, button {
 }
 
 header li a {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .header-logo {
@@ -90,3 +90,8 @@ header li a {
     color: black;
     background-color: #fff;
 }
+
+.header-nav, header button {
+    text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
+    letter-spacing: 3px; 
+  }
