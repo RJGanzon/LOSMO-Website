@@ -1,3 +1,4 @@
+// SLIDING TRANSITION SCRIPT
 let slideIndex = 0;
 showSlides(slideIndex);
 setInterval(showSlides, 5000);
@@ -26,3 +27,5 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+// FADE ANIMATION SCRIPT

@@ -84,6 +84,7 @@ header li a {
     outline: none;
     border-radius: 4px;
     letter-spacing: 3px;
+    font-weight: 500;
 }
 #header-reservation button:hover {
     color: black;

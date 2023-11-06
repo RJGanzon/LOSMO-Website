@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+/*Keyframes*/
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+}
 body {
     margin: 0px;
     background-color: black;
@@ -32,6 +39,7 @@ body {
     margin-top: -400px;
     width: 100%;
     text-align: left;
+
   }
   
   /* The dots/bullets/indicators */
@@ -88,6 +96,7 @@ body {
   .text {
     margin-left:80px;
     margin-bottom:0px;
+    animation: fade-up 1s;
   }
   p {
     font-size:18px;
@@ -108,4 +117,5 @@ body {
     text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
     letter-spacing: 3px; 
   }
+
 /* -----------------HERO------------------------------------------------------------------------*/
