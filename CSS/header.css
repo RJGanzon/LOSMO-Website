@@ -15,9 +15,10 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 5px 5%;
     padding-top: 30px;
     padding: 30px;
+    padding-right:80px;
+    padding-left:80px;
 }
 
 header li, a, button {
