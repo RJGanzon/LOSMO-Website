@@ -135,3 +135,40 @@ body {
   color: white;
   margin: 50px;
 }
+
+/* -----------------About us------------------------------------------------------------------------*/
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: white;
+  margin-top: 50px;
+}
+
+.aboutus div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  width: 1050px;
+  height: 200px;
+}
+
+.aboutus img {
+  max-height: 150%;
+  max-width: 150%;
+  position: relative;
+}
+
+.aboutus h1 {
+  font-size: 70px;
+}
+
+.aboutus p {
+  width: 700px;
+  margin-left: 20px;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+}
