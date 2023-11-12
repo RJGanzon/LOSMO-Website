@@ -9,6 +9,8 @@
 body {
     margin: 0px;
     background-color: black;
+    display:flex;
+    flex-direction: column;
     
 }
 
@@ -119,4 +121,17 @@ body {
     letter-spacing: 3px; 
   }
 
-/* -----------------HERO------------------------------------------------------------------------*/
+
+/* -----------------Instagram Widget------------------------------------------------------------------------*/
+.Instagram-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+}
+
+.Instagram-widget h2 {
+  color: white;
+  margin: 50px;
+}
