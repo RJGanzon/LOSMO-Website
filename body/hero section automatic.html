@@ -145,10 +145,14 @@ a {
 <script type="text/javascript">
 let slideIndex = 0;
 showSlides(slideIndex);
-setInterval(showSlides, 5000);
+let slideloop = setInterval(showSlides, 5000);
+
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
+  clearInterval(slideloop);
+  slideloop = null;
+  slideloop = setInterval(showSlides, 5000);
 }
 
 function showSlides(n) {
