@@ -237,6 +237,8 @@ body {
 
 
 .event-container .card {
+  display: flex;
+  flex-direction: column;
   background: #1b1b1b;
   width: 270px;
   height: 550px;
@@ -279,8 +281,6 @@ body {
 .event-container .card a {
   background: black;
   color: white;
-  padding: 15px 20px;
-  display: block;
   text-align: center;
   margin: 20px 50px;
   text-decoration: none;
@@ -333,6 +333,10 @@ body {
     background-position: center;
   }
 }
+
+  .event-container .butts {
+    display:flex;
+  }
 
 
 @media(max-width:479px) {
