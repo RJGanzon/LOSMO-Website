@@ -152,7 +152,6 @@ body {
 }
 
 .aboutus p {
-  text-align: center;
   font-size: .5rem;
 }
 
@@ -177,7 +176,7 @@ body {
 }
 
 .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-  font-size: 3.375rem;
+  font-size: 4.375rem;
   letter-spacing: 5px;
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
   color: white;
@@ -197,6 +196,104 @@ body {
   
 }
 
+
+
+/* -----------------Upcoming Events------------------------------------------------------------------------*/
+.Upcoming-Events {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 5000px;
+}
+
+.Upcoming-Events h1 {
+  margin-bottom: 5vh;
+}
+
+.event-container{
+  display:flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.event-container p {
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: .5rem;
+  color: whitesmoke;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.event-container .date {
+  margin-bottom: 1rem;
+  font-size: .8rem;
+}
+
+.event-container .title {
+  font-size: 1.2rem;
+}
+
+
+.event-container .card {
+  background: #1b1b1b;
+  width: 270px;
+  height: 550px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card-image {
+  background-color: #0000FF;
+  height: 400px;
+  margin-bottom: 15px;
+  border-radius: 5px 5px 0 0;
+  background-size:cover;
+}
+
+.card-1 {
+  background-position: center center;
+  background-image: url(../Images/losmoween.jpg);
+}
+
+.card-2 {
+  background-position: 75% 10% ;
+  background-image: url(../Images/midnights.PNG);
+}
+
+.card-3 {
+  background-position: center center;
+  background-image: url(../Images/netflix.jpg);
+}
+
+
+.event-container .card h1 {
+  padding: 10px;
+}
+
+.event-container .card p {
+
+}
+
+.event-container .card a {
+  background: black;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+  text-decoration: none;
+
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}
+
+
 @media(max-width:840px) {
   .aboutus p {
     text-align: center;
@@ -212,7 +309,28 @@ body {
 
 @media(max-width:790px) {
   .aboutus {
-    margin-bottom:35vh;
+    margin-bottom:15vh;
+  }
+  
+  .Upcoming-Events h1 {
+    text-align: center;
+  }
+  
+  .Upcoming-Events {
+    align-items: center;
+  }
+
+  .event-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .event-container .card {
+    width: 90vw;
+  }
+
+  .card-2 {
+    background-position: center;
   }
 }
 
@@ -223,70 +341,7 @@ body {
   }
 
   .aboutus {
-    margin-bottom: 65vh;
+    margin-bottom: 35vh;
   }
 
-}
-
-
-/* -----------------Upcoming Events------------------------------------------------------------------------*/
-.Upcoming-Events {
-  height: 94.78vh;
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.event-container{
-  display:flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.event-container .card {
-  background: white;
-  width: 270px;
-  height: 400px;
-  margin: 10px;
-  border-radius: 15px;
-}
-
-.card-image {
-  background-color: #0000FF;
-  height: 150px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.card-1 {
-  background-image: url();
-}
-
-.event-container .card h1 {
-  padding: 10px;
-}
-
-.event-container .card p {
-  padding: 10px;
-}
-
-.event-container .card a {
-  background: black;
-  color: white;
-  padding: 15px 20px;
-  display: block;
-  text-align: center;
-  margin: 20px 50px;
-  text-decoration: none;
-
-}
-
-.card:hover {
-  background-color: #1b1b1b;
-  color: white;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease;
 }
