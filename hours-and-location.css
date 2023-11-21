@@ -6,22 +6,26 @@ body{
     color: white;
     background-color: black;
 }
-.hours-and-location{
+.hours-and-location-container{
+    display: flex;
     margin-top: 50px;
+    border: 2pz solid white;
 }
-.hours-container{
-    padding:25px;
-    width: 450px;
-    height: 345.5px;
+.hours-and-location-item{
+    padding:3.6vh;
+    width: 50%;
+    height: 34vh;
     text-align: center;
     background-color: black;
-
-    float: left;
-    margin-left: 10px;
-}
-ul.hours{
+    border: 2px solid white;
     list-style-type: none;
-    padding: 0%;
+}
+ul.hours-and-location-item{
+    list-style-type: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
 iframe.gmaps{
     width: 500px; 
