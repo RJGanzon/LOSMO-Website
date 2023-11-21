@@ -113,6 +113,10 @@ p {
     margin: 0px;
 }
 
+#p1 {
+    font-size: 15px;
+}
+
 h2 {
     margin-top: 10px;
     margin-bottom: 10px;
