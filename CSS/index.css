@@ -282,9 +282,12 @@ body {
   background: black;
   color: white;
   text-align: center;
-  margin: 20px 50px;
+  display:block;
   text-decoration: none;
+}
 
+.read-more {
+  background-color: #0000FF;
 }
 
 .card:hover {
