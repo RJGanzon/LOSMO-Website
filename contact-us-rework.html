@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+
+.contact-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #242424;
+}
+
+.contact-us > .form, .faq{
+    position: static;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    width: 850px;
+    text-align: center;
+}
+
+.accordion{
+    left: 0;
+    right: 0;
+    display: inline-block;
+    background-color: #eee;
+    color: #242424;
+    cursor: pointer;
+    padding: 18px;
+    width: 815px;
+    outline: none;
+    text-align: left;
+    transition: 0.4s;
+}
+          
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    width: 815px;
+    background-color: #ebdbb2;
+    display: none;
+    overflow: hidden;
+}
+
+</style>
+<title>Contact Us</title>
+</head>
+
+<body>
+    <section class="contact-us">
+        <section class="form">
+            <span class="accordion">hye</span>
+            <article class="panel">Hello World</article>
+            <span class="accordion">hye</span>
+            <article class="panel">Hello World</article>
+        </section>
+
+        <section class="faq">
+            <span class="accordion">hol</span>
+            <article class="panel">Hello World</article>
+        </section>
+    </section>
+
+
+<script>
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+    
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+</script>
+</body>
+</html>
