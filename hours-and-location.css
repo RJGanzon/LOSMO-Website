@@ -9,16 +9,15 @@ body{
 .hours-and-location-container{
     display: flex;
     margin-top: 50px;
-    border: 2pz solid white;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 .hours-and-location-item{
-    padding:3.6vh;
-    width: 50%;
-    height: 34vh;
+    width: 101vh;
+    height: 32svh;
     text-align: center;
     background-color: black;
     list-style-type: none;
-    border: 2px solid white;
 }
 .hours-and-location-item > ul{
     list-style-type: none;
@@ -28,12 +27,7 @@ body{
     margin: 0;
 }
 iframe.gmaps{
-    width: 30vh; 
-    height: 400px;
+    width: 99.9%; 
+    height: 40vh;
     border:0;
-}
-.gmaps-container{
-    width: 199vh;
-    border: 2px solid white;
-    padding: 2vh;
 }
