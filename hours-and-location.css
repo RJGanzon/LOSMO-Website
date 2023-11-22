@@ -13,11 +13,12 @@ body{
     flex-direction: row;
 }
 .hours-and-location-item{
-    width: 101vh;
+    width: 49.5vw;
     height: 32svh;
     text-align: center;
     background-color: black;
     list-style-type: none;
+    border: 2px solid white;
 }
 .hours-and-location-item > ul{
     list-style-type: none;
