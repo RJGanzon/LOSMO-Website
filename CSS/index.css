@@ -223,7 +223,7 @@ body {
   margin-left: .5rem;
   color: whitesmoke;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 }
 
 .event-container .date {
@@ -269,7 +269,6 @@ body {
   background-image: url(../Images/netflix.jpg);
 }
 
-
 .event-container .card h1 {
   padding: 10px;
 }
@@ -279,23 +278,40 @@ body {
 }
 
 .event-container .card a {
-  background: black;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
   text-align: center;
   display:block;
   text-decoration: none;
+  padding: 5px;
+  font-size: 17px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-top: 20px;
+  width:100px;
+  height: 25px;
+  border-radius: .3rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
 
-.read-more {
-  background-color: #0000FF;
+.event-container .card .read-more {
+  border: 1px solid whitesmoke;
+
 }
 
-.card:hover {
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease;
+.event-container .card .read-more:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
 }
 
+.event-container .card .reserve {
+  background-color: #eb19b0;
+  color: whitesmoke;
+  border: 1px solid transparent;
+}
 
 @media(max-width:840px) {
   .aboutus p {
@@ -339,6 +355,7 @@ body {
 
   .event-container .butts {
     display:flex;
+    justify-content: space-around;
   }
 
 
