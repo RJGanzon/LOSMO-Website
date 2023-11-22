@@ -199,12 +199,11 @@ body {
 
 /* -----------------Upcoming Events------------------------------------------------------------------------*/
 .Upcoming-Events {
-  height: 1000px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 5000px;
 }
 
 .Upcoming-Events h1 {
