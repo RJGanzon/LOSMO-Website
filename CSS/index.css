@@ -19,7 +19,7 @@ body {
 
 .hero {
     vertical-align: middle;
-    height: 500px;
+    height: 630px;
     object-fit:cover;
   }
 
@@ -170,7 +170,6 @@ body {
 .aboutus img {
   max-height: 75%;
   max-width: 75%;
-  position: relative;
   overflow: hidden;
   margin: 0%;
 }
@@ -240,8 +239,8 @@ body {
   display: flex;
   flex-direction: column;
   background: #1b1b1b;
-  width: 270px;
-  height: 550px;
+  width: 230px;
+  height: 480px;
   margin: 10px;
   border-radius: 5px;
 }
@@ -274,7 +273,7 @@ body {
 }
 
 .event-container .card p {
-
+  margin-left: 12px;
 }
 
 .event-container .card a {
@@ -286,14 +285,15 @@ body {
   display:block;
   text-decoration: none;
   padding: 5px;
-  font-size: 17px;
+  font-size: 13px;
   font-family: 'PT Sans Narrow', sans-serif;
   margin-top: 20px;
-  width:100px;
-  height: 25px;
+  width:80px;
+  height: 20px;
   border-radius: .3rem;
   font-weight: bold;
   letter-spacing: 1.5px;
+  margin-bottom: .6rem;
 }
 
 .event-container .card .read-more {
