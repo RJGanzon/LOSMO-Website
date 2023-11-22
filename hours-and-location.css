@@ -14,11 +14,10 @@ body{
 }
 .hours-and-location-item{
     width: 49.5vw;
-    height: 32vh;
+    height: 48vh;
     text-align: center;
     background-color: black;
     list-style-type: none;
-    border: 2px solid white;
 }
 .hours-and-location-item > ul{
     list-style-type: none;
@@ -26,6 +25,9 @@ body{
     height: auto;
     padding: 0;
     margin: 0;
+}
+.hours-and-location-item > h1{
+    text-decoration: underline;
 }
 iframe.gmaps{
     width: 99.9%; 
