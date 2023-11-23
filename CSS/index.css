@@ -60,7 +60,7 @@ body {
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover{
+  .activem, .dot:hover{
     background-color: #eb19b0;
   }
   
