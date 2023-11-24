@@ -9,10 +9,11 @@
 <link rel="shortcut icon" href="Images/losmologo.png" type="image/x-icon" />
 </head>
 <body>
-
+  
   <!----------------------HEADER------------------------------------------------------------- -->
   <header>
     <img class="header-logo" src="images/header-logo.png">
+    <img class="header-logo-mobile" src="images/losmo.png">
     <nav>
         <ul class="header-nav">
             <li><a href="#">ABOUT</a></li>
@@ -23,6 +24,11 @@
         </ul>
     </nav>
     <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
 </header>
 
   <!----------------------HERO------------------------------------------------------------- -->
@@ -65,9 +71,43 @@
   </div>
 </section>
 
+<!-----------------------Upcoming Events----------------------------------------------------------------------------->
+<section class="Upcoming-Events">
+  <h1>Featured Events</h1>
+  <section class="event-container">
+    <div class="card">
+      <div class="card-image card-1"></div>
+      <p class="date">MON October 30, 2023</p>
+      <p class="title">Losmoween</p>
+      <div class="butts">
+        <a href="#" class="read-more">View Details</a>
+        <a href="#" class="reserve">Get a Table</a>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card-image card-2"></div>
+      <p class="date">WED March 22, 2023</p>
+      <p class="title">Midnights at LOSMO</p>
+      <div class="butts">
+        <a href="#" class="read-more">View Details</a>
+        <a href="#" class="reserve">Get a Table</a>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card-image card-3"></div>
+      <p class="date">MON October 31, 2022</p>
+      <p class="title">Netflix N' Kill</p>
+      <div class="butts">
+      <a href="#" class="read-more">View Details</a>
+      <a href="#" class="reserve">Get a Table</a>
+      </div>
+    </div>
+  </section>
+</section>
+
 <!-----------------------Instagram Widget----------------------------------------------------------------------------->
 <section class="Instagram-widget">
-  <h2>Follow LOSMO on Instagram</h2>
+  <h1>Follow LOSMO on Instagram</h1>
   <iframe src="https://embed.fouita.com/widget/0xedcfe/fthjd210a" 
 title="InstagramFeedLoadMore" width="100%" height="800" frameborder="0" >
 </iframe>
@@ -90,6 +130,10 @@ title="InstagramFeedLoadMore" width="100%" height="800" frameborder="0" >
   externalFunction();
 </script>
 
+<script src="Scripts/header.js"></script>
+<script type="Scripts/header.js">
+  externalFunction();
+</script>
 
 </body>
 </html>
