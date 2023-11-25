@@ -35,13 +35,13 @@
             .menu__type {
                 text-decoration: none;
                 list-style-type: none;
-                border: 2px solid white;
+                border: 1px solid white;
                 padding:5px 10px;
             }
             .menu__item {
                 display:grid;
                 grid-template-columns: 12vh 10vw 10vw 10vh;
-                border-bottom: 2px solid white;
+                border-bottom: 1px solid white;
                 gap:5px 10px;
                 padding:6px 0;
                 box-sizing: border-box;
@@ -54,7 +54,7 @@
                 padding-top: 0.4rem;
                 font-weight: bold;
             }
-            .menu__item__info--notext {
+            .menu__item__info--noimage {
                 grid-column: 1 / span 3;
                 font-weight: bold;
             }
@@ -80,8 +80,8 @@
                 position: relative;
             }
             .menu__1 {
-                height:80vh;
-                width:80vw;
+                height: fit-content;
+                width:100vw;
                 padding-top: 4vh;
                 display: flex;
                 justify-content: center;
@@ -111,7 +111,7 @@
                 font-family: Jost, sans-serif;
             }
             .menu__item:first-child {
-                border-top: 2px solid white;
+                border-top: 1px solid white;
             }
             .menu__list__container {
                 display: flex;
@@ -141,6 +141,11 @@
             }
             .menu__hero__image {
                 height: 70vh;
+            }
+            .menu__sercharge {
+                padding-top: 1rem;
+                font-size: smaller;
+                text-align: right;
             }
         </style>
     </head>
@@ -192,7 +197,7 @@
                 <h3 class="menu__text--heading">Starters</h3>
                 <div class="menu__list__1">
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Grilled Caesar Salad</p></span>
+                    <span class="menu__item__info--noimage"><p>Grilled Caesar Salad</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">265.00</p></span>
                     <span class="menu__item__description--notext"><p class="menu__item__description">A smokey twist to a classic beloved dish.</p></span>
                 </div>  
@@ -208,16 +213,16 @@
                     <span class="menu__item__price"><p class="menu__item__price">340.00</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Gambas</p></span>
+                    <span class="menu__item__info--noimage"><p>Gambas</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">275.00</p></span>
                     <span class="menu__item__description--notext"><p class="menu__item__description">Shrimp in olive oil and garlic sauce.</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Hungarian Sausage</p></span>
+                    <span class="menu__item__info--noimage"><p>Hungarian Sausage</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">375.00</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Steak Sausage</p></span>
+                    <span class="menu__item__info--noimage"><p>Steak Sausage</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">410.00</p></span>
                 </div>  
                 <div class="menu__item">
@@ -247,19 +252,19 @@
                     <div class="menu__item__image--whole"><img class= "menu__item__image--whole" src="menu/5.png"></div>
                 </div>   
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Pulled Pork Poutine</p></span>
+                    <span class="menu__item__info--noimage"><p>Pulled Pork Poutine</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">310.00</p></span>
                 </div>
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Truffle Parmesan Fries</p></span>
+                    <span class="menu__item__info--noimage"><p>Truffle Parmesan Fries</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">160.00</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Cajun Potato Wedges</p></span>
+                    <span class="menu__item__info--noimage"><p>Cajun Potato Wedges</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">150.00</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Onion Rings w/ Dip</p></span>
+                    <span class="menu__item__info--noimage"><p>Onion Rings w/ Dip</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">215.00</p></span>
                 </div>  
                 <div class="menu__item">
@@ -268,18 +273,20 @@
                     <span class="menu__item__price"><p class="menu__item__price">150.00</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Chicken Fingers</p></span>
+                    <span class="menu__item__info--noimage"><p>Chicken Fingers</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
                 </div>  
                 <div class="menu__item">
-                    <span class="menu__item__info--notext"><p>Fish Fingers</p></span>
+                    <span class="menu__item__info--noimage"><p>Fish Fingers</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">230.00</p></span>
-                </div>  
+                </div>
+                <div class="menu__sercharge"><p class="menu__sercharge">NOTE: 10% service charge is included in every transaction</p></div>  
                 </div>
                 </div>
-
+                
             </div>
         </section>
+        
         </section>
     </body>
 </html>
