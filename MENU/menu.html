@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Tilt+Neon&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+            * {
+                margin:0px;
+                padding:0px;
+                
+            }
+            body {
+                margin-top: 10vh;
+                background-color: black;
+            }
+            .menu__nav {
+                display:flex;
+                justify-content:space-around;
+                width:70vw;
+                margin:auto;
+            }
+            .menu__list__1 {
+                width:fit-content;
+                align-items: center;
+            }
+            .menu__type {
+                text-decoration: none;
+                list-style-type: none;
+                border: 2px solid white;
+                padding:5px 10px;
+            }
+            .menu__item {
+                display:grid;
+                grid-template-columns: 12vh 10vw 10vw 10vh;
+                border-bottom: 2px solid white;
+                gap:5px 10px;
+                padding:6px 0;
+                box-sizing: border-box;
+                min-height: 8vh;
+            }
+
+            .menu__item__info {
+                grid-column: 2 / span 2;
+                text-align: left;
+                padding-top: 0.4rem;
+                font-weight: bold;
+            }
+            .menu__item__info--notext {
+                grid-column: 1 / span 3;
+                font-weight: bold;
+            }
+
+            .menu__item__description {
+                grid-area: 2 / 2 / 3 / 4;
+                height: 7.5vh;
+                min-height: fit-content;
+            }
+            .menu__item__description--notext {
+                grid-area: 2 / 1 / 3 / 4;
+                height: 7.5vh;
+                min-height: fit-content;
+            }
+
+            .menu__item__price {
+                text-align: center;
+                grid-area : 1 / 4 / 3 / 5;
+                
+            }
+            .menu__container {
+                padding-bottom:10vh;
+            }
+            .menu__1 {
+                height:80vh;
+                width:80vw;
+                padding-top: 4vh;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap:2vw; 
+            }
+            .menu__item__image{
+                height: 12vh;
+                display:block;
+            }
+            .menu__item__image__container {
+                grid-area: 1 / 1 / 3 / 2;
+            }
+            p, li {
+                font-family: PT Sans, sans-serif;
+                color:white;
+            }
+            p.menu__item__description {
+                font-size: 0.9rem;
+            }
+            p.menu__item__price {
+                font-size: 1.1rem;
+            }
+            .menu__text--heading {
+                color: #eb19b0;
+                font-size: 2rem;
+                font-family: Jost, sans-serif;
+            }
+            .menu__item:first-child {
+                border-top: 2px solid white;
+            }
+            .menu__list__container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            div.menu__item__image--whole {
+                overflow: hidden;
+                grid-area: 1 / 1 / 3 / 5;
+                height: fit-content;
+                min-height: fit-content;
+
+            }
+            img.menu__item__image--whole {
+                object-fit: contain;
+                display: block;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="menu__hero">
+
+        </section>
+        <section class="menu__container">
+            <nav>
+                <ul class="menu__nav">
+                <li class = "menu__type">Appetizers</li>
+                <li class = "menu__type">Mains</li>
+                <li class = "menu__type">Specials</li>
+                <li class = "menu__type">Solo Ricebowls</li>
+                <li class = "menu__type">Pasta</li>
+                <li class = "menu__type">Dessert</li>
+                <li class = "menu__type">Cocktails</li>
+                <li class = "menu__type">Non-alcoholic Drinks</li>
+                <li class = "menu__type">Liquors</li>
+                </ul>
+            </nav>
+            <section class="menu__list__container">
+            <div class="menu__1">
+
+                <div>
+                <h3 class="menu__text--heading">Starters</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Grilled Caesar Salad</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">265.00</p></span>
+                    <span class="menu__item__description--notext"><p class="menu__item__description">A smokey twist to a classic beloved dish.</p></span>
+                </div>  
+                <div class="menu__item">
+                    <div class="menu__item__image__container"><img class = "menu__item__image" src="1.png"></div>
+                    <span class="menu__item__info"><p>Sesame Salad w/ Breaded Shrimp</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">250.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description--notext">Breaded shrimps served with sesame salad and mayo sauce.</p></span>
+                </div>  
+                <div class="menu__item">
+                    <div class="menu__item__image__container"><img class = "menu__item__image" src="2.png"></div>
+                    <span class="menu__item__info"><p>Texas Style Wings</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">340.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Gambas</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">275.00</p></span>
+                    <span class="menu__item__description--notext"><p class="menu__item__description">Shrimp in olive oil and garlic sauce.</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Hungarian Sausage</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">375.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Steak Sausage</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">410.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <div class="menu__item__image__container"><img class="menu__item__image" src="3.png"></div>
+                    <span class="menu__item__info"><p>Bacon-wrapped Sausage Rings</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">350.00</p></span>
+                </div>  
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Finger Food</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <div class="menu__item__image__container"><img class = "menu__item__image" src="6.png"></div>
+                    <span class="menu__item__info"><p>Chicken Poppers</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">(Honey Sriracha, Lemon Pepper, Creamy Sriracha)</p></span>
+                </div>  
+                <div class="menu__item">
+                    <div class="menu__item__image__container"><img class = "menu__item__image" src="4.png"></div>
+                    <span class="menu__item__info"><p>Surf n Turf Nachos</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">380.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description--notext"></p></span>
+                </div>  
+                <div class="menu__item">
+                    <div class="menu__item__image--whole"><img class= "menu__item__image--whole" src="5.png"></div>
+                </div>   
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Pulled Pork Poutine</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">310.00</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Truffle Parmesan Fries</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">160.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Cajun Potato Wedges</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">150.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Onion Rings w/ Dip</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">215.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <div class="menu__item__image__container"><img class = "menu__item__image" src="7.png"></div>
+                    <span class="menu__item__info"><p>Salted Egg Chicken Skin</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">150.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Chicken Fingers</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--notext"><p>Fish Fingers</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">230.00</p></span>
+                </div>  
+                </div>
+                </div>
+
+            </div>
+        </section>
+        </section>
+    </body>
+</html>
