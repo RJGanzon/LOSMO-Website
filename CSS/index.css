@@ -356,7 +356,8 @@ body {
 .drinkies {
   height: 540px;
   display: none;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 6rem;
   align-items: center;
 }
 
