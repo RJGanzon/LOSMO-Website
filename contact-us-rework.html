@@ -19,7 +19,7 @@ body{
     position: static;
     left: 0;
     right: 0;
-    margin: 10px;
+    margin: 15px;
     width: 850px;
     text-align: left;
     color: white;
@@ -49,7 +49,7 @@ body{
     text-align: left;
     padding: 0 18px;
     width: 815px;
-    background-color: #ebdbb2;
+    background-color: black;
     display: none;
     overflow: hidden;
 }
@@ -58,19 +58,21 @@ body{
 input[type=text], textarea {
     color: #eb19b0;
     width: 100%;
-    border: none;
-    border-bottom: white solid 2px;
+    border: white solid 2px;
     margin-bottom: 10px;
     margin-top: 3px;
     background-color: black;
     resize: none;
     outline: none;
-    opacity: 1px;
+    font-size: 18px;
+}
+
+input[type=text]{
+    padding: 5px;
 }
 
 textarea{
     height: 100px;
-    opacity: 1px;
 }   
 
 input[type=submit] {
@@ -87,6 +89,24 @@ input[type=submit] {
     margin-top: 20px;
 }
 
+.purpose-form {
+    cursor: pointer;
+    padding: 10px;
+}
+
+::placeholder{
+    opacity: 1;
+    font-size: 18px;
+}
+
+.acc-faq{
+    margin: 10px;
+}
+
+.panel-faq{
+    padding: 10px;
+}
+
 </style>
 <title>Contact Us</title>
 </head>
@@ -95,31 +115,44 @@ input[type=submit] {
     <section class="contact-us">
         <section class="form">
         <form>
-            <label for="fname">Name</label>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
-        
-            <label for="email">Email </label>
             <input type="text" id="email" name="Email" placeholder="Email*" required>
-
-            <label for="num">Number </label>
             <input type="text" id="num" name="Number" placeholder="Number*" required>
         
 
             <span class="accordion purpose">Purpose</span>
-            <article class="panel purpose-form">Hello World</article>
-
+            <article class="panel purpose-form">
+                <span onclick="checkEvent(0)"> Inquiry </span>
+                <hr>
+                <span onclick="checkEvent(1)"> Private Event </span>
+                <p></p>
+            </article>
             <br>
-            <label for="message">Message</label>
+
+
+            <input type="text" id="Subject" name="Subject" placeholder="Subject*" required>
+            <input type="text" id="when" name="When" placeholder="When*" required>
+            <input type="text" id="pax" name="PAX" placeholder="PAX*" required>
+
             <textarea id="message" id="message" name="Message" placeholder="Your Message"></textarea>
         
-            <input type="submit" value="Send">
+            <input type="submit" value="Submit">
         </form>
         </section>
 
 
         <section class="faq">
-            <span class="accordion">hol</span>
-            <article class="panel">Hello World</article>
+            <span class="accordion acc-faq" style="margin-top: 3px;">Wag mo buksan</span>
+            <article class="panel panel-faq">Bisakol</article>
+
+            <span class="accordion acc-faq">Wag mo buksan</span>
+            <article class="panel panel-faq">Bisakol</article>
+
+            <span class="accordion acc-faq">Wag mo buksan</span>
+            <article class="panel panel-faq">Bisakol</article>
+
+            <span class="accordion acc-faq">Wag mo buksan</span>
+            <article class="panel panel-faq">Bisakol</article>
         </section>
     </section>
 
@@ -144,6 +177,18 @@ input[type=submit] {
         }
       });
     }
+
+    function checkEvent(num){
+        if(num == 1){
+            document.getElementById("when").style.display = "inline-block";
+            document.getElementById("pax").style.display = "inline-block";  
+        } else {
+            document.getElementById("when").style.display = "none"; 
+            document.getElementById("pax").style.display = "none"; 
+        }
+    }
+
+    checkEvent(0);
 </script>
 </body>
 </html>
