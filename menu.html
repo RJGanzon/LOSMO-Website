@@ -31,7 +31,10 @@
             .menu__list__1 {
                 width:fit-content;
                 align-items: center;
+                gap: 1rem;
+                
             }
+
             .menu__type {
                 text-decoration: none;
                 list-style-type: none;
@@ -41,7 +44,7 @@
             .menu__item {
                 display:grid;
                 grid-template-columns: 12vh 10vw 10vw 10vh;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid #d3d3d3;
                 gap:5px 10px;
                 padding:6px 0;
                 box-sizing: border-box;
@@ -64,7 +67,7 @@
                 height: 7.5vh;
                 min-height: fit-content;
             }
-            .menu__item__description--notext {
+            .menu__item__description--noimage {
                 grid-area: 2 / 1 / 3 / 4;
                 height: 7.5vh;
                 min-height: fit-content;
@@ -79,7 +82,7 @@
                 padding-bottom:10vh;
                 position: relative;
             }
-            .menu__1 {
+            .menu__item__container {
                 height: fit-content;
                 width:100vw;
                 padding-top: 4vh;
@@ -181,25 +184,23 @@
                 <ul class="menu__nav">
                 <li class = "menu__type">Appetizers</li>
                 <li class = "menu__type">Mains</li>
-                <li class = "menu__type">Specials</li>
-                <li class = "menu__type">Solo Ricebowls</li>
-                <li class = "menu__type">Pasta</li>
-                <li class = "menu__type">Dessert</li>
+                <li class = "menu__type">Solo Ricebowls & Pasta</li>
+                <li class = "menu__type">Dessert & Others</li>
                 <li class = "menu__type">Cocktails</li>
                 <li class = "menu__type">Non-alcoholic Drinks</li>
                 <li class = "menu__type">Liquors</li>
                 </ul>
             </nav>
             <section class="menu__list__container">
-            <div class="menu__1">
-
+                
+            <div class="menu__item__container">
                 <div>
                 <h3 class="menu__text--heading">Starters</h3>
                 <div class="menu__list__1">
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>Grilled Caesar Salad</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">265.00</p></span>
-                    <span class="menu__item__description--notext"><p class="menu__item__description">A smokey twist to a classic beloved dish.</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">A smokey twist to a classic beloved dish.</p></span>
                 </div>  
                 <div class="menu__item">
                     <div class="menu__item__image__container"><img class = "menu__item__image" src="menu/1.png"></div>
@@ -215,7 +216,7 @@
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>Gambas</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">275.00</p></span>
-                    <span class="menu__item__description--notext"><p class="menu__item__description">Shrimp in olive oil and garlic sauce.</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">Shrimp in olive oil and garlic sauce.</p></span>
                 </div>  
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>Hungarian Sausage</p></span>
@@ -246,7 +247,7 @@
                     <div class="menu__item__image__container"><img class = "menu__item__image" src="menu/4.png"></div>
                     <span class="menu__item__info"><p>Surf n Turf Nachos</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">380.00</p></span>
-                    <span class="menu__item__description"><p class="menu__item__description--notext"></p></span>
+                    <span class="menu__item__description"><p class="menu__item__description--noimage"></p></span>
                 </div>  
                 <div class="menu__item">
                     <div class="menu__item__image--whole"><img class= "menu__item__image--whole" src="menu/5.png"></div>
@@ -283,7 +284,338 @@
                 <div class="menu__sercharge"><p class="menu__sercharge">NOTE: 10% service charge is included in every transaction</p></div>  
                 </div>
                 </div>
+            </div>
+
+            <div class="menu__item__container">
+                <div>
+                <h3 class="menu__text--heading">For Sharing</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>USDA Prime Ribeye 350g</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 1,340.00</p></span>
+                </div>  
                 
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>USDA Prime Ribeye 500g</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 1,940.00</p></span>
+                </div>  
+                
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Salpicao and Eggs</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 450.00</p></span>
+                </div>  
+                
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Steakhouse Salmon</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 680.00</p></span>
+                </div>  
+                
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Roasted Chicken</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 410.00</p></span>
+                </div>  
+                
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Creamy Mushroom Chicken</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 350.00</p></span>
+                </div>              
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Specials</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Tomahawk 1kg</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">3,550.00</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Dry Aged Bone-In Ribeye</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">6,450.00</p></span>
+                </div>  
+
+                <div class="menu__sercharge"><p class="menu__sercharge">* highly suggested to order in advance.</p></div>
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge">NOTE: 10% service charge is included in every transaction</p></div>    
+                </div>
+                </div>
+            </div>
+
+            <div class="menu__item__container">
+
+                <div>
+                <h3 class="menu__text--heading">Solo Ricebowls</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Surf n' Turf</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 429.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">(Steak & Shrimp)</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Lemon Glazed Salmon</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 409.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description"></p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Steak Ricebowl</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 399.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description"></p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Chimichurri Steak</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 409.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description"></p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Roasted Chicken</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 339.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description"></p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Honey Garlic Chicken</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 319.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description"></p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Chicken Teriyaki</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 299.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description"></p></span>
+                </div>  
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Pasta</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Spaghetti Meatballs</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">370.00</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">(Honey Sriracha, Lemon Pepper, Creamy Sriracha)</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Chili Pasta</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">350.00</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">(Honey Sriracha, Lemon Pepper, Creamy Sriracha)</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>White Mac n' Cheese</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">250.00</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">(Honey Sriracha, Lemon Pepper, Creamy Sriracha)</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Aglio Olio</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">380.00</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">(Honey Sriracha, Lemon Pepper, Creamy Sriracha)</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Creamy Pesto</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">330.00</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">(Honey Sriracha, Lemon Pepper, Creamy Sriracha)</p></span>
+                </div>
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge">NOTE: 10% service charge is included in every transaction</p></div>  
+                </div>
+                </div>
+            </div>
+
+            <div class="menu__item__container">
+
+                <div>
+                <h3 class="menu__text--heading">Mini Basque Burnt Cheesecake</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Classic Cheesecake</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 110.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Blueberry Cheesecake</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 130.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Dulce De Leche Cheesecake</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 130.00</p></span>
+                </div>  
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Ice Cream Scoop</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Vanilla</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 65.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Strawberry</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 65.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Chocolate</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 65.00</p></span>
+                </div>  
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Add-ons</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Plain Rice</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 50.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Mashed Potatoes</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 50.00</p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Corn</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 50.00</p></span>
+                </div>  
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Cigarettes</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Winston Cigarettes pack</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 200</p></span>
+                    <span class="menu__item__description--noimage"><p class="menu__item__description">(Red/Lights/Purple)</p></span>
+                </div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>
+                <div class="menu__sercharge"><p class="menu__sercharge">NOTE: 10% service charge is included in every transaction</p></div> 
+                </div>
+                </div>
+            </div>
+
+            <div class="menu__item__container">
+
+                <div>
+                <h3 class="menu__text--heading">Special Cocktails</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Lost Moment</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">TROPICAL & STRONG
+                        Includes rum-infused blue pea, rum, special syrups, lychee, lemon, pineapple, and lychee.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Sugar Daddy</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">SAVORY, SWEET, & SALTY
+                        Includes blended scotch, flavored liqueurs, vanilla, and fruit syrup. Garnished with caramelized banana slices.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Sweet Talk</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">SWEET, STRONG, & SEXY
+                        Includes flavored vodka, fruit juice, strawberry, lemon, and cranberry. Topped with an orange peel.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Wake Up Call</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">BUTTERY, SMOOTH, & CREAMY 
+                        Includes Biscoff cookie butter, vodka, espresso, coffee liqueur, and cinnamon syrup.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Red Flag</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">TART, SWEET,& CREAMY 
+                        Includes bourbon whiskey, flavored liqueur, vermouth, fruit juice, and special syrup. Topped with an orange peel.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Sincerely Yours,</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">REFRESHING, FRUITY, & BUBBLY
+                        Includes strawberry purée, vodka, and daiquiri. Topped with sparkling wine.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Black Jack</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">SWEET, SOUR, & CRISP
+                        Includes Jack Daniel's Tennesee whiskey, fruit syrup, fruit flavoring, and lemon.
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>7 Seas</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">CITRUSY & STRONG
+                        Includes gin, fruit liqueur, fruit syrups, tonic water, and lemon. Topped with a lemon peel.                        
+                        </p></span>
+                </div>  
+                <div class="menu__item">
+                    <span class="menu__item__info"><p>Sunkissed</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
+                    <span class="menu__item__description"><p class="menu__item__description">FRUITY, HERBAL, & REFRESHING 
+                        Includes rum, fruit liqueur, fruit juice, and herbs. Garnished with dried pineapples and pineapple leaves.                        
+                        </p></span>
+                </div>  
+                </div>
+                </div>
+
+                <div>
+                <h3 class="menu__text--heading">Classic Cocktails</h3>
+                <div class="menu__list__1">
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Frozen Piñacolada</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Frozen Blue Margarita</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Gin Tonic</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Sangria</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
+                </div>
+                <div class="menu__item">
+                    <span class="menu__item__info--noimage"><p>Amaretto Sour</p></span>
+                    <span class="menu__item__price"><p class="menu__item__price">260.00</p></span>
+                </div>
+                <div class="menu__sercharge"><p class="menu__sercharge">*other cocktails may be available upon request</p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>   
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge"></p></div>  
+                <div class="menu__sercharge"><p class="menu__sercharge">NOTE: 10% service charge is included in every transaction</p></div>  
+                </div>
+                </div>
             </div>
         </section>
         
