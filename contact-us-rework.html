@@ -37,6 +37,9 @@
 }
 
 .panel {
+    left: 0;
+    right: 0;
+    text-align: left;
     padding: 0 18px;
     width: 815px;
     background-color: #ebdbb2;
@@ -51,11 +54,13 @@
 <body>
     <section class="contact-us">
         <section class="form">
+        <form>
+            <input type="text">
             <span class="accordion">hye</span>
             <article class="panel">Hello World</article>
-            <span class="accordion">hye</span>
-            <article class="panel">Hello World</article>
+        </form>
         </section>
+
 
         <section class="faq">
             <span class="accordion">hol</span>
@@ -77,10 +82,10 @@
     
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
+        if (panel.style.display === "inline-block") {
           panel.style.display = "none";
         } else {
-          panel.style.display = "block";
+          panel.style.display = "inline-block";
         }
       });
     }
