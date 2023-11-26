@@ -18,6 +18,7 @@ body{
     text-align: center;
     background-color: black;
     list-style-type: none;
+
 }
 .hours-and-location-item > ul{
     list-style-type: none;
@@ -28,6 +29,12 @@ body{
 }
 .hours-and-location-item > h1{
     text-decoration: underline;
+}
+#hours-and-location-border{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin-left: 8vw;
+    margin-right:8vw;
 }
 iframe.gmaps{
     width: 99.9%; 
