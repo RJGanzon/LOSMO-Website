@@ -156,6 +156,11 @@
             p.menu__sercharge{
                 text-align: right;
             }
+            .menu__button {
+                background-color: black;
+                border: 0;
+            }
+
         </style>
     </head>
     <body>
@@ -188,18 +193,18 @@
         <section class="menu__container">
             <nav>
                 <ul class="menu__nav">
-                <li class = "menu__type">Appetizers</li>
-                <li class = "menu__type">Mains</li>
-                <li class = "menu__type">Solo Ricebowls & Pasta</li>
-                <li class = "menu__type">Dessert & Others</li>
-                <li class = "menu__type">Cocktails</li>
-                <li class = "menu__type">Non-alcoholic Drinks</li>
-                <li class = "menu__type">Liquors</li>
+                <li class = "menu__type"><button class="menu__button"  id= "appetizer">Appetizers</button></li>
+                <li class = "menu__type"><button class="menu__button"  id = "main">Mains</li></button>
+                <li class = "menu__type"><button class="menu__button"  id = "solo">Solo Ricebowls & Pasta</button></li>
+                <li class = "menu__type"><button class="menu__button"  id = "dessert">Dessert & Others</button></li>
+                <li class = "menu__type"><button class="menu__button"  id = "cocktail">Cocktails</button></li>
+                <li class = "menu__type"><button class="menu__button"  id = "non">Non-alcoholic Drinks</button></li>
+                <li class = "menu__type"><button class="menu__button"  id = "liquors">Liquors</button></li>i>
                 </ul>
             </nav>
             <section class="menu__list__container">
                 
-            <div class="menu__item__container">
+            <div class="menu__item__container" id="appetizerDiv">
                 <div>
                 <h3 class="menu__text--heading">Starters</h3>
                 <div class="menu__list__1" style = "height: 38vh;">
@@ -293,7 +298,7 @@
             </div>
             
 
-            <div class="menu__item__container">
+            <div class="menu__item__container" id="mainDiv">
                 
                 <div>
                 <h3 class="menu__text--heading">For Sharing</h3>
@@ -354,7 +359,7 @@
                 </div>
             </div>
 
-            <div class="menu__item__container">
+            <div class="menu__item__container" id="soloDiv">
 
                 <div>
                 <h3 class="menu__text--heading">Solo Ricebowls</h3>
@@ -437,7 +442,7 @@
                 </div>
             </div>
 
-            <div class="menu__item__container">
+            <div class="menu__item__container" id ="dessertDiv">
 
                 <div>
                 <h3 class="menu__text--heading">Mini Basque Burnt Cheesecake</h3>
@@ -508,7 +513,7 @@
                 </div>
             </div>
 
-            <div class="menu__item__container">
+            <div class="menu__item__container" id="cocktailDiv">
 
                 <div>
                 <h3 class="menu__text--heading">Special Cocktails</h3>
@@ -524,7 +529,7 @@
                     <span class="menu__item__info"><p>Sugar Daddy</p></span>
                     <span class="menu__item__price"><p class="menu__item__price"> 290.00</p></span>
                     <span class="menu__item__description"><p class="menu__item__description">SAVORY, SWEET, & SALTY
-                        Includes blended scotch, flavored liqueurs, vanilla, and fruit syrup. Garnished with caramelized banana slices.
+                        Includes blended scotch, flavored liquors, vanilla, and fruit syrup. Garnished with caramelized banana slices.
                         </p></span>
                 </div>  
                 <div class="menu__item">
@@ -628,5 +633,19 @@
         </section>
         
         </section>
+        <script>
+            var buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', e => {
+                    var divId = e.target.id + 'Div';
+                    var div = document.getElementById(divId);
+                    if (div.style.display === "block") {
+                        div.style.display = "none";
+                    } else {
+                        div.style.display = "block";
+                    }
+                })
+            })
+        </script>
     </body>
 </html>
