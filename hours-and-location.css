@@ -11,13 +11,14 @@ body{
     margin-top: 50px;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 }
 .hours-and-location-item{
-    width: 49.5vw;
+    width: 35.5vw;
     height: 48vh;
     text-align: center;
     background-color: black;
-    list-style-type: none;
+    justify-content: center;
 
 }
 .hours-and-location-item > ul{
@@ -31,9 +32,8 @@ body{
     text-decoration: underline;
 }
 #hours-and-location-border{
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    margin-left: 8vw;
+    border: 3px double white;
+    margin-left:8vw;
     margin-right:8vw;
 }
 iframe.gmaps{
