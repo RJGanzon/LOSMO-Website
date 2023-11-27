@@ -107,6 +107,10 @@ input[type=submit] {
     padding: 10px;
 }
 
+
+#when, #pax{
+    display: none;
+}
 </style>
 <title>Contact Us</title>
 </head>
@@ -164,7 +168,10 @@ input[type=submit] {
     var i;
     
     for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
+      acc[i].addEventListener("click", panelDisplay);
+    }
+
+    function panelDisplay() {
         /* Toggle between adding and removing the "active" class,
         to highlight the button that controls the panel */
         this.classList.toggle("active");
@@ -176,20 +183,21 @@ input[type=submit] {
         } else {
           panel.style.display = "inline-block";
         }
-      });
     }
 
     function checkEvent(num){
         if(num == 1){
             document.getElementById("when").style.display = "inline-block";
-            document.getElementById("pax").style.display = "inline-block";  
+            document.getElementById("pax").style.display = "inline-block";
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
         } else {
             document.getElementById("when").style.display = "none"; 
             document.getElementById("pax").style.display = "none"; 
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
         }
     }
-
-    checkEvent(0);
 </script>
 </body>
 </html>
