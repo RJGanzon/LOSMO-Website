@@ -158,7 +158,6 @@
             }
             .menu__button {
                 background-color: black;
-                border: 0;
             }
 
         </style>
@@ -193,13 +192,13 @@
         <section class="menu__container">
             <nav>
                 <ul class="menu__nav">
-                <li class = "menu__type"><button class="menu__button"  id= "appetizer">Appetizers</button></li>
-                <li class = "menu__type"><button class="menu__button"  id = "main">Mains</li></button>
-                <li class = "menu__type"><button class="menu__button"  id = "solo">Solo Ricebowls & Pasta</button></li>
-                <li class = "menu__type"><button class="menu__button"  id = "dessert">Dessert & Others</button></li>
-                <li class = "menu__type"><button class="menu__button"  id = "cocktail">Cocktails</button></li>
-                <li class = "menu__type"><button class="menu__button"  id = "non">Non-alcoholic Drinks</button></li>
-                <li class = "menu__type"><button class="menu__button"  id = "liquors">Liquors</button></li>i>
+                <button class="menu__button menu__type"  id= "appetizer">Appetizers</button>
+                <button class="menu__button menu__type"  id = "main">Mains</button>
+                <button class="menu__button menu__type"  id = "solo">Solo Ricebowls & Pasta</button>
+                <button class="menu__button menu__type"  id = "dessert">Dessert & Others</button>
+                <button class="menu__button menu__type"  id = "cocktail">Cocktails</button>
+                <button class="menu__button menu__type"  id = "non">Non-alcoholic Drinks</button>
+                <button class="menu__button menu__type"  id = "liquors">Liquors</button>
                 </ul>
             </nav>
             <section class="menu__list__container">
@@ -639,10 +638,10 @@
                 button.addEventListener('click', e => {
                     var divId = e.target.id + 'Div';
                     var div = document.getElementById(divId);
-                    if (div.style.display === "block") {
-                        div.style.display = "none";
-                    } else {
+                    if (div.style.display === "none") {
                         div.style.display = "block";
+                    } else {
+                        div.style.display = "none";
                     }
                 })
             })
