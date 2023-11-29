@@ -29,11 +29,12 @@
                 margin:auto;
             }
             .menu__list__1 {
-                width:66vw;
+                width:67vw;
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
-                align-items: flex-start;                
+                align-items: flex-start;  
+                gap: 1vw;              
             }
 
             .menu__type {
@@ -159,7 +160,67 @@
             .menu__button {
                 background-color: black;
             }
-
+            #mainDiv {
+                display: none;
+            }
+            #soloDiv {
+                display: none;
+            }
+            #dessertDiv {
+                display: none;
+            }
+            #cocktailDiv {
+                display: none;
+            }
+            #nonDiv {
+                display: none;
+            }
+            #liquorDiv {
+                display: none;
+            }
+            #starterlist {
+                height:45vh;
+            }
+            #fingerlist {
+                height: 80vh;
+            }
+            #sharinglist {
+                height: 30vh;
+            }
+            #sololist {
+                height:65vh;
+            }
+            #pastalist {
+                height:40vh;
+            }
+            .menu__button:hover {
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+            }
+            .menu__button:active {
+            background-color: #eb19b0;
+            transition: 0.3s;
+            }
+            
+            @media(max-width:790px) {
+                .menu__list__1 {
+                    flex-direction: row;
+                }
+                .menu__item {
+                    grid-template-columns: 12vw 20vw 20vw 12vw;
+                    width: 80vw;
+                }
+                .menu__item__image {
+                    height: 12vw;
+                }
+                #starterlist,#fingerlist,#sharinglist,#sololist,#pastalist {
+                height:fit-content;
+                }
+                .menu__item--wrapped {
+                    border-top: 1px solid #d3d3d3;
+                    border-bottom: none;
+                }
         </style>
     </head>
     <body>
@@ -206,7 +267,7 @@
             <div class="menu__item__container" id="appetizerDiv">
                 <div>
                 <h3 class="menu__text--heading">Starters</h3>
-                <div class="menu__list__1" style = "height: 38vh;">
+                <div class="menu__list__1" id = "starterlist">
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>Grilled Caesar Salad</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">265.00</p></span>
@@ -246,7 +307,7 @@
 
                 <div>
                 <h3 class="menu__text--heading">Finger Food</h3>
-                <div class="menu__list__1" style = "height: 61vh;">
+                <div class="menu__list__1" id="fingerlist">
                 <div class="menu__item">
                     <div class="menu__item__image__container"><img class = "menu__item__image" src="MENU/6.png"></div>
                     <span class="menu__item__info"><p>Chicken Poppers</p></span>
@@ -301,7 +362,7 @@
                 
                 <div>
                 <h3 class="menu__text--heading">For Sharing</h3>
-                <div class="menu__list__1">
+                <div class="menu__list__1" id="sharinglist">
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>USDA Prime Ribeye 350g</p></span>
                     <span class="menu__item__price"><p class="menu__item__price"> 1,340.00</p></span>
@@ -336,7 +397,7 @@
 
                 <div>
                 <h3 class="menu__text--heading">Specials</h3>
-                <div class="menu__list__1">
+                <div class="menu__list__1" id = "speciallist">
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>Tomahawk 1kg</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">3,550.00</p></span>
@@ -362,7 +423,7 @@
 
                 <div>
                 <h3 class="menu__text--heading">Solo Ricebowls</h3>
-                <div class="menu__list__1">
+                <div class="menu__list__1" id = "sololist">
                 <div class="menu__item">
                     <span class="menu__item__info"><p>Surf n' Turf</p></span>
                     <span class="menu__item__price"><p class="menu__item__price"> 429.00</p></span>
@@ -403,7 +464,7 @@
 
                 <div>
                 <h3 class="menu__text--heading">Pasta</h3>
-                <div class="menu__list__1">
+                <div class="menu__list__1" id="pastalist">
                 <div class="menu__item">
                     <span class="menu__item__info--noimage"><p>Spaghetti Meatballs</p></span>
                     <span class="menu__item__price"><p class="menu__item__price">370.00</p></span>
@@ -633,15 +694,17 @@
         
         </section>
         <script>
+            var current = 'appetizerDiv';
             var buttons = document.querySelectorAll('button');
             buttons.forEach(button => {
                 button.addEventListener('click', e => {
                     var divId = e.target.id + 'Div';
                     var div = document.getElementById(divId);
-                    if (div.style.display === "none") {
-                        div.style.display = "block";
-                    } else {
-                        div.style.display = "none";
+                    if (div.style.display === "none" || div.style.display === "") {
+                        console.log(current);
+                        document.getElementById(current).style.display = "none";
+                        div.style.display = "flex";
+                        current = divId;
                     }
                 })
             })
