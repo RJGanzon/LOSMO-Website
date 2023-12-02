@@ -5,10 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Events</title>
   <link rel="stylesheet" href="CSS/events.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/footer.css">
   <link rel="shortcut icon" href="Images/losmologo.png" type="image/x-icon" />
 </head>
 <body>
-
+  <!----------------------HEADER------------------------------------------------------------- -->
+  <header>
+    <img class="header-logo" src="images/header-logo.png">
+    <img class="header-logo-mobile" src="images/losmo.png">
+    <nav>
+        <ul class="header-nav">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">HOURS & LOCATION</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="event.html">EVENTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+</header>
+<br><br><br><br>
   <!-- HERO SECTION: Netflix N’ Kill -->
   <section class="slideshow-container">
     <article class="mySlides fade">
@@ -84,6 +106,8 @@
     </article>
   </section>
 
+  <br><br>
+
   <!-- EVENT DESCRIPTION -->
   <div class="animate fadeInUp header1">
     <h1>FEATURED EVENTS</h1>
@@ -143,15 +167,14 @@
       </div>
     </div>
   </div>
+  <br><br>
 
   <!-- Gallery Hover effect -->
-  <section class="gallery-hover">
     <div class="animate fadeInUp header1">
-      <h1>LOSMO EVENT GALLERY</h1>
+      <h1>LOSMO EVENTS GALLERY</h1>
     </div>
-  </section>
 
-  <br>
+  <br><br><br>
 
   <div class="wrapper">
     <div class="media">
@@ -201,6 +224,19 @@
       <img src="Images/gallery12.jpg" alt="" />
     </div>
   </div>
+
+  <br><br><br>
+<!----------------------FOOTER------------------------------------------------------------- -->
+<footer>
+  <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
+  <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
+  <ul>
+    <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg" width="24" height="24"></a></li>
+    <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg" width="24" height="24"></a></li>
+    <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg" width="24" height="24"></a></li>
+  </ul>
+  <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
+</footer>
 
   <script src="Scripts/index.js"></script>
 </body>

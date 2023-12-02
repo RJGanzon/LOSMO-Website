@@ -122,19 +122,17 @@ body {
     animation: fade-up 1s;
 }
 
-p {
-    font-size: 18px;
-    margin: 0px;
-}
-
 #p1 {
-    font-size: 15px;
+    font-size: 1rem;
     font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
 }
 
 h2 {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 3.5rem;
 }
 
 a {
@@ -181,6 +179,10 @@ a {
 
     .description {
       max-width: 400px;
+    }
+
+    .description h2 {
+        font-size: 2.5rem;
     }
 
 /*------Gallery Hover effect---------*/
