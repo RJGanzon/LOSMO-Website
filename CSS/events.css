@@ -11,8 +11,10 @@
 
 body {
     margin: 0px;
+    background-color: black;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 /* -----------------HERO------------------------------------------------------------------------*/
@@ -39,10 +41,11 @@ body {
     font-size: 20px;
     padding: 25px;
     position: absolute;
-    margin-top: -400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    text-align: center; 
-    bottom: 8%; 
+    text-align: center;
 }
 
 /* The dots/bullets/indicators */
@@ -67,13 +70,13 @@ body {
     text-align: center;
     left: 0;
     right: 0;
-    margin-top: -40px;
+    bottom: 8%;
 }
 
 /* Fading animation */
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3s; 
 }
 
 .hero-link {
@@ -93,12 +96,24 @@ body {
 }
 
 @keyframes fade {
-    from {
-        opacity: .5
+    0% {
+        opacity: 0.5;
     }
 
-    to {
-        opacity: 1
+    25% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
+
+    75% {
+        opacity: 0.95;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -133,6 +148,41 @@ a {
     letter-spacing: 3px; 
 }
 
+/*------Event description---------*/
+.container {
+      display: flex;
+      height: 100%;
+    }
+
+    .image-container {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .description-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      font-family: 'Tilt Neon', sans-serif;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .description {
+      max-width: 400px;
+    }
+
 /*------Gallery Hover effect---------*/
 .gallery-hover {
     text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
@@ -143,18 +193,18 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: 'Tilt Neon', sans-serif;
-  } 
-
-.wrapper {
+  }
+  
+  .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-.media {
+  }
+  
+  .media {
     max-width: 300px;
     max-height: 200px;
     overflow: hidden;
@@ -162,42 +212,29 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.media img {
+    transition: transform 0.5s;
+  }
+  
+  .media img {
     max-width: 100%;
     height: auto;
-}
-
-.layer {
-    opacity: 0;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10px;
-    height: 90%;
-    background: #fff;
-    color: #151e3f;
-    transition: all 0.9s ease;
-}
-
-/* Separate block for p element */
-.layer p {
-    transition: all 0.9s ease;
-    transform: scale(0.1);
-}
-
-.media:hover .layer {
+  }
+  
+  .media:hover {
+    transform: scale(1.5); 
+    z-index: 1;
+  }
+  
+  .media:hover .layer {
     opacity: 0.8;
     width: 90%;
     transition: all 0.5s ease;
-}
-
-.media:hover .layer p {
+  }
+  
+  .media:hover .layer p {
     transform: scale(1);
     transition: all 0.9s ease;
-}
+  }
 
 /* -----------------FADE ANIMATIONS------------------------------------------------------------------------*/
 /*=== Trigger  ===*/
@@ -271,3 +308,11 @@ a {
     -moz-animation-delay: 0.5s;
     animation-delay: 0.5s;
     }
+
+h1 {
+    font-size: 3.5rem;
+  letter-spacing: 8px;
+  text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
+  color: white;
+  text-align: center;
+}
