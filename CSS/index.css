@@ -48,6 +48,9 @@ body {
     margin-left:1000px;
 
   }
+  .her0__button {
+    display: flex;
+  }
   
   /* The dots/bullets/indicators */
   .dot {
@@ -84,11 +87,13 @@ body {
     cursor: pointer;
     display: inline-block;
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 100000px;
+    background-color: rgba(27, 27, 27, 0.6);
     padding: 5px;
     margin-top: 10px;
     color: white;
     transition: all .5s ease;
+    text-align: center;
   }
   
   .hero-link:hover {
@@ -118,11 +123,24 @@ body {
     margin-right:5px;
   }
 
-  .slideshow-container h2, .hero-link {
+  .slideshow-container h2, .hero-link--text {
     text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
     letter-spacing: 3px; 
   }
-
+  .hero__img--button {
+    height: 18px; 
+    display: inline-block;
+    margin-left: 2px;
+  }
+  .hero__button {
+    display: flex;
+    margin: auto;
+    gap: 5px;
+  }
+  .hero-link--text {
+    margin-bottom: 2px;
+    font-size: smaller;
+  }
 
 /* -----------------Instagram Widget------------------------------------------------------------------------*/
 .Instagram-widget {
