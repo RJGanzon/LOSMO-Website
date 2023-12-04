@@ -48,9 +48,6 @@ body {
     margin-left:1000px;
 
   }
-  .her0__button {
-    display: flex;
-  }
   
   /* The dots/bullets/indicators */
   .dot {
@@ -82,21 +79,7 @@ body {
     animation-duration: 1.5s;
   }
   
-  .hero-link{
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    border-style: solid;
-    border-radius: 100000px;
-    background-color: rgba(27, 27, 27, 0.6);
-    padding: 5px;
-    margin-top: 10px;
-    color: white;
-    transition: all .5s ease;
-    text-align: center;
-  }
-  
-  .hero-link:hover {
+  .hero__button:hover {
     background-color: #eb19b0;
   }
   
@@ -130,16 +113,36 @@ body {
   .hero__img--button {
     height: 18px; 
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 6px;
+    margin-right: 5px;
+  }
+  
+  .hero-link--text {
+    font-size: smaller;
+    display:table-cell;
+    vertical-align:middle;
+    line-height: 1rem;
+  }
+
+  .button__flex {
+    margin-top: 1.8vh;
+    display: flex;
+    width: fit-content;
+    gap: 0.7vw;
   }
   .hero__button {
-    display: flex;
-    margin: auto;
-    gap: 5px;
-  }
-  .hero-link--text {
-    margin-bottom: 2px;
-    font-size: smaller;
+    display: table;
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 100000px;
+    background-color: rgba(27, 27, 27, 0.6);
+    color: white;
+    transition: all .5s ease;
+    padding: 4px;
+    line-height: 1rem;
+
   }
 
 /* -----------------Instagram Widget------------------------------------------------------------------------*/
@@ -324,6 +327,7 @@ body {
   color: whitesmoke;
   border: 1px solid transparent;
 }
+
 
 /*----------------------------------------Menu Index----------------------------------------------*/
 .Menu-section {
