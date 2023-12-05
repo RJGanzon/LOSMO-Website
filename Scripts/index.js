@@ -72,3 +72,22 @@ function showMenu(n) {
   }
   slides[indexSlide-1].style.display = "flex";
 }
+
+//Change icon on hero button
+var buttons = document.querySelectorAll('.hero__button');
+var temp = "";
+            buttons.forEach(a => {
+                a.addEventListener('mouseenter', e => {
+                  console.log(e.target.id);
+                  var image = "Images/" + e.target.id + "2.png";
+                      var img = a.querySelector('img'); 
+                      temp = img.src;
+                      img.src = image;
+                })
+                a.addEventListener('mouseleave', e => {
+                  console.log(e.target.id);
+                      var img = a.querySelector('img'); 
+                      img.src = temp;
+                })
+            })
+
