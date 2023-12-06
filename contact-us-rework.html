@@ -7,7 +7,7 @@
 }
 body{
     font-family: 'PT Sans Narrow';
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     background-color: black;
 }
@@ -25,9 +25,6 @@ body{
     width: 32vw;
     text-align: left;
     color: white;
-}
-h1 {
-    font-size: larger;
 }
 
 .accordion{
@@ -71,7 +68,7 @@ h1 {
 
 
 input[type=text], textarea {
-    color: #eb19b0;
+    color: white;
     width: 32vw;
     border: white solid 2px;
     margin-bottom: 10px;
@@ -80,14 +77,22 @@ input[type=text], textarea {
     resize: none;
     outline: none;
     font-size: 18px;
+    padding-left: 15px;
 }
 
 input[type=text]{
     padding: 5px;
+    padding-left: 15px;
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    
 }
 
 textarea{
-    height: 100px;
+    height: 150px;
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    padding-left: 15px;
 }   
 
 input[type=submit] {
@@ -98,6 +103,13 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     float: right;
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    padding-left: 15px;
+}
+input::placeholder {
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
 }
 
 .purpose {
@@ -108,11 +120,6 @@ input[type=submit] {
 .purpose-form {
     cursor: pointer;
     padding: 10px;
-}
-
-::placeholder{
-    opacity: 1;
-    font-size: 18px;
 }
 
 .acc-faq{
@@ -138,9 +145,12 @@ input[type=submit] {
 }
 h1 {
     color: white;
+    margin: 10px 0;
+    font-size: 26px;
 }
 p {
     color:white;
+    margin: 26px 0;
 }
 .faq--container {
     width: 32vw;
