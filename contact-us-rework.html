@@ -15,7 +15,7 @@ body{
     background-color: black;
 }
 
-.contact-us > .form, .faq{
+.contact-us > .form, .faq, .contact-us-titles{ 
     position: static;
     left: 0;
     right: 0;
@@ -111,14 +111,49 @@ input[type=submit] {
 #when, #pax{
     display: none;
 }
+
+.contact-title{
+    color: white;
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 80px;
+}
+
+.contact-us-titles {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+.title-description{
+    font-size: 25px;
+    margin: 0;
+}
+
+.title-heading{
+    text-align: center;
+    margin: 0;
+}
+
+
 </style>
 <title>Contact Us</title>
 </head>
 
 <body>
     <img src="Images/contac-us-image.jpg" style="height: 500px;">
+    <h1 class="contact-title">CONTACT US</h1>
     <section class="contact-us">
+
         <section class="form">
+        <span class="contact-us-titles"> 
+            <p class ="title-heading">Get in touch</p>
+            <p class="title-description">Lorem Ipsum Dolor Magandang Gabi</p>
+        </span>
+
         <form>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
             <input type="text" id="email" name="Email" placeholder="Email*" required>
@@ -147,6 +182,11 @@ input[type=submit] {
 
 
         <section class="faq">
+            <span class="contact-us-titles">
+                <p class ="title-heading">FAQ</p>
+                <p class="title-description">Lorem Ipsum Dolor Magandang Gabi</p>
+            </span>
+
             <span class="accordion acc-faq" style="margin-top: 3px;">What are your modes of payment?</span>
             <article class="panel panel-faq">•We accept cash, Gcash, bank transfers, and debit/credit cards.</article>
 
