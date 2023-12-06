@@ -2,41 +2,54 @@
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans Narrow">
 <style>
+* {
+    box-sizing: border-box;
+}
 body{
     font-family: 'PT Sans Narrow';
     font-size: 20px;
     margin: 0;
+    background-color: black;
 }
 
 .contact-us {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 32vw;
     background-color: black;
+    margin: 0 auto;
 }
 
 .contact-us > .form, .faq{
     position: static;
     left: 0;
     right: 0;
-    margin: 15px;
-    width: 850px;
+    width: 32vw;
     text-align: left;
     color: white;
 }
 
+
 .accordion{
-    left: 0;
-    right: 0;
     display: inline-block;
     background-color: #eee;
     color: black;
     cursor: pointer;
+    height:fit-content;
     padding: 18px;
-    width: 815px;
+    width: 32vw;
     outline: none;
     text-align: left;
     transition: 0.4s;
+}
+
+.accordion:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
 }
           
 .active, .accordion:hover {
@@ -48,7 +61,7 @@ body{
     right: 0;
     text-align: left;
     padding: 0 18px;
-    width: 815px;
+    width: 32vw;
     background-color: black;
     display: none;
     overflow: hidden;
@@ -57,7 +70,7 @@ body{
 
 input[type=text], textarea {
     color: #eb19b0;
-    width: 100%;
+    width: 32vw;
     border: white solid 2px;
     margin-bottom: 10px;
     margin-top: 3px;
@@ -82,11 +95,12 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 400px;
+    float: right;
 }
 
 .purpose {
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .purpose-form {
@@ -100,7 +114,7 @@ input[type=submit] {
 }
 
 .acc-faq{
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .panel-faq{
@@ -111,13 +125,36 @@ input[type=submit] {
 #when, #pax{
     display: none;
 }
+.contact--container {
+    width:80vw;
+    display: flex;
+    margin: 0 auto;
+}
+
+.contact--text {
+    width: 32vw;
+}
+h1 {
+    color: white;
+}
+p {
+    color:white;
+}
+.faq--container {
+    width: 32vw;
+    margin: 0 auto;
+}
 </style>
 <title>Contact Us</title>
 </head>
 
 <body>
-    <img src="Images/contac-us-image.jpg" style="height: 500px;">
+    <section class="contact--container">
     <section class="contact-us">
+        <section class="contact--text">
+            <h1>Get in Touch</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
         <section class="form">
         <form>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
@@ -134,7 +171,6 @@ input[type=submit] {
             </article>
             <br>
 
-
             <input type="text" id="Subject" name="Subject" placeholder="Subject*" required>
             <input type="text" id="when" name="When" placeholder="When*" required>
             <input type="text" id="pax" name="PAX" placeholder="PAX*" required>
@@ -144,32 +180,34 @@ input[type=submit] {
             <input type="submit" value="Submit">
         </form>
         </section>
-
-
+        </section>
+        <section class = "faq--container">
+        <section class="contact--text">
+            <h1>Frequently Asked Questions</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
         <section class="faq">
             <span class="accordion acc-faq" style="margin-top: 3px;">What are your modes of payment?</span>
-            <article class="panel panel-faq">•We accept cash, Gcash, bank transfers, and debit/credit cards.</article>
+            <article class="panel panel-faq">• We accept cash, Gcash, bank transfers, and debit/credit cards.</article>
 
             <span class="accordion acc-faq">Is there a dress code?</span>
-            <article class="panel panel-faq">•Slippers are not allowed for safety purposes. No loungewear please, always dress your best! ;)</article>
+            <article class="panel panel-faq">• Slippers are not allowed for safety purposes. No loungewear please, always dress your best! ;)</article>
 
             <span class="accordion acc-faq">Is there an entrance fee?</span>
-            <article class="panel panel-faq">•There is no entrance fee</article>
+            <article class="panel panel-faq">• There is no entrance fee</article>
 
             <span class="accordion acc-faq">Are your tables consumable?</span>
-            <article class="panel panel-faq">•Yes! tables are consumable every friday and saturday only. we have no table rates from tuesday to thursday and sunday.</article>
+            <article class="panel panel-faq">• Yes! tables are consumable every friday and saturday only. we have no table rates from tuesday to thursday and sunday.</article>
 
             <span class="accordion acc-faq">Do you offer towers?</span>
-            <article class="panel panel-faq">•No, our menu can be found on our social media accounts.</article>
+            <article class="panel panel-faq">• No, our menu can be found on our social media accounts.</article>
 
             <span class="accordion acc-faq">Do i need to make a reservation?</span>
-            <article class="panel panel-faq">•We accept walk-in customers but you can make a reservation to guarantee seats.</article>
-
-            <span class="accordion acc-faq">Can I hold my private event inside Losmo?</span>
-            <article class="panel panel-faq">•Yes! message us to know more about our private event packages.</article>
+            <article class="panel panel-faq">• We accept walk-in customers but you can make a reservation to guarantee seats.</article>
 
             <span class="accordion acc-faq">Should I bring my id?</span>
-            <article class="panel panel-faq">•Persons under 18 years of age are not allowed. Please bring a valid id for verification</article>
+            <article class="panel panel-faq">• Persons under 18 years of age are not allowed. Please bring a valid id for verification</article>
+        </section>
         </section>
     </section>
 
