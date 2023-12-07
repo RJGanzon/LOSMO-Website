@@ -4,12 +4,13 @@
 <style>
 * {
     box-sizing: border-box;
+    border: 1px solid red;
 }
 body{
     font-family: 'PT Sans Narrow';
     font-size: 18px;
     margin: 0;
-    background-color: black;
+    background-color: black;   
 }
 
 .contact-us {
@@ -105,6 +106,7 @@ input[type=submit] {
     float: right;
     font-family: 'PT Sans Narrow';
     font-size: 18px;
+    margin-top: 5px;
     padding-left: 15px;
 }
 input::placeholder {
@@ -158,17 +160,46 @@ p {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+
+    .contact--container {
+        flex-direction: column;
+        width: 80vw;
+    }
+    .accordion {
+        width: 80vw;
+    }
+    .panel {
+        width: 80vw;
+    }
+    input[type=text], textarea {
+        width: 80vw;
+    }
+    p {
+        width: 80vw;
+    }
+    .contact-us {
+        width: 80vw;
+    }
+    .contact-us > .form, .faq{ 
+        width: 80vw;
+    }
+    .faq {
+        width: 80vw;
+    }
+    .faq--container {
+        width: 80vw;
+    }
 </style>
 <title>Contact Us</title>
 </head>
 
 <body>
-
     <section class="contact--container">
     <section class="contact-us">
         <section class="contact--text">
             <h1>Get in Touch</h1>
-            <p>If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. You can also check out the FAQ section for commonly asked questions (and avoid embarassing yourself with an email!). We hope to hear from you!</p>
+            <p>If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. You can also check out the FAQ section below for commonly asked questions (and avoid embarassing yourself with an email!). We hope to hear from you!</p>
         </section>
         <section class="form">
         <form>
@@ -225,7 +256,7 @@ p {
         </section>
         </section>
     </section>
-
+    </main>
 
 <script>
 
