@@ -45,7 +45,7 @@ body {
     margin-top: -400px;
     width: 100%;
     text-align: left;
-    margin-left:1000px;
+    margin-left:800px;
 
   }
   
@@ -89,7 +89,7 @@ body {
   }
   
   .text {
-    margin-left:180px;
+    margin-left:190px;
     margin-bottom:0px;
     animation: fade-up 1s;
   }
@@ -348,7 +348,7 @@ body {
 }
 
 .image-opening .paragraph {
-  width: 45%;
+  width: 48%;
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: 1.2px;
@@ -383,6 +383,10 @@ body {
   align-items: center;
 }
 
+.drinkies img {
+  margin: 0;  
+}
+
 
 .drinkies .info {
   width: 28rem;
@@ -391,6 +395,7 @@ body {
 .drinkies h1 {
   font-size: 5.8rem;
   letter-spacing: 2px;
+  margin-bottom: 0;
 }
 
 .drinkies p {
@@ -438,8 +443,17 @@ body {
 
 
 @media(max-width:840px) {
+  .drinkies .info {
+    width: 20rem;
+  }
+
+  .text {
+    margin-left:140px;
+  }
   .aboutus p {
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.575rem;
   }
   .aboutus div {
     gap: 3.125rem;
@@ -448,11 +462,76 @@ body {
   .aboutus {
     margin-bottom: 5vh;
   }
+
+  .paragraph {
+    margin-right: 11rem;
+  }
+
+  .image-opening h1 {
+    font-size: 3.5rem;
+    width: 600px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 600px;
+    font-size: 1.1rem;
+  }
+
+  .drinkies {
+    gap: 3rem;
+  }
+
+  .drinks-section .info {
+    gap: .1rem;
+  }
+
+  .drinkies h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+  
+  .drinkies p {
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    width: 20rem; 
+  }
+
+  .drinks-section img {
+    height:70%;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 3.5rem;
+
+  }
+
+  .prev, .next {
+    top: 470%;
+  }
+
 }
 
 @media(max-width:790px) {
+
+  .drinkies {
+    gap: 1.5rem;
+    
+  }
+  .prev, .next {
+    top: 570%;
+  }
+
   .aboutus {
     margin-bottom:15vh;
+  }
+
+  .aboutus div {
+    gap: 3.10rem;
+  }
+
+  .aboutus h1 {
+    margin-bottom:35px;
   }
   
   .Upcoming-Events h1 {
@@ -461,29 +540,170 @@ body {
   
   .Upcoming-Events {
     align-items: center;
+    margin-bottom:30rem;
   }
 
   .event-container {
-    justify-content: center;
     align-items: center;
   }
 
   .event-container .card {
-    width: 90vw;
+    width: 43vw;
   }
 
   .card-2 {
     background-position: center;
   }
-}
+
 
   .event-container .butts {
     display:flex;
     justify-content: space-around;
   }
 
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:8rem;
+  }
+}  
+
+@media(max-width:690px) {
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 3rem;
+
+  }
+
+  .aboutus p {
+    font-size: .95rem
+  }
+
+  .paragraph {
+    margin-right: 5rem;
+  }
+
+  .drinkies {
+    gap: 1rem;
+  }
+
+  .drinkies h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .drinkies p {
+    font-size: .9rem;
+    letter-spacing: 1.2px;
+    width: 18rem; 
+  }
+
+  .drinks-section img {
+    height:60%;
+  }
+
+  .image-opening h1 {
+    font-size: 2.5rem;
+    width: 420px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 450px;
+    font-size: 1rem;
+    line-height: 25px;
+  }
+
+  .event-container {
+    justify-content: center;
+  }
+
+  .event-container .card {
+    width: 75vw;
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:13rem;
+    height: 1.2rem;
+  }
+
+  .Upcoming-Events {
+    margin-bottom: 900px;
+  }
+
+  .prev, .next {
+    top: 640%;
+  }
+}
+
+@media(max-width:590px) {
+
+  .aboutus {
+    margin-bottom: 9rem;
+  }
+  .aboutus p {
+    width:30.75rem; 
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:11rem;
+    height: 1.2rem;
+  }
+
+  .image-opening {
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .image-opening h1 {
+    font-size: 2.2rem;
+    width: 400px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 400px;
+    font-size: .9rem;
+    line-height: 25px;
+  }
+
+  .drinkies {
+    gap: .1rem;
+  }
+
+  .drinkies h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    width: 18rem;
+  }
+  
+  .drinkies p {
+    font-size: .9rem;
+    letter-spacing: 1.2px;
+    width: 18rem; 
+  }
+
+  .drinks-section img {
+    height:50%;
+  }
+
+  .prev, .next {
+    top: 655%;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 2.5rem;
+
+  }
+  
+}
+
+
+
 
 @media(max-width:479px) {
+  
   .aboutus p{
   width:19.29rem;
   }
