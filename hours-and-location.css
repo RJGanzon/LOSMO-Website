@@ -46,4 +46,5 @@ iframe.gmaps{
     width: 99.9%; 
     height: 40vh;
     border:0;
+    background-color: black;
 }
