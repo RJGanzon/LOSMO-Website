@@ -1,3 +1,14 @@
+//HEADER SCRIPT
+const headerE1 = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    headerE1.classList.add('header-scrolled');
+  }
+  else if (window.scrollY <= 200) {
+    headerE1.classList.remove('header-scrolled');
+  }
+});
+
 // SLIDING TRANSITION SCRIPT
 let slideIndex = 0;
 showSlides(slideIndex);

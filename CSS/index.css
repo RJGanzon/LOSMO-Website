@@ -145,11 +145,28 @@ body {
 
   }
 
+  .vidhero {
+    display:none;
+    height: 100vh;
+    width: 100%;
+  }
+  #myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  
+  }
+
 /* -----------------Instagram Widget------------------------------------------------------------------------*/
 .Instagram-widget {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   margin: 0;  
 
 }
@@ -262,6 +279,11 @@ body {
   border-radius: 5px;
 }
 
+.butts {
+  display:flex;
+  justify-content: space-around;
+}
+
 .card-image {
   background-color: #0000FF;
   height: 400px;
@@ -337,18 +359,17 @@ body {
 .image-opening {
   height: 500px;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../Images/menuindex.jpg);
-  display: block;
   background-position: center 40%;
   background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
 }
 
 .image-opening .paragraph {
-  width: 48%;
+  width: 50%;
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: 1.2px;
@@ -376,7 +397,7 @@ body {
 
 
 .drinkies {
-  height: 540px;
+  height: 83.98vh;
   display: none;
   justify-content: center;
   gap: 6rem;
@@ -469,12 +490,12 @@ body {
 
   .image-opening h1 {
     font-size: 3.5rem;
-    width: 600px;
+    width: 37.5rem;
     text-align: center;
   }
 
   .image-opening p {
-    width: 600px;
+    width: 37.5rem;
     font-size: 1.1rem;
   }
 
@@ -514,12 +535,20 @@ body {
 
 @media(max-width:790px) {
 
+  .slideshow-container {
+    display:none;
+  }
+
+  .vidhero {
+    display:block;
+  }
+
   .drinkies {
     gap: 1.5rem;
     
   }
   .prev, .next {
-    top: 570%;
+    top: 595%;
   }
 
   .aboutus {
@@ -540,34 +569,44 @@ body {
   
   .Upcoming-Events {
     align-items: center;
-    margin-bottom:30rem;
+    margin-bottom:60rem;
   }
 
   .event-container {
-    align-items: center;
+    justify-content: center;
   }
 
   .event-container .card {
-    width: 43vw;
+    width: 70vw;
   }
 
   .card-2 {
     background-position: center;
   }
 
-
-  .event-container .butts {
-    display:flex;
-    justify-content: space-around;
-  }
-
   .event-container .card .read-more,
   .event-container .card .reserve {
     width:8rem;
   }
-}  
+
+  
+}
+
+@media(max-width:740px) {
+  .image-opening h1 {
+    width: 35rem;
+  }
+
+  .image-opening p {
+    width: 35rem;
+  }
+}
 
 @media(max-width:690px) {
+
+  .aboutus {
+    margin-top:50px;
+  }
 
   .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
     font-size: 3rem;
@@ -611,10 +650,6 @@ body {
     width: 450px;
     font-size: 1rem;
     line-height: 25px;
-  }
-
-  .event-container {
-    justify-content: center;
   }
 
   .event-container .card {
@@ -694,22 +729,165 @@ body {
 
   .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
     font-size: 2.5rem;
-
   }
   
 }
 
 
+@media(max-width:490px) {
 
+  .event-container .card {
+    width: 90vw;
+  }
 
-@media(max-width:479px) {
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:11rem;
+    height: 1.2rem;
+  }
   
   .aboutus p{
-  width:19.29rem;
+  width:21.29rem;
   }
 
   .aboutus {
     margin-bottom: 35vh;
   }
 
+  .image-opening {
+    align-items: center;
+    margin-left: auto;
+    height: 300px;
+  }
+
+  .image-opening h1 {
+    margin-top: 50px;
+    font-size: 1.8rem;
+    width: 320px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 320px;
+    font-size: .70rem;
+    line-height: 17px;
+  }
+
+  .drinkies {
+    gap: 1rem;
+  }
+
+  .drinkies .info {
+    width: 14rem;
+  }
+
+  .drinkies h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    width: 15rem;
+  }
+  
+  .drinkies p {
+    font-size: .7rem;
+    letter-spacing: 1.2px;
+    width: 15rem; 
+  }
+
+  .drinks-section img {
+    height:40%;
+  }
+
+  .prev, .next {
+    top: 625%;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 2.0rem;
+  }
+}
+
+@media(max-width:390px) {
+  .image-opening {
+    align-items: center;
+    margin-left: auto;
+    height: 300px;
+  }
+
+  .image-opening h1 {
+    margin-top: 50px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    width: 280px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 280px;
+    font-size: .55rem;
+    line-height: 15px;
+  }
+
+  .drinkies {
+    gap: 1rem;
+    height:60vh;
+  }
+
+  .drinkies .info {
+    width: 12rem;
+  }
+
+  .drinkies h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    width: 12rem; 
+  }
+  
+  .drinkies p {
+    font-size: .7rem;
+    letter-spacing: 1.2px;
+    width: 12rem; 
+  }
+
+  .drinks-section img {
+    height:45%;
+  }
+
+  .prev, .next {
+    top: 608%;
+  }
+
+  .aboutus {
+    height: 60vh;
+    margin-bottom: 10vh;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 1.5rem;
+  }
+
+  .aboutus h1 {
+    margin-top:20px;
+  }
+
+  .aboutus p {
+    font-size: .5rem;
+    line-height: 1rem;
+  }
+  
+  .aboutus img {
+    max-height: 50%;
+    max-width: 50%;
+    overflow: hidden;
+    margin: 0%;
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:9rem;
+    height: 1.2rem;
+  }
+
+  .prev, .next {
+    top: 563%;
+  }
 }

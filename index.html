@@ -11,7 +11,7 @@
 <body>
   
   <!----------------------HEADER------------------------------------------------------------- -->
-    <header>
+    <header class="header">
       <img class="header-logo" src="images/header-logo.png">
       <img class="header-logo-mobile" src="images/losmo.png">
       <nav>
@@ -54,11 +54,17 @@
     <div class="hero__button" id="reserve"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link"><img class = "hero__img--button" src="Images/reserve.png"><span class="hero-link--text">Get a Table</span></a></div>
    </div>
   </article>
-  <article class = "slide">
+  <article class ="slide">
     <span class="dot" onclick="currentSlide(0);"></span> 
     <span class="dot" onclick="currentSlide(1);"></span> 
     <span class="dot" onclick="currentSlide(2);"></span> 
   </article>
+  </section>
+
+  <section class="vidhero">
+  <video autoplay muted loop id="myVideo">
+    <source src="Images/herovid.mp4" type="video/mp4">
+  </video>
   </section>
   <!-----------------------About us----------------------------------------------------------------------------->
   <section class="aboutus">
@@ -180,18 +186,18 @@
   <!-----------------------Instagram Widget----------------------------------------------------------------------------->
   <section class="Instagram-widget">
     <h1>Follow LOSMO on Instagram</h1>
-    <iframe src="https://embed.fouita.com/widget/0xedcfe/fthjd210a" 
-  title="InstagramFeedLoadMore" width="100%" height="800" frameborder="0" >
-  </iframe>
+    <br><br>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-1031e9fc-57a5-46cc-a69d-ae26436d8367" data-elfsight-app-lazy></div>
     </section>
     <!----------------------FOOTER------------------------------------------------------------- -->
   <footer>
     <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
     <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
     <ul>
-      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg" width="24" height="24"></a></li>
-      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg" width="24" height="24"></a></li>
-      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg" width="24" height="24"></a></li>
+      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg"></a></li>
+      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg"></a></li>
+      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg"></a></li>
     </ul>
     <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
   </footer>
