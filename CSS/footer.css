@@ -49,3 +49,22 @@ margin-top: 15px;
 margin-left: 48px;
 margin-bottom: 8px;
 }
+
+@media(max-width:490px) {
+    footer {
+        width: 90%;
+    }
+
+    footer .footertext {
+        font-size: 10px;
+    }
+    footer #copyright{
+    font-size: 9px;
+    margin-left:13px;
+    }
+
+    footer img {
+        height: 12px;
+        width: 12px;
+    }
+}

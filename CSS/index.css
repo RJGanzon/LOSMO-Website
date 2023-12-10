@@ -45,7 +45,7 @@ body {
     margin-top: -400px;
     width: 100%;
     text-align: left;
-    margin-left:1000px;
+    margin-left:800px;
 
   }
   
@@ -89,7 +89,7 @@ body {
   }
   
   .text {
-    margin-left:180px;
+    margin-left:190px;
     margin-bottom:0px;
     animation: fade-up 1s;
   }
@@ -145,11 +145,28 @@ body {
 
   }
 
+  .vidhero {
+    display:none;
+    height: 100vh;
+    width: 100%;
+  }
+  #myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  
+  }
+
 /* -----------------Instagram Widget------------------------------------------------------------------------*/
 .Instagram-widget {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   margin: 0;  
 
 }
@@ -262,6 +279,11 @@ body {
   border-radius: 5px;
 }
 
+.butts {
+  display:flex;
+  justify-content: space-around;
+}
+
 .card-image {
   background-color: #0000FF;
   height: 400px;
@@ -337,18 +359,17 @@ body {
 .image-opening {
   height: 500px;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../Images/menuindex.jpg);
-  display: block;
   background-position: center 40%;
   background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
 }
 
 .image-opening .paragraph {
-  width: 45%;
+  width: 50%;
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: 1.2px;
@@ -376,11 +397,15 @@ body {
 
 
 .drinkies {
-  height: 540px;
+  height: 83.98vh;
   display: none;
   justify-content: center;
   gap: 6rem;
   align-items: center;
+}
+
+.drinkies img {
+  margin: 0;  
 }
 
 
@@ -391,6 +416,7 @@ body {
 .drinkies h1 {
   font-size: 5.8rem;
   letter-spacing: 2px;
+  margin-bottom: 0;
 }
 
 .drinkies p {
@@ -438,8 +464,17 @@ body {
 
 
 @media(max-width:840px) {
+  .drinkies .info {
+    width: 20rem;
+  }
+
+  .text {
+    margin-left:140px;
+  }
   .aboutus p {
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.575rem;
   }
   .aboutus div {
     gap: 3.125rem;
@@ -448,11 +483,84 @@ body {
   .aboutus {
     margin-bottom: 5vh;
   }
+
+  .paragraph {
+    margin-right: 11rem;
+  }
+
+  .image-opening h1 {
+    font-size: 3.5rem;
+    width: 37.5rem;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 37.5rem;
+    font-size: 1.1rem;
+  }
+
+  .drinkies {
+    gap: 3rem;
+  }
+
+  .drinks-section .info {
+    gap: .1rem;
+  }
+
+  .drinkies h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+  
+  .drinkies p {
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    width: 20rem; 
+  }
+
+  .drinks-section img {
+    height:70%;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 3.5rem;
+
+  }
+
+  .prev, .next {
+    top: 470%;
+  }
+
 }
 
 @media(max-width:790px) {
+
+  .slideshow-container {
+    display:none;
+  }
+
+  .vidhero {
+    display:block;
+  }
+
+  .drinkies {
+    gap: 1.5rem;
+    
+  }
+  .prev, .next {
+    top: 595%;
+  }
+
   .aboutus {
     margin-bottom:15vh;
+  }
+
+  .aboutus div {
+    gap: 3.10rem;
+  }
+
+  .aboutus h1 {
+    margin-bottom:35px;
   }
   
   .Upcoming-Events h1 {
@@ -461,35 +569,325 @@ body {
   
   .Upcoming-Events {
     align-items: center;
+    margin-bottom:60rem;
   }
 
   .event-container {
     justify-content: center;
-    align-items: center;
   }
 
   .event-container .card {
-    width: 90vw;
+    width: 70vw;
   }
 
   .card-2 {
     background-position: center;
   }
-}
 
-  .event-container .butts {
-    display:flex;
-    justify-content: space-around;
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:8rem;
   }
 
+  
+}
 
-@media(max-width:479px) {
+@media(max-width:740px) {
+  .image-opening h1 {
+    width: 35rem;
+  }
+
+  .image-opening p {
+    width: 35rem;
+  }
+}
+
+@media(max-width:690px) {
+
+  .aboutus {
+    margin-top:50px;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 3rem;
+
+  }
+
+  .aboutus p {
+    font-size: .95rem
+  }
+
+  .paragraph {
+    margin-right: 5rem;
+  }
+
+  .drinkies {
+    gap: 1rem;
+  }
+
+  .drinkies h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .drinkies p {
+    font-size: .9rem;
+    letter-spacing: 1.2px;
+    width: 18rem; 
+  }
+
+  .drinks-section img {
+    height:60%;
+  }
+
+  .image-opening h1 {
+    font-size: 2.5rem;
+    width: 420px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 450px;
+    font-size: 1rem;
+    line-height: 25px;
+  }
+
+  .event-container .card {
+    width: 75vw;
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:13rem;
+    height: 1.2rem;
+  }
+
+  .Upcoming-Events {
+    margin-bottom: 900px;
+  }
+
+  .prev, .next {
+    top: 640%;
+  }
+}
+
+@media(max-width:590px) {
+
+  .aboutus {
+    margin-bottom: 9rem;
+  }
+  .aboutus p {
+    width:30.75rem; 
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:11rem;
+    height: 1.2rem;
+  }
+
+  .image-opening {
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .image-opening h1 {
+    font-size: 2.2rem;
+    width: 400px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 400px;
+    font-size: .9rem;
+    line-height: 25px;
+  }
+
+  .drinkies {
+    gap: .1rem;
+  }
+
+  .drinkies h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    width: 18rem;
+  }
+  
+  .drinkies p {
+    font-size: .9rem;
+    letter-spacing: 1.2px;
+    width: 18rem; 
+  }
+
+  .drinks-section img {
+    height:50%;
+  }
+
+  .prev, .next {
+    top: 655%;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 2.5rem;
+  }
+  
+}
+
+
+@media(max-width:490px) {
+
+  .event-container .card {
+    width: 90vw;
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:11rem;
+    height: 1.2rem;
+  }
+  
   .aboutus p{
-  width:19.29rem;
+  width:21.29rem;
   }
 
   .aboutus {
     margin-bottom: 35vh;
   }
 
+  .image-opening {
+    align-items: center;
+    margin-left: auto;
+    height: 300px;
+  }
+
+  .image-opening h1 {
+    margin-top: 50px;
+    font-size: 1.8rem;
+    width: 320px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 320px;
+    font-size: .70rem;
+    line-height: 17px;
+  }
+
+  .drinkies {
+    gap: 1rem;
+  }
+
+  .drinkies .info {
+    width: 14rem;
+  }
+
+  .drinkies h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    width: 15rem;
+  }
+  
+  .drinkies p {
+    font-size: .7rem;
+    letter-spacing: 1.2px;
+    width: 15rem; 
+  }
+
+  .drinks-section img {
+    height:40%;
+  }
+
+  .prev, .next {
+    top: 625%;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 2.0rem;
+  }
+}
+
+@media(max-width:390px) {
+  .image-opening {
+    align-items: center;
+    margin-left: auto;
+    height: 300px;
+  }
+
+  .image-opening h1 {
+    margin-top: 50px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    width: 280px;
+    text-align: center;
+  }
+
+  .image-opening p {
+    width: 280px;
+    font-size: .55rem;
+    line-height: 15px;
+  }
+
+  .drinkies {
+    gap: 1rem;
+    height:60vh;
+  }
+
+  .drinkies .info {
+    width: 12rem;
+  }
+
+  .drinkies h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    width: 12rem; 
+  }
+  
+  .drinkies p {
+    font-size: .7rem;
+    letter-spacing: 1.2px;
+    width: 12rem; 
+  }
+
+  .drinks-section img {
+    height:45%;
+  }
+
+  .prev, .next {
+    top: 608%;
+  }
+
+  .aboutus {
+    height: 60vh;
+    margin-bottom: 10vh;
+  }
+
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 1.5rem;
+  }
+
+  .aboutus h1 {
+    margin-top:20px;
+  }
+
+  .aboutus p {
+    font-size: .5rem;
+    line-height: 1rem;
+  }
+  
+  .aboutus img {
+    max-height: 50%;
+    max-width: 50%;
+    overflow: hidden;
+    margin: 0%;
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:9rem;
+    height: 1.2rem;
+  }
+
+  .prev, .next {
+    top: 563%;
+  }
 }
