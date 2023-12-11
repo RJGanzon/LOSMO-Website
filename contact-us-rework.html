@@ -81,7 +81,7 @@ input[type=text], textarea {
     background-color: black;
     resize: none;
     outline: none;
-    font-size: 18px;
+    font-size: 1rem;
     padding-left: 15px;
     line-height: 1.6;
 }
@@ -90,14 +90,14 @@ input[type=text]{
     padding: 5px;
     padding-left: 15px;
     font-family: 'PT Sans Narrow';
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
 textarea{
     height: 150px;
     font-family: 'PT Sans Narrow';
-    font-size: 18px;
+    font-size: 1rem;
     padding-left: 15px;
     line-height: 1.6;
 }   
@@ -111,16 +111,13 @@ input[type=submit] {
     cursor: pointer;
     float: right;
     font-family: 'PT Sans Narrow';
-    font-size: 18px;
+    font-size: 1rem;
     margin-top: 5px;
-    padding-left: 15px;
 }
 input::placeholder {
     font-family: 'PT Sans Narrow';
-    font-size: 18px;
+    font-size: 1remx;
 }
-
-
 
 .acc-faq{
     margin: 10px 0;
@@ -144,12 +141,12 @@ input::placeholder {
 .contact--text {
     width: 32vw;
 }
-h1 {
+.contact--heading {
     color: white;
     margin: 10px 0;
-    font-size: 26px;
+    font-size: 1.6rem;
 }
-p {
+.faq--para {
     color:white;
     margin: 26px 0;
     line-height: 1.6;
@@ -198,7 +195,7 @@ article {
     input[type=text], textarea {
         width: 80vw;
     }
-    p {
+    .faq--para {
         width: 80vw;
     }
     .contact-us {
@@ -217,19 +214,50 @@ article {
     width: 80vw;
     margin: 14vh auto 0;
     }
+    @media(max-width:860px) {
+        * {
+                    font-size: 17px;
+                }
+    }
+    @media(max-width:440px) {
+        * {
+                    font-size: 16px;
+                }
+    }
 </style>
 <title>Contact Us</title>
 </head>
 
 <body>
+    <!----------------------HEADER------------------------------------------------------------- -->
+    <header class="header">
+        <img class="header-logo" src="images/header-logo.png">
+        <img class="header-logo-mobile" src="images/losmo.png">
+        <nav>
+            <ul class="header-nav">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HOURS & LOCATION</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="event.html">EVENTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </header>
+    <!----------------------CONTACT--------------------------------------------------------- -->
     <section class="hero">
-    <h1>CONTACT US</h1>
+    <h1 class="contact--heading">CONTACT US</h1>
     </section>
     <section class="contact--container">
     <section class="contact-us">
         <section class="contact--text">
-            <h1>Get in Touch</h1>
-            <p>If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. You can also check out the FAQ section below for commonly asked questions (and avoid embarassing yourself with an email!). We hope to hear from you!</p>
+            <h1 class="contact--heading">Get in Touch</h1>
+            <p class="faq--para">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. You can also check out the FAQ section below for commonly asked questions (and avoid embarassing yourself with an email!). We hope to hear from you!</p>
         </section>
         <section class="form">
         <form>
@@ -258,8 +286,8 @@ article {
         </section>
         <section class = "faq--container">
         <section class="contact--text">
-            <h1>Frequently Asked Questions</h1>
-            <p>Have a question? Already answered! Below are frequently asked questions. Please read the section thouroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <h1 class="contact--heading">Frequently Asked Questions</h1>
+            <p class="faq--para">Have a question? Already answered! Below are frequently asked questions. Please read the section thouroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
         </section>
         <section class="faq">
             <span class="accordion acc-faq" style="margin-top: 3px;">What are your modes of payment?</span>
@@ -286,6 +314,17 @@ article {
         </section>
     </section>
     </main>
+    <!----------------------FOOTER------------------------------------------------------------- -->
+  <footer>
+    <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
+    <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
+    <ul>
+      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg"></a></li>
+      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg"></a></li>
+      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg"></a></li>
+    </ul>
+    <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
+  </footer>
 <script>
 
     var acc = document.getElementsByClassName("accordion");
@@ -322,16 +361,16 @@ article {
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
         }
     }
-</script>
-<!-- Hero Function -->
-  <script src="Scripts/index.js"></script>
-  <script type="Scripts/index.js">
-    externalFunction();
-  </script>
-  <script src="Scripts/header.js"></script>
-  <script type="Scripts/header.js">
-    externalFunction();
-  </script>
 
+            const headerE1 = document.querySelector('.header');
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 200) {
+                headerE1.classList.add('header-scrolled');
+              }
+              else if (window.scrollY <= 200) {
+                headerE1.classList.remove('header-scrolled');
+              }
+            });
+</script>
 </body>
 </html>
