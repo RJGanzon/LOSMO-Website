@@ -425,11 +425,16 @@ body {
 }
 
 /* Next & previous buttons */
+
+.prevnextbutt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 410%;
-  width: auto;
   margin-top: 22px;
   padding: 16px;
   color: white;
@@ -441,7 +446,6 @@ body {
 }
 
 .next {
-  right: 0;
   border-radius: 3px 0 0 3px;
 }
 
