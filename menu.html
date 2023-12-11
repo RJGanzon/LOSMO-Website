@@ -349,6 +349,27 @@
                     display: block;
                 } */
             }
+            @media(max-width:414px) {
+                .menu__list__2 {
+                    flex-direction: column;
+                    width: 86vw;
+                }
+                .menu__list__1 {
+                    width: 86vw;
+                    flex-direction: row;
+                }
+                .menu__item__container {
+                    width: 86vw;
+                }
+
+                .menu__item {
+                    grid-template-columns: 12vw 30vw 30vw 12vw;
+                    width: 86vw;
+                }
+                #sercharge {
+                    padding-right: 7vw;
+                }
+            }
 
             #menu__hero {
                 display: flex;
@@ -1158,7 +1179,7 @@
                     var menuTypeElements = document.getElementsByClassName("menu__type");
                         for (var i = 0; i < menuTypeElements.length; i++) {
                             menuTypeElements[i].style.display = "none";
-                        }
+                        }   
                 }
             }
 
