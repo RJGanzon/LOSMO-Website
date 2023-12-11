@@ -235,7 +235,7 @@ body {
 
 /* -----------------Upcoming Events------------------------------------------------------------------------*/
 .Upcoming-Events {
-  height: 750px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
@@ -351,6 +351,7 @@ body {
 }
 
 
+
 /*----------------------------------------Menu Index----------------------------------------------*/
 .Menu-section {
   width: 100%;
@@ -428,7 +429,7 @@ body {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 410%;
+  top: 300%;
   width: auto;
   margin-top: 22px;
   padding: 16px;
@@ -891,3 +892,177 @@ body {
     top: 563%;
   }
 }
+
+/*----------------------------------------contact Index----------------------------------------------*/
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  width: 32vw;
+  background-color: black;
+}
+
+.contact-us > .form, .faq{ 
+  position: static;
+  left: 0;
+  right: 0;
+  width: 32vw;
+  text-align: left;
+  color: white;
+}
+
+.accordion{
+  display: inline-block;
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  height:fit-content;
+  padding: 15px;
+  width: 32vw;
+  outline: none;
+  text-align: left;
+  transition: 0.4s;
+  font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    margin: 0;
+}
+
+.accordion:after {
+content: '\002B';
+font-weight: bold;
+float: right;
+margin-left: 5px;
+}
+
+.active:after {
+content: "\2212";
+}
+        
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  left: 0;
+  right: 0;
+  text-align: left;
+  padding: 0 18px;
+  width: 32vw;
+  background-color: black;
+  display: none;
+  overflow: hidden;
+}
+.acc-faq{
+  margin: 10px 0;
+}
+
+.contact--container {
+  width:80vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 8vw;
+  
+}
+.faq--container {
+  width: 32vw;
+  margin: 0 auto;
+}
+.hero__faq--container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 72vw;
+  margin:2vh auto 8vh;
+  text-align: center;
+}
+
+.contact--text {
+  width: 32vw;
+}
+.contact__button {
+  font-family: 'PT Sans Narrow', sans-serif;
+  transition: all .5s ease;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid white;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  background-color : transparent;
+  padding: 10px 7px 10px 10px;
+  outline: none;
+  border-radius: 4px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  width: fit-content;
+  margin: auto;
+  text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
+}
+.contact__button--left {
+  margin: 0;
+}
+.contact__button:hover{
+  color: black;
+  background-color: #fff;
+}
+
+.contact__header {
+  color: white;
+    margin: 10px 0;
+    font-size: 26px;
+}
+.contact__para {
+  color:white;
+  margin: 10px 0 20px;
+}
+  
+@media screen and (max-width: 768px) {
+  #contact__faq {
+    
+  }
+  .contact--container {
+      flex-direction: column;
+      width: 80vw;
+  }
+  .contact__button--left {
+    margin: auto;
+  }
+  .accordion {
+      width: 80vw;
+  }
+  .contact--text{
+    text-align: center;
+    margin: auto;
+    width: 80vw;
+  }
+  .panel {
+      width: 80vw;
+  }
+  input[type=text], textarea {
+      width: 80vw;
+  }
+  .contact__header {
+      width: 80vw;
+  }
+  .contact-us {
+      width: 80vw;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
+  }
+  .contact-us > .faq{ 
+      width: 80vw;
+      margin: auto;
+  }
+  .faq {
+      width: 80vw;
+      margin: auto;
+  }
+  .faq--container {
+      width: 80vw;
+  }
+  .hero__faq--container {
+      width: 80vw;
+      margin: 14vh auto 0;
+  }
