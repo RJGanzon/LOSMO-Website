@@ -1015,7 +1015,7 @@ content: "\2212";
 
   .aboutus {
     height: 60vh;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
 
   .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
@@ -1027,8 +1027,8 @@ content: "\2212";
   }
 
   .aboutus p {
-    font-size: .5rem;
-    line-height: 1rem;
+    font-size: .8rem;
+    line-height: 1.2rem;
   }
   
   .aboutus img {
