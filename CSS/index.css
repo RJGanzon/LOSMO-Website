@@ -904,8 +904,8 @@ body {
 
 /*----------------------------------------contact Index----------------------------------------------*/
 #contact__faq {
-  margin-top:20vh;
-  margin-bottom: 20vh;
+  margin-top:10vh;
+  margin-bottom: 10vh;
 }
 
 .contact-us {
@@ -937,7 +937,7 @@ body {
   text-align: left;
   transition: 0.4s;
   font-family: 'PT Sans Narrow';
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin: auto;
 }
 
@@ -1027,17 +1027,20 @@ content: "\2212";
     font-size: 26px;
 }
 .contact__para {
+  line-height: 1.6;
   color:white;
   margin: 10px 0 20px;
 }
   
 @media screen and (max-width: 768px) {
   #contact__faq {
-    
+    margin-top:0;
+    margin-bottom: 4vh;
   }
   .contact--container {
       flex-direction: column;
       width: 80vw;
+      gap: 0;
   }
   .contact__button--left {
     margin: auto;
@@ -1078,6 +1081,15 @@ content: "\2212";
   }
   .hero__faq--container {
       width: 80vw;
-      margin: 14vh auto 0;
+      margin: 4vh auto 0;
+  }
+  .contact__button {
+    margin: 1rem auto 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact__para {
+    text-align: justify;
   }
 }
