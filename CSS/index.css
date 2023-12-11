@@ -920,6 +920,7 @@ body {
 }
 
 .accordion{
+  box-sizing: border-box;
   display: inline-block;
   background-color: #eee;
   color: black;
@@ -931,8 +932,8 @@ body {
   text-align: left;
   transition: 0.4s;
   font-family: 'PT Sans Narrow';
-    font-size: 18px;
-    margin: 0;
+    font-size: 1.1rem;
+    margin: auto;
 }
 
 .accordion:after {
