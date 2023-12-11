@@ -527,6 +527,7 @@ content: "\2212";
 }
 
 .panel {
+  box-sizing: border-box;
   left: 0;
   right: 0;
   text-align: left;
