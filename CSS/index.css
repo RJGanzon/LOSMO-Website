@@ -398,17 +398,16 @@ body {
 
 
 .drinkies {
-  height: 83.98vh;
+  height: 80.98vh;
   display: none;
   justify-content: center;
   gap: 6rem;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .drinkies img {
   margin: 0;  
 }
-
 
 .drinkies .info {
   width: 28rem;
@@ -426,11 +425,21 @@ body {
 }
 
 /* Next & previous buttons */
+
+.prevnextbutt {
+  display: flex;
+  justify-content: center;
+}
+
+.prevnextbutt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 300%;
-  width: auto;
   margin-top: 22px;
   padding: 16px;
   color: white;
@@ -442,7 +451,6 @@ body {
 }
 
 .next {
-  right: 0;
   border-radius: 3px 0 0 3px;
 }
 
@@ -971,6 +979,7 @@ content: "\2212";
 .hero__faq--container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 72vw;
   margin:2vh auto 8vh;
@@ -1066,3 +1075,4 @@ content: "\2212";
       width: 80vw;
       margin: 14vh auto 0;
   }
+}
