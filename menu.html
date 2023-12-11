@@ -210,40 +210,39 @@
                 width: 67vw;
             }
             @media(max-height:655px) {
-                .menu__list__2 {
-                    flex-direction: column;
-                    width: 67vw;
-                }
-                .menu__list__1 {
-                    width: 67vw;
-                    flex-direction: row;
-                }
-                .menu__item__container {
-                    width: 80vw;
-                }
-                .menu__item {
-                    grid-template-columns: 12vw 20vw 20vw 12vw;
-                    width: 80vw;
-                }
-                .menu__item__image {
-                    height: 12vw;
-                }
-                #starterlist,#fingerlist,#sharinglist,#sololist,#pastalist,#cheesecakelist,#icecreamlist,#addonlist,#cigarettelist,#cocktaillist,#classiclist,#beerlist,#shooterlist,#tequilalist,#vodkalist,#ginlist,#liquorlist,#champagnelist,#nonalcoholiclist {
-                height:fit-content;
-                }
-                .menu__text--heading{
-                    padding:0
-                }
-                .menu__item--wrapped {
-                    border-top: 1px solid #d3d3d3;
-                    border-bottom: none;
-                }
                 #sercharge {
                 padding-right: 15.8vw;
                 }
                 img.menu__item__image--whole {
                 height: 33vh;
                 width: 67vw;
+                }
+            }
+            @media(max-height:655px) and (max-width:1080px) {
+                #sercharge {
+                padding-right: 15.8vw;
+                }
+                img.menu__item__image--whole {
+                height: 33vh;
+                width: 67vw;
+                }
+                .menu__button {
+                    width: 67vw;
+                    margin: auto;
+                    cursor: pointer;
+                    display: none;
+                }
+                .menu__nav {
+                    gap:0;
+                    flex-direction: column;
+                    margin: auto;   
+                }
+                #type::after {
+                    float: right;
+                    content: "▾";
+                }
+                #type {
+                    display: inline-block;
                 }
             }
             @media(max-width:1200px) and (min-height:655px) {
@@ -1175,7 +1174,7 @@
                         }
             }
             function closedropdownmenu() {
-                if (window.innerWidth < 860) {
+                if (window.innerWidth <1080) {
                     var menuTypeElements = document.getElementsByClassName("menu__type");
                         for (var i = 0; i < menuTypeElements.length; i++) {
                             menuTypeElements[i].style.display = "none";
@@ -1184,9 +1183,9 @@
             }
 
             function changeWindowsize() {
-                if (window.innerWidth > 860) {
+                if (window.innerWidth > 1080) {
                     dropdownmenu();
-                }   else {
+                }   {
                     closedropdownmenu();
                 }
             }
