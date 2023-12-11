@@ -382,7 +382,7 @@
         
         <section class="menu__container">
             <nav>
-                <ul class="menu__nav">
+                <ul class="menu__nav" onmouseleave="closedropdownmenu()">
                 <button class="menu__button" id ="type" onmouseover="dropdownmenu()">Appetizers</button>
                 <button class="menu__button menu__type" id = "appetizer">Appetizers</button>
                 <button class="menu__button menu__type" id = "main">Mains</button>
@@ -1153,6 +1153,23 @@
                             menuTypeElements[i].style.display = "block";
                         }
             }
+            function closedropdownmenu() {
+                if (window.innerWidth < 860) {
+                    var menuTypeElements = document.getElementsByClassName("menu__type");
+                        for (var i = 0; i < menuTypeElements.length; i++) {
+                            menuTypeElements[i].style.display = "none";
+                        }
+                }
+            }
+
+            function changeWindowsize() {
+                if (window.innerWidth > 860) {
+                    dropdownmenu();
+                }   else {
+                    closedropdownmenu();
+                }
+            }
+            window.addEventListener("resize", changeWindowsize);
 
         </script>
     </body>
