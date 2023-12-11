@@ -65,7 +65,6 @@ body{
     left: 0;
     right: 0;
     text-align: left;
-    padding: 0 18px;
     width: 32vw;
     background-color: black;
     display: none;
@@ -84,6 +83,7 @@ input[type=text], textarea {
     outline: none;
     font-size: 18px;
     padding-left: 15px;
+    line-height: 1.6;
 }
 
 input[type=text]{
@@ -91,7 +91,7 @@ input[type=text]{
     padding-left: 15px;
     font-family: 'PT Sans Narrow';
     font-size: 18px;
-    
+    line-height: 1.6;
 }
 
 textarea{
@@ -99,6 +99,7 @@ textarea{
     font-family: 'PT Sans Narrow';
     font-size: 18px;
     padding-left: 15px;
+    line-height: 1.6;
 }   
 
 input[type=submit] {
@@ -119,15 +120,7 @@ input::placeholder {
     font-size: 18px;
 }
 
-.purpose {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
 
-.purpose-form {
-    cursor: pointer;
-    padding: 10px;
-}
 
 .acc-faq{
     margin: 10px 0;
@@ -159,6 +152,7 @@ h1 {
 p {
     color:white;
     margin: 26px 0;
+    line-height: 1.6;
 }
 .faq--container {
     width: 32vw;
@@ -170,6 +164,23 @@ p {
 }
 header {
     top: 0%;
+}
+.purpose {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.purpose-form {
+    cursor: pointer;
+}
+.purpose::after {
+    content: "▾";
+}
+article {
+    line-height: 1.6;
+}
+.purpose__choice {
+    padding: 0;
+    line-height: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -211,27 +222,6 @@ header {
 </head>
 
 <body>
-    <!----------------------HEADER--------------------------------------------------------------->
-    <header>
-      <img class="header-logo" src="images/header-logo.png">
-      <img class="header-logo-mobile" src="images/losmo.png">
-      <nav>
-          <ul class="header-nav">
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">HOURS & LOCATION</a></li>
-              <li><a href="menu.html">MENU</a></li>
-              <li><a href="event.html">EVENTS</a></li>
-              <li><a href="#">CONTACT</a></li>
-          </ul>
-      </nav>
-      <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </header>
-
     <section class="hero">
     <h1>CONTACT US</h1>
     </section>
@@ -250,10 +240,9 @@ header {
 
             <span class="accordion purpose">Purpose</span>
             <article class="panel purpose-form">
-                <span onclick="checkEvent(0)"> Inquiry </span>
+                <span class = "purpose__choice" onclick="checkEvent(0)"> Inquiry </span>
                 <hr>
-                <span onclick="checkEvent(1)"> Private Event </span>
-                <p></p>
+                <span class = "purpose__choice" onclick="checkEvent(1)"> Private Event </span>
             </article>
             <br>
 
@@ -297,18 +286,6 @@ header {
         </section>
     </section>
     </main>
-    <!----------------------FOOTER------------------------------------------------------------- -->
-    <footer>
-    <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
-    <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
-    <ul>
-      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg" width="24" height="24"></a></li>
-      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg" width="24" height="24"></a></li>
-      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg" width="24" height="24"></a></li>
-    </ul>
-    <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
-    </footer>
-
 <script>
 
     var acc = document.getElementsByClassName("accordion");
