@@ -4,10 +4,9 @@
     padding: 0;
 }
 
-header {
+.header {
     letter-spacing: 5px;
     box-sizing: border-box;
-    background-color: black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -18,14 +17,18 @@ header {
     z-index:10;
 }
 
-header li, a, button {
+.header-scrolled {
+    background-color: black;
+}
+
+.header li, a, button {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
 
 }
 
-header li a {
+.header li a {
     font-weight: 500;
 }
 
@@ -100,7 +103,7 @@ header li a {
     background-color: #fff;
 }
 
-.header-nav, header button {
+.header-nav, .header button {
     text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
     letter-spacing: 3px; 
   }
