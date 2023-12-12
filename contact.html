@@ -22,7 +22,7 @@ body{
 
 .contact-us {
     width: 38vw;
-    background-color: white;
+    background-color: black;
     padding: 3vw;
     margin: 0 auto;
 }
@@ -39,6 +39,7 @@ body{
 
 .accordion{
     display: inline-block;
+    background-color: #eee;
     color: black;
     cursor: pointer;
     height:fit-content;
@@ -47,7 +48,6 @@ body{
     outline: none;
     text-align: left;
     transition: height 0.4s;
-    border-bottom: 0.1rem black solid;
 }
 
 .accordion:after {
@@ -71,7 +71,8 @@ body{
     right: 0;
     width: 32vw;
     padding: 0 1.2rem;
-    background-color: white;
+    color: black;
+    background-color: black;
     text-align: left;    
     max-height: 0.1rem;
     transition: all 0.4s;
@@ -82,7 +83,7 @@ body{
 input[type=text], textarea {
     color: white;
     width: 32vw;
-    margin:0.1rem 0;
+    margin:0.5rem 0;
     border: none;
     background-color: black;
     resize: none;
@@ -90,6 +91,7 @@ input[type=text], textarea {
     font-size: 1rem;
     padding:1rem;
     line-height: 1.6;
+    border: white solid 2px;
 }
 
 input[type=text]{
@@ -125,7 +127,7 @@ input::placeholder {
 }
 
 .acc-faq{
-    margin: 0 0;
+    margin: 0 0 0.9rem;
 }
 
 #when, #pax{
@@ -145,13 +147,13 @@ input::placeholder {
     width: 32vw;
 }
 .contact--heading {
-    color: black;
+    color: white;
     margin: 10px 0;
     text-align: center;
     font-size: 1.6rem;
 }
 .faq--para {
-    color: black;
+    color: white;
     margin: 26px 0;
     line-height: 1.6;
     text-align: center;
@@ -160,7 +162,7 @@ input::placeholder {
 .faq--container {
     width: 38vw;
     padding: 3vw;
-    background-color: white;
+    background-color: black;
     margin: 0 auto;
 }
 .hero {
@@ -171,6 +173,7 @@ header {
     top: 0%;
 }   
 .purpose {
+    margin: 0 0 0.9rem;
     border: none;
     padding:1rem;
 }
@@ -387,7 +390,7 @@ article {
         </section>
         <section class = "faq--container">
         <section class="contact--text">
-            <img id = "smallcover" src="Images/faq.jpg">
+            <img id = "smallcover" src="Images/faq.png">
             <h1 class="contact--heading">Frequently Asked Questions</h1>
             <p class="faq--para">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
         </section>
@@ -440,17 +443,21 @@ article {
         /* Toggle between adding and removing the "active" class,
         to highlight the button that controls the panel */
         this.classList.toggle("active");
-    
+        
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight === "fit-content") {
-          panel.style.maxHeight = "0.1rem";
-          panel.style.padding = "0 1.2rem";
-          panel.style.backgroundColor = "white";
+          panel.style.color = "black";
+          setTimeout(function () {
+            panel.style.maxHeight = "0.1rem";
+            panel.style.padding = "0 1.2rem";
+            this.style.margin = "0 0 0.9rem";
+            }.bind(this), 150);
         } else {
           panel.style.maxHeight = "fit-content";
           panel.style.padding = "1.2rem";
-          panel.style.backgroundColor = "black";
+          this.style.margin = "0";
+          panel.style.color = "white";
         }
     }
 
@@ -459,15 +466,13 @@ article {
             document.getElementById("when").style.display = "inline-block";
             document.getElementById("pax").style.display = "inline-block";
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
-            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
-            document.getElementsByClassName("panel purpose-form")[0].style.backgroundColor = "white";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 0.9rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
         } else {
             document.getElementById("when").style.display = "none"; 
             document.getElementById("pax").style.display = "none"; 
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
-            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
-            document.getElementsByClassName("panel purpose-form")[0].style.backgroundColor = "white";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 0.9rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
         }
     }
