@@ -323,7 +323,7 @@ h1 {
 }
 
 /* -----------------FOR RESPONSIVENESS------------------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
   .hero {
     height: auto;
   }
