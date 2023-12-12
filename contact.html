@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="CSS/footer.css">
 <link rel="shortcut icon" href="Images/losmologo.png" type="image/x-icon" />
 <style>
+html {
+    font-size: 18px;
+}
 * {
     box-sizing: border-box;
 }
 body{
     font-family: 'PT Sans Narrow';
-    font-size: 18px;
     margin: 0;
     background-color: black;   
 }
@@ -40,7 +42,7 @@ body{
     color: black;
     cursor: pointer;
     height:fit-content;
-    padding: 1.5rem;
+    padding: 1.2rem;
     width: 32vw;
     outline: none;
     text-align: left;
@@ -68,7 +70,7 @@ body{
     left: 0;
     right: 0;
     width: 32vw;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
     background-color: white;
     text-align: left;    
     max-height: 0.1rem;
@@ -225,6 +227,9 @@ article {
 }
 
     @media(max-width:500px) {
+        html {
+            font-size: 18px;
+        }
         * {
         font-size: 16px;
         }
@@ -440,11 +445,11 @@ article {
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight === "fit-content") {
           panel.style.maxHeight = "0.1rem";
-          panel.style.padding = "0 1.5rem";
+          panel.style.padding = "0 1.2rem";
           panel.style.backgroundColor = "white";
         } else {
           panel.style.maxHeight = "fit-content";
-          panel.style.padding = "1.5rem";
+          panel.style.padding = "1.2rem";
           panel.style.backgroundColor = "black";
         }
     }

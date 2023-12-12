@@ -7,6 +7,9 @@
     transform: translateY(30px) scale(0.9);
   }
 }
+html {
+  font-size: 18px;
+}
 body {
     margin: 0px;
     background-color: black;
@@ -1155,6 +1158,9 @@ content: "\2212";
 }
 
 @media screen and (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
   .contact__para {
     text-align: justify;
   }
