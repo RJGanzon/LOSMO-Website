@@ -85,7 +85,7 @@ input[type=text], textarea {
     background-color: black;
     resize: none;
     outline: none;
-    font-size: 0.6rem;
+    font-size: 1rem;
     padding:1rem;
     line-height: 1.6;
 }
@@ -187,9 +187,9 @@ article {
 }
 
 @media screen and (max-width: 768px) {
-    * {
-        font-size: 17px;
-        }
+    .contact--text {
+        width: 67vw;
+    }
     .contact--container {
         flex-direction: column;
         width: 73vw;
@@ -228,9 +228,12 @@ article {
         * {
         font-size: 16px;
         }
+        .contact--text {
+        width: 80vw;
+        }
         .contact--container {
             flex-direction: column;
-            width: 80vw;
+            width: 86vw;
         }
         .accordion {
             width: 80vw;
@@ -245,7 +248,7 @@ article {
             width: 80vw;
         }
         .contact-us {
-            width: 80vw;
+            width: 86vw;
         }
         .contact-us > .form, .faq{ 
             width: 80vw;
@@ -254,10 +257,10 @@ article {
             width: 80vw;
         }
         .faq--container {
-            width: 80vw;
+            width: 86vw;
         }
         .hero {
-        width: 80vw;
+        width: 86vw;
         margin: 14vh auto 0;
         }
         .faq--para {
