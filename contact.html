@@ -34,24 +34,25 @@ body{
     color: white;
 }
 
+
 .accordion{
     display: inline-block;
-    background-color: #eee;
     color: black;
     cursor: pointer;
     height:fit-content;
-    padding: 15px;
+    padding: 1.5rem;
     width: 32vw;
     outline: none;
     text-align: left;
-    transition: 0.4s;
+    transition: height 0.4s;
+    border-bottom: 0.1rem black solid;
 }
 
 .accordion:after {
   content: '\002B';
   font-weight: bold;
   float: right;
-  margin-left: 5px;
+  transition: all 0.5s;
 }
 
 .active:after {
@@ -65,10 +66,12 @@ body{
 .panel {
     left: 0;
     right: 0;
-    text-align: left;
     width: 32vw;
-    background-color: black;
-    display: none;
+    padding: 0 1.5rem;
+    background-color: white;
+    text-align: left;    
+    max-height: 0.1rem;
+    transition: all 0.4s;
     overflow: hidden;
 }
 
@@ -76,20 +79,18 @@ body{
 input[type=text], textarea {
     color: white;
     width: 32vw;
-    border: white solid 2px;
-    margin-bottom: 10px;
-    margin-top: 3px;
+    margin:0.1rem 0;
+    border: none;
     background-color: black;
     resize: none;
     outline: none;
-    font-size: 1rem;
-    padding-left: 15px;
+    font-size: 0.6rem;
+    padding:1rem;
     line-height: 1.6;
 }
 
 input[type=text]{
-    padding: 5px;
-    padding-left: 15px;
+    padding: 1rem;
     font-family: 'PT Sans Narrow';
     font-size: 1rem;
     line-height: 1.6;
@@ -99,7 +100,7 @@ textarea{
     height: 150px;
     font-family: 'PT Sans Narrow';
     font-size: 1rem;
-    padding-left: 15px;
+    padding:1rem;
     line-height: 1.6;
 }   
 
@@ -117,17 +118,12 @@ input[type=submit] {
 }
 input::placeholder {
     font-family: 'PT Sans Narrow';
-    font-size: 1remx;
+    font-size: 1rem;
 }
 
 .acc-faq{
-    margin: 10px 0;
+    margin: 0 0;
 }
-
-.panel-faq{
-    padding: 10px;
-}
-
 
 #when, #pax{
     display: none;
@@ -172,12 +168,11 @@ header {
     top: 0%;
 }   
 .purpose {
-    margin-top: 5px;
-    margin-bottom: 10px;
+    border: none;
+    padding:1rem;
 }
 .purpose-form {
     cursor: pointer;
-    padding: 0 15px;
 }
 .purpose::after {
     content: "▾";
@@ -187,11 +182,8 @@ article {
 }
 .purpose__choice {
     padding: 0;
-    line-height: 3rem;
-
+    width: 100%;
 }
-
-
 
 @media screen and (max-width: 768px) {
     * {
@@ -199,7 +191,7 @@ article {
         }
     .contact--container {
         flex-direction: column;
-        width: 67vw;
+        width: 73vw;
     }
     .accordion {
         width: 67vw;
@@ -214,7 +206,7 @@ article {
         width: 67vw;
     }
     .contact-us {
-        width: 67vw;
+        width: 73vw;
     }
     .contact-us > .form, .faq{ 
         width: 67vw;
@@ -223,7 +215,7 @@ article {
         width: 67vw;
     }
     .faq--container {
-        width: 67vw;
+        width: 73vw;
     }
     .hero {
     width: 67vw;
@@ -370,12 +362,10 @@ article {
 
             <span class="accordion purpose">Purpose</span>
             <article class="panel purpose-form">
-                <span class = "purpose__choice" onclick="checkEvent(0)"> Inquiry </span>
+                <div class = "purpose__choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Inquiry </div>
                 <hr>
-                <span class = "purpose__choice" onclick="checkEvent(1)"> Private Event </span>
+                <div class = "purpose__choice" onclick="checkEvent(1)"" style="padding-top:1rem"> Private Event </div>
             </article>
-            <br>
-
             <input type="text" id="Subject" name="Subject" placeholder="Subject*" required>
             <input type="text" id="when" name="When" placeholder="When*" required>
             <input type="text" id="pax" name="PAX" placeholder="PAX*" required>
@@ -390,10 +380,10 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/faq.jpg">
             <h1 class="contact--heading">Frequently Asked Questions</h1>
-            <p class="faq--para">Have a question? Already answered! Below are frequently asked questions. Please read the section thouroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <p class="faq--para">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
         </section>
         <section class="faq">
-            <span class="accordion acc-faq" style="margin-top: 3px;">What are your modes of payment?</span>
+            <span class="accordion acc-faq">What are your modes of payment?</span>
             <article class="panel panel-faq">• We accept cash, Gcash, bank transfers, and debit/credit cards.</article>
 
             <span class="accordion acc-faq">Is there a dress code?</span>
@@ -444,10 +434,14 @@ article {
     
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
-        if (panel.style.display === "inline-block") {
-          panel.style.display = "none";
+        if (panel.style.maxHeight === "fit-content") {
+          panel.style.maxHeight = "0.1rem";
+          panel.style.padding = "0 1.5rem";
+          panel.style.backgroundColor = "white";
         } else {
-          panel.style.display = "inline-block";
+          panel.style.maxHeight = "fit-content";
+          panel.style.padding = "1.5rem";
+          panel.style.backgroundColor = "black";
         }
     }
 
