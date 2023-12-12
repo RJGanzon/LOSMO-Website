@@ -20,11 +20,13 @@ body{
     background-color: black;   
 }
 
-.contact-us {
+.contact-us, .faq--container {
     width: 38vw;
     background-color: black;
-    padding: 3vw;
+    padding: 3vw 3vw;
     margin: 0 auto;
+    z-index: 5;
+    border: 1px solid rgba(235, 25, 176, .9);
 }
 
 .contact-us > .form, .faq{ 
@@ -77,6 +79,7 @@ body{
     max-height: 0.1rem;
     transition: all 0.4s;
     overflow: hidden;
+    display: none;
 }
 
 
@@ -127,7 +130,7 @@ input::placeholder {
 }
 
 .acc-faq{
-    margin: 0 0 0.9rem;
+    margin: 0 0 1rem;
 }
 
 #when, #pax{
@@ -145,6 +148,8 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     width: 32vw;
+    height: 46vh;
+    min-height: 300px;
 }
 .contact--heading {
     color: white;
@@ -159,12 +164,7 @@ input::placeholder {
     text-align: center;
     min-height: 120px;
 }
-.faq--container {
-    width: 38vw;
-    padding: 3vw;
-    background-color: black;
-    margin: 0 auto;
-}
+
 .hero {
     width: 72vw;
     margin: 14vh auto 0;
@@ -177,9 +177,7 @@ header {
     border: none;
     padding:1rem;
 }
-.purpose-form {
-    cursor: pointer;
-}
+
 .purpose::after {
     content: "▾";
 }
@@ -189,7 +187,10 @@ article {
 .purpose__choice {
     padding: 0;
     width: 100%;
-}
+    cursor: pointer;
+} 
+
+
 
 @media screen and (max-width: 768px) {
     .contact--text {
@@ -295,6 +296,7 @@ article {
         content: "";
         position: absolute;
         height: 60vh;
+        min-height:400px;
         top: 0;
         right: 0;
         bottom: 0;
@@ -322,7 +324,7 @@ article {
     #smallcover {
     height: 3rem;
     z-index: 2;
-    margin: auto;
+    margin: 0 auto;
     }
 
 </style>
@@ -369,16 +371,16 @@ article {
         <form>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
             <input type="text" id="email" name="Email" placeholder="Email*" required>
-            <input type="text" id="num" name="Number" placeholder="Number*" required>
+            <input type="text" id="num" name="Number" placeholder="Number*" required style="margin: 0.5rem 0 1rem;">
         
 
             <span class="accordion purpose">Purpose</span>
             <article class="panel purpose-form">
-                <div class = "purpose__choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Inquiry </div>
+                <div class = "purpose__choice" id = "choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Inquiry </div>
                 <hr>
-                <div class = "purpose__choice" onclick="checkEvent(1)" style="padding-top:1rem"> Private Event </div>
+                <div class = "purpose__choice" id = "choice" onclick="checkEvent(1)" style="padding-top:1rem"> Private Event </div>
             </article>
-            <input type="text" id="Subject" name="Subject" placeholder="Subject*" required>
+            <input type="text" id="Subject" name="Subject" placeholder="Subject*" required style="margin: 0.1rem 0 0.5rem;">
             <input type="text" id="when" name="When" placeholder="When*" required>
             <input type="text" id="pax" name="PAX" placeholder="PAX*" required>
 
@@ -431,7 +433,6 @@ article {
     <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
   </footer>
 <script>
-
     var acc = document.getElementsByClassName("accordion");
     var i;
     
@@ -446,34 +447,48 @@ article {
         
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
+
         if (panel.style.maxHeight === "fit-content") {
-          panel.style.color = "black";
-          setTimeout(function () {
+            this.style.margin = "0 0 1rem";
             panel.style.maxHeight = "0.1rem";
-            panel.style.padding = "0 1.2rem";
-            this.style.margin = "0 0 0.9rem";
-            }.bind(this), 150);
+            panel.style.padding = "0 1.2rem"; 
+            setTimeout(function () {
+            panel.style.display = "none";
+            }.bind(this), 1);
+
         } else {
+          panel.style.display = "inline-block";
+          setTimeout(function () {
           panel.style.maxHeight = "fit-content";
           panel.style.padding = "1.2rem";
           this.style.margin = "0";
-          panel.style.color = "white";
+          panel.style.color = "white";  
+        }.bind(this), 1);
         }
     }
+    
 
     function checkEvent(num){
         if(num == 1){
             document.getElementById("when").style.display = "inline-block";
             document.getElementById("pax").style.display = "inline-block";
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
-            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 0.9rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
+            document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+            setTimeout(function () {
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            }.bind(this), 300);
         } else {
             document.getElementById("when").style.display = "none"; 
             document.getElementById("pax").style.display = "none"; 
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
-            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 0.9rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
+            document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+            setTimeout(function () {
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            }.bind(this), 300);
         }
     }
 
