@@ -1,0 +1,302 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans Narrow">
+<style>
+* {
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    margin: 0;
+    background-color: black;   
+}
+
+.contact-us {
+    width: 32vw;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.contact-us > .form, .faq{ 
+    position: static;
+    left: 0;
+    right: 0;
+    width: 32vw;
+    text-align: left;
+    color: white;
+}
+
+.accordion{
+    display: inline-block;
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    height:fit-content;
+    padding: 15px;
+    width: 32vw;
+    outline: none;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.accordion:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+          
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 0 18px;
+    width: 32vw;
+    background-color: black;
+    display: none;
+    overflow: hidden;
+}
+
+
+input[type=text], textarea {
+    color: white;
+    width: 32vw;
+    border: white solid 2px;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    background-color: black;
+    resize: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+input[type=text]{
+    padding: 5px;
+    padding-left: 15px;
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    
+}
+
+textarea{
+    height: 150px;
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    padding-left: 15px;
+}   
+
+input[type=submit] {
+    background-color: #eb19b0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+input::placeholder {
+    font-family: 'PT Sans Narrow';
+    font-size: 18px;
+}
+
+.purpose {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.purpose-form {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.acc-faq{
+    margin: 10px 0;
+}
+
+.panel-faq{
+    padding: 10px;
+}
+
+
+#when, #pax{
+    display: none;
+}
+
+.contact--container {
+    width:80vw;
+    display: flex;
+    margin: 0 auto;
+}
+
+.contact--text {
+    width: 32vw;
+}
+h1 {
+    color: white;
+    margin: 10px 0;
+    font-size: 26px;
+}
+p {
+    color:white;
+    margin: 26px 0;
+}
+.faq--container {
+    width: 32vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact--container {
+        flex-direction: column;
+        width: 80vw;
+    }
+    .accordion {
+        width: 80vw;
+    }
+    .panel {
+        width: 80vw;
+    }
+    input[type=text], textarea {
+        width: 80vw;
+    }
+    p {
+        width: 80vw;
+    }
+    .contact-us {
+        width: 80vw;
+    }
+    .contact-us > .form, .faq{ 
+        width: 80vw;
+    }
+    .faq {
+        width: 80vw;
+    }
+    .faq--container {
+        width: 80vw;
+    }
+</style>
+<title>Contact Us</title>
+</head>
+
+<body>
+    <section class="hero">
+    <h1>CONTACT US</h1>
+    </section>
+    <section class="contact--container">
+    <section class="contact-us">
+        <section class="contact--text">
+            <h1>Get in Touch</h1>
+            <p>If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. You can also check out the FAQ section below for commonly asked questions (and avoid embarassing yourself with an email!). We hope to hear from you!</p>
+        </section>
+        <section class="form">
+        <form>
+            <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
+            <input type="text" id="email" name="Email" placeholder="Email*" required>
+            <input type="text" id="num" name="Number" placeholder="Number*" required>
+        
+
+            <span class="accordion purpose">Purpose</span>
+            <article class="panel purpose-form">
+                <span onclick="checkEvent(0)"> Inquiry </span>
+                <hr>
+                <span onclick="checkEvent(1)"> Private Event </span>
+                <p></p>
+            </article>
+            <br>
+
+            <input type="text" id="Subject" name="Subject" placeholder="Subject*" required>
+            <input type="text" id="when" name="When" placeholder="When*" required>
+            <input type="text" id="pax" name="PAX" placeholder="PAX*" required>
+
+            <textarea id="message" id="message" name="Message" placeholder="Your Message"></textarea>
+        
+            <input type="submit" value="Submit">
+        </form>
+        </section>
+        </section>
+        <section class = "faq--container">
+        <section class="contact--text">
+            <h1>Frequently Asked Questions</h1>
+            <p>Have a question? Already answered! Below are frequently asked questions. Please read the section thouroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+        </section>
+        <section class="faq">
+            <span class="accordion acc-faq" style="margin-top: 3px;">What are your modes of payment?</span>
+            <article class="panel panel-faq">• We accept cash, Gcash, bank transfers, and debit/credit cards.</article>
+
+            <span class="accordion acc-faq">Is there a dress code?</span>
+            <article class="panel panel-faq">• Slippers are not allowed for safety purposes. No loungewear please, always dress your best! ;)</article>
+
+            <span class="accordion acc-faq">Is there an entrance fee?</span>
+            <article class="panel panel-faq">• There is no entrance fee</article>
+
+            <span class="accordion acc-faq">Are your tables consumable?</span>
+            <article class="panel panel-faq">• Yes! tables are consumable every friday and saturday only. we have no table rates from tuesday to thursday and sunday.</article>
+
+            <span class="accordion acc-faq">Do you offer towers?</span>
+            <article class="panel panel-faq">• No, our menu can be found on our social media accounts.</article>
+
+            <span class="accordion acc-faq">Do i need to make a reservation?</span>
+            <article class="panel panel-faq">• We accept walk-in customers but you can make a reservation to guarantee seats.</article>
+
+            <span class="accordion acc-faq">Should I bring my id?</span>
+            <article class="panel panel-faq">• Persons under 18 years of age are not allowed. Please bring a valid id for verification</article>
+        </section>
+        </section>
+    </section>
+    </main>
+
+<script>
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", panelDisplay);
+    }
+
+    function panelDisplay() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+    
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "inline-block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "inline-block";
+        }
+    }
+
+    function checkEvent(num){
+        if(num == 1){
+            document.getElementById("when").style.display = "inline-block";
+            document.getElementById("pax").style.display = "inline-block";
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
+        } else {
+            document.getElementById("when").style.display = "none"; 
+            document.getElementById("pax").style.display = "none"; 
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
+        }
+    }
+</script>
+</body>
+</html>
