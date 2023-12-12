@@ -364,7 +364,7 @@ article {
             <article class="panel purpose-form">
                 <div class = "purpose__choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Inquiry </div>
                 <hr>
-                <div class = "purpose__choice" onclick="checkEvent(1)"" style="padding-top:1rem"> Private Event </div>
+                <div class = "purpose__choice" onclick="checkEvent(1)" style="padding-top:1rem"> Private Event </div>
             </article>
             <input type="text" id="Subject" name="Subject" placeholder="Subject*" required>
             <input type="text" id="when" name="When" placeholder="When*" required>
@@ -449,12 +449,16 @@ article {
         if(num == 1){
             document.getElementById("when").style.display = "inline-block";
             document.getElementById("pax").style.display = "inline-block";
-            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.backgroundColor = "white";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
         } else {
             document.getElementById("when").style.display = "none"; 
             document.getElementById("pax").style.display = "none"; 
-            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+            document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.backgroundColor = "white";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
         }
     }
