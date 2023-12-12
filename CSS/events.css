@@ -146,46 +146,46 @@ a {
     letter-spacing: 3px; 
 }
 
-/*------Event description---------*/
+/* -----------------EVENT DESCRIPTION------------------------------------------------------------------------*/
 .container {
-      display: flex;
-      height: 100%;
-    }
+  display: flex;
+  height: 100%;
+}
 
-    .image-container {
-      flex: 1;
-      overflow: hidden;
-    }
+.image-container {
+  flex: 1;
+  overflow: hidden;
+}
 
-    .image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .description-container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background-color: black;
-      color: white;
-      font-family: 'Tilt Neon', sans-serif;
-      font-size: 20px;
-      text-align: center;
-    }
+.description-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
 
-    .description {
-      max-width: 400px;
-    }
+.description {
+  max-width: 400px;
+}
 
-    .description h2 {
-        font-size: 2.5rem;
-    }
+.description h2 {
+  font-size: 2.5rem;
+}
 
-/*------Gallery Hover effect---------*/
+/* -----------------GALLERY------------------------------------------------------------------------*/
 .gallery-hover {
     text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
     letter-spacing: 3px; 
@@ -280,7 +280,7 @@ a {
   animation-name: fadeInUp;
 }
 
-/*=== FADE IN  ===*/
+/*=== FADE IN ===*/
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -290,6 +290,7 @@ a {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -299,17 +300,19 @@ a {
     opacity: 1;
   }
 }
+
 .fadeIn {
-    -webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 /*=== Optional Delays ===*/
-.header1 {
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    }
+.header2, .p {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
 
 h1 {
     font-size: 3.5rem;
@@ -317,4 +320,66 @@ h1 {
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
   color: white;
   text-align: center;
+}
+
+/* -----------------FOR RESPONSIVENESS------------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
+  .slideshow-container {
+    height: auto;
+  }
+
+  .text {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+  }
+
+  .fade {
+    animation-duration: 2s; 
+  }
+
+  .description-container {
+    padding: 10px;
+  }
+
+  .description h2 {
+    font-size: 2rem;
+  }
+
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    gap: 5px;
+  }
+
+  .media {
+    max-width: 75%;
+    max-height: 200px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container,
+  .description-container {
+    width: 100%;
+  }
+
+  .description-container {
+    padding: 10px;
+    text-align: center;
+  }
 }
