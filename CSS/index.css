@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 /*Keyframes*/
 @keyframes fade-up {
@@ -7,6 +8,7 @@
     transform: translateY(30px) scale(0.9);
   }
 }
+
 html {
   font-size: 18px;
 }
@@ -46,7 +48,7 @@ body {
     padding: 25px;
     position: absolute;
     margin-top: -400px;
-    width: 100%;
+    width: fit-content;
     text-align: left;
     margin-left:800px;
 
@@ -205,7 +207,6 @@ body {
   width: 100%;
   height: 200px;
   gap: 6.25rem;
-
 }
 
 .aboutus img {
@@ -216,7 +217,7 @@ body {
 }
 
 .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-  font-size: 4.375rem;
+  font-size: 4rem;
   letter-spacing: 5px;
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
   color: white;
@@ -231,7 +232,6 @@ body {
   font-size: 1.125rem;
   line-height: 1.875rem;
   width:38.75rem;
-  
 }
 
 
@@ -362,7 +362,8 @@ body {
 }
 
 .image-opening {
-  height: 500px;
+  height: fit-content;
+  min-height: 500px;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../Images/menuindex.jpg);
   background-position: center 40%;
   background-size: cover;
@@ -374,14 +375,18 @@ body {
 }
 
 .image-opening .paragraph {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-bottom: 50px;
   letter-spacing: 1.2px;
+  width:50%;
 }
 
+
 .image-opening h1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
 }
 
 .image-opening p {
@@ -403,6 +408,7 @@ body {
 .drinkcontainer {
   display:flex;
   justify-content: center;
+  overflow: hidden;
   align-items: flex-end;
 }
 
@@ -423,7 +429,7 @@ body {
 }
 
 .drinkies h1 {
-  font-size: 5.8rem;
+  font-size: 4rem;
   letter-spacing: 2px;
   margin-bottom: 0;
 }
@@ -485,23 +491,46 @@ body {
   color: white;
   background-color: black;
   width: 80vw;
-  height: 66vh;
-  min-height: 500px;
+  height: 110vh;
+  min-height: 480px;
   margin: auto;
+  letter-spacing: 1.2px;
 }
-.hours-and-location-container ul, p {
-  line-height: 1.6;
+.hours-and-location-container p {
+  font-size: 1.125rem;
+  line-height: 30px;
+}
+.hours-and-location-container h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
+  color: white;
+  letter-spacing: 5px;
+}
+.hour {
+  border: #eb19b0 2px dashed;
 }
 
 .hours-and-location-item{
+  box-sizing: border-box;
   margin: 0 auto;
-  width: 35.5vw;
-  height: 58vh;
+  padding: 2rem;
+  width: 39vw;
+  height: fit-content;
   text-align: center;
   background-color: black;
   justify-content: center;
-
 }
+.day {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.day + li {
+  font-family: 'Jost', sans-serif;
+
+  font-size: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
 .hours-and-location-item > ul{
   list-style-type: none;
   width: auto;
@@ -527,6 +556,11 @@ iframe.gmaps{
   margin-top:10vh;
   margin-bottom: 10vh;
 }
+#contact__faq p, span, .panel {
+  letter-spacing: 0.094rem;
+  font-size: 1.125rem;
+  line-height: 1.875rem;  
+}
 
 .contact-us {
   display: flex;
@@ -543,6 +577,9 @@ iframe.gmaps{
   text-align: left;
   color: white;
 }
+.faq {
+  padding-top: 0.7rem;
+}
 
 .accordion{
   box-sizing: border-box;
@@ -551,27 +588,26 @@ iframe.gmaps{
   color: black;
   cursor: pointer;
   height:fit-content;
-  padding: 15px;
+  padding: 1.2rem;
   width: 32vw;
   outline: none;
   text-align: left;
-  transition: 0.4s;
-  font-family: 'PT Sans Narrow';
-    font-size: 1.15rem;
-    margin: auto;
+  transition: all 0.4s;
 }
 
 .accordion:after {
-content: '\002B';
-font-weight: bold;
-float: right;
-margin-left: 5px;
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  transition: all 0.5s;
 }
 
+
 .active:after {
-content: "\2212";
+  content: "\2212";
+  transition: all 0.5s;
 }
-        
+
 .active, .accordion:hover {
   background-color: #ccc;
 }
@@ -588,9 +624,8 @@ content: "\2212";
   overflow: hidden;
 }
 .acc-faq{
-  margin: 10px 0;
+  margin: 0 0 1rem;
 }
-
 .contact--container {
   width:80vw;
   display: flex;
@@ -642,10 +677,14 @@ content: "\2212";
   background-color: #fff;
 }
 
-.contact__header {
+.contact__header { 
   color: white;
-    margin: 10px 0;
-    font-size: 26px;
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
+  color: white;
+  letter-spacing: 5px;
 }
 .contact__para {
   line-height: 1.6;
@@ -654,148 +693,14 @@ content: "\2212";
 }
 
 
-@media(max-width:840px) {
-  .Upcoming-Events {
-    margin-top: 15vh;
-  }
-  .drinkies .info {
-    width: 20rem;
-  }
 
-  .text {
-    margin-left:140px;
-  }
-  .aboutus p {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.575rem;
-  }
-  .aboutus div {
-    gap: 3.125rem;
-  }
-
-  .aboutus {
-    margin-bottom: 30vh;
-  }
-
-  .paragraph {
-    margin-right: 11rem;
-  }
-
-  .image-opening h1 {
-    font-size: 3.5rem;
-    width: 37.5rem;
-    text-align: center;
-  }
-
-  .image-opening p {
-    width: 37.5rem;
-    font-size: 1.1rem;
-  }
-
-  .drinkies {
-    gap: 3rem;
-  }
-
-  .drinks-section .info {
-    gap: .1rem;
-  }
-
-  .drinkies h1 {
-    font-size: 4rem;
-    letter-spacing: 2px;
-  }
-  
-  .drinkies p {
-    font-size: 1rem;
-    letter-spacing: 1.2px;
-    width: 20rem; 
-  }
-
-  .drinks-section img {
-    height:70%;
-  }
-
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-    font-size: 3.5rem;
-
-  }
-
-  .prev, .next {
-    top: 470%;
-  }
-
-}
-
-@media(max-width:790px) {
-
-  
-
-  .slideshow-container {
-    display:none;
-  }
-
-  .vidhero {
-    display:block;
-  }
-
-  .drinkies {
-    gap: 1.5rem;
-    
-  }
-  .prev, .next {
-    top: 595%;
-  }
-
-  .aboutus {
-    margin-top:5vh;
-    margin-bottom:25vh;
-  }
-
-  .aboutus div {
-    gap: 3.10rem;
-  }
-
-  .aboutus h1 {
-    margin-bottom:35px;
-  }
-  
-  .Upcoming-Events h1 {
-    text-align: center;
-  }
-  
-  .Upcoming-Events {
-    align-items: center;
-    margin-bottom:67rem;
-  }
-
-  .event-container {
-    justify-content: center;
-  }
-
-  .event-container .card {
-    width: 70vw;
-  }
-
-  .card-2 {
-    background-position: center;
-  }
-
-  .event-container .card .read-more,
-  .event-container .card .reserve {
-    width:8rem;
-  }
-
-  
-}
-
+/*
 @media(max-width:740px) {
   .image-opening h1 {
     width: 35rem;
   }
 
   .image-opening p {
-    width: 35rem;
   }
 }
 
@@ -820,7 +725,6 @@ content: "\2212";
   }
 
   .paragraph {
-    margin-right: 5rem;
   }
 
   .drinkies {
@@ -849,7 +753,6 @@ content: "\2212";
   }
 
   .image-opening p {
-    width: 450px;
     font-size: 1rem;
     line-height: 25px;
   }
@@ -908,7 +811,6 @@ content: "\2212";
   }
 
   .image-opening p {
-    width: 400px;
     font-size: .9rem;
     line-height: 25px;
   }
@@ -960,14 +862,6 @@ content: "\2212";
 
 @media(max-width:490px) {
 
-  .prev, .next {
-    display: none;
-  }
-
-  .prevnextbutt {
-    display:flex;
-  }
-
   .event-container .card {
     width: 90vw;
   }
@@ -1003,7 +897,6 @@ content: "\2212";
   }
 
   .image-opening p {
-    width: 320px;
     font-size: .70rem;
     line-height: 17px;
   }
@@ -1062,7 +955,6 @@ content: "\2212";
   }
 
   .image-opening p {
-    width: 280px;
     line-height: 15px;
   }
 
@@ -1119,8 +1011,141 @@ content: "\2212";
     top: 563%;
   }
 }
+*/
+
+/*Laptop L*/
+@media screen and (min-width: 1440px) {
+    .text {
+    font-size: 1.3em;
+  }
+  .hero__img--button {
+    height: 18px; 
+  }
+
+  .hero__button {
+    padding: 7px;
+  }
+}
+
+/*Laptop*/
+@media screen and (max-width: 1024px) {
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .hours-and-location-container h1, .contact__header {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .text {
+    margin-left:150px;
+    letter-spacing: 0.094rem;
+
+  }
+
+  .aboutus p {
+    font-size: 18px;
+    line-height: 1.6rem;
+    letter-spacing: 0.094rem;
+  }
+  .aboutus img {
+    max-height: 70%;
+    max-width: 70%;
+  }
+
+  .aboutus div {
+    gap: 4.25rem;
+  }
+
+  .hours-and-location-container p {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.094rem;
+  }
+
+  .image-opening .paragraph {
+    text-align: center;
+    letter-spacing: 0.094rem;
+    width:530px;
+  }
   
+  .image-opening p {
+    font-size: 18px;
+    letter-spacing: 0.094rem;
+    line-height: 1.6rem;
+  }
+
+  .drinkies {
+    gap: 2rem;
+  }
+
+  .drinkies img {
+    height:65%;  
+  }
+
+  .drinks-section .info {
+    gap: 0rem;
+  }
+  
+  .drinkies .info {
+    width: 21rem;
+  }
+  
+  .drinkies h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+  
+  .drinkies p {
+    font-size: 18px;
+    letter-spacing: 0.094rem;
+  }
+
+  #contact__faq p, span, .panel {
+    letter-spacing: 0.094rem;
+    font-size: 18px;
+    line-height: 1.875rem;  
+  }
+  
+}
+
+/*Tablet*/
 @media screen and (max-width: 768px) {
+  .slideshow-container {
+    display: none;
+  }
+  .vidhero {
+    display: block;
+  }
+  .aboutus p {
+    font-size: 18px;
+    width:625px;
+    line-height: 1.6rem;
+    letter-spacing: 0.094rem;
+  }
+
+  .Upcoming-Events {
+    margin-bottom:60em;
+    align-items: center;
+  }
+
+  .image-opening .paragraph {
+    letter-spacing: 0.094rem;
+  }
+
+  
+  .image-opening p {
+    font-size: 18px;
+    letter-spacing: 0.094rem;
+    line-height: 1.6rem;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+
+  .prevnextbutt {
+    display:flex;
+  }
+
   #contact__faq {
     margin-top:0;
     margin-bottom: 4vh;
@@ -1174,43 +1199,67 @@ content: "\2212";
   .contact__button {
     margin: 1rem auto 2rem;
   }
-}
 
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 16px;
+  .event-container {
+    justify-content: center;
   }
-  .contact__para {
-    text-align: justify;
+
+  .event-container .card {
+    width: 70vw;
+  }
+
+  .card-2 {
+    background-position: center;
+  }
+
+  .event-container .card .read-more,
+  .event-container .card .reserve {
+    width:8rem;
   }
 }
 
-/*Laptop L*/
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 660px) {
+  .aboutus p {
+    font-size: 18px;
+    width:530px;
+    line-height: 1.6rem;
+    letter-spacing: 0.094rem;
+  } 
+  .drinkies {
+    flex-direction: column;
+  }
 
 }
 
-/*Laptop*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
+  .image-opening .paragraph {
+    width:400px;  
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .aboutus p {
+    font-size: 18px;
+    width:450px;
+    line-height: 1.6rem;
+    letter-spacing: 0.094rem;
+  } 
 
 }
 
-/*Tablet*/
-@media screen and (max-width: 768px) {
+/*pargraph turns into 16px*/
+@media screen and (max-width: 500px) {
 
 }
 
 /*Mobile L*/
 @media screen and (max-width: 425px) {
-
 }
 
 /*Mobile M*/
-@media screen and (max-width: 375) {
-
+@media screen and (max-width: 375px) {
 }
 
 /*Mobile S*/
-@media screen and (max-width: 320) {
-
+@media screen and (max-width: 320px) {
 }

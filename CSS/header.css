@@ -180,3 +180,14 @@
         margin-right: 8px;
     }
 }
+
+/*Laptop L*/
+@media screen and (min-width: 1440px) {
+    .header-logo {
+        height: 65%;
+    } 
+    .header li, a, button {
+        font-size: 1.02em;
+    }
+
+}
