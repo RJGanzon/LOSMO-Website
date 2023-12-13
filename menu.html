@@ -8,6 +8,9 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&family=Tilt+Neon&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+            html {
+                font-size: 18px;
+            }
             * {
                 margin:0px;
                 padding:0px;
@@ -218,7 +221,7 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+                background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
                 pointer-events: none;
             }
             #smallcover {
@@ -329,9 +332,6 @@
             }
 
             @media(max-width:860px) {
-                * {
-                    font-size: 17px;
-                }
                 .menu__nav {
                 width:80vw;
                 }
@@ -429,14 +429,18 @@
                 }
             }
             @media(max-width:440px) {
-                * {
-                    font-size: 16px;
+                html {
+                font-size: 16px;
                 }
+            
                 img.menu__item__image--whole {
                 height: 24vh;
                 width: 84vw;
                 }
                 .menu__nav {
+                width:84vw;
+                }
+                .menu__button {
                 width:84vw;
                 }
                 .menu__list__2 {

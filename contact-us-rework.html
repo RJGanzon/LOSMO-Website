@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Losmo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans Narrow">
 <link rel="stylesheet" href="CSS/header.css">
@@ -10,6 +9,7 @@
 <style>
 * {
     box-sizing: border-box;
+    
 }
 body{
     font-family: 'PT Sans Narrow';
@@ -19,9 +19,8 @@ body{
 }
 
 .contact-us {
-    width: 38vw;
-    background-color: white;
-    padding: 3vw;
+    width: 32vw;
+    background-color: black;
     margin: 0 auto;
 }
 
@@ -66,6 +65,7 @@ body{
     left: 0;
     right: 0;
     text-align: left;
+    padding: 0 18px;
     width: 32vw;
     background-color: black;
     display: none;
@@ -82,25 +82,23 @@ input[type=text], textarea {
     background-color: black;
     resize: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 18px;
     padding-left: 15px;
-    line-height: 1.6;
 }
 
 input[type=text]{
     padding: 5px;
     padding-left: 15px;
     font-family: 'PT Sans Narrow';
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 18px;
+    
 }
 
 textarea{
     height: 150px;
     font-family: 'PT Sans Narrow';
-    font-size: 1rem;
+    font-size: 18px;
     padding-left: 15px;
-    line-height: 1.6;
 }   
 
 input[type=submit] {
@@ -112,12 +110,23 @@ input[type=submit] {
     cursor: pointer;
     float: right;
     font-family: 'PT Sans Narrow';
-    font-size: 1rem;
+    font-size: 18px;
     margin-top: 5px;
+    padding-left: 15px;
 }
 input::placeholder {
     font-family: 'PT Sans Narrow';
-    font-size: 1remx;
+    font-size: 18px;
+}
+
+.purpose {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.purpose-form {
+    cursor: pointer;
+    padding: 10px;
 }
 
 .acc-faq{
@@ -137,229 +146,68 @@ input::placeholder {
     width:80vw;
     display: flex;
     margin: 0 auto;
-    translate: 0 -50px;
 }
 
 .contact--text {
-    display: flex;
-    flex-direction: column;
     width: 32vw;
 }
-.contact--heading {
-    color: black;
+h1 {
+    color: white;
     margin: 10px 0;
-    text-align: center;
-    font-size: 1.6rem;
+    font-size: 26px;
 }
-.faq--para {
-    color: black;
+p {
+    color:white;
     margin: 26px 0;
-    line-height: 1.6;
-    text-align: center;
-    min-height: 120px;
 }
 .faq--container {
-    width: 38vw;
-    padding: 3vw;
-    background-color: white;
+    width: 32vw;
     margin: 0 auto;
 }
-.hero {
-    width: 72vw;
-    margin: 14vh auto 0;
-}
-header {
-    top: 0%;
-}   
-.purpose {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-.purpose-form {
-    cursor: pointer;
-    padding: 0 15px;
-}
-.purpose::after {
-    content: "▾";
-}
-article {
-    line-height: 1.6;
-}
-.purpose__choice {
-    padding: 0;
-    line-height: 3rem;
-
-}
-
-
 
 @media screen and (max-width: 768px) {
-    * {
-        font-size: 17px;
-        }
+
     .contact--container {
         flex-direction: column;
-        width: 67vw;
+        width: 80vw;
     }
     .accordion {
-        width: 67vw;
+        width: 80vw;
     }
     .panel {
-        width: 67vw;
+        width: 80vw;
     }
     input[type=text], textarea {
-        width: 67vw;
+        width: 80vw;
     }
-    .faq--para {
-        width: 67vw;
+    p {
+        width: 80vw;
     }
     .contact-us {
-        width: 67vw;
+        width: 80vw;
     }
     .contact-us > .form, .faq{ 
-        width: 67vw;
+        width: 80vw;
     }
     .faq {
-        width: 67vw;
+        width: 80vw;
     }
     .faq--container {
-        width: 67vw;
-    }
-    .hero {
-    width: 67vw;
-    margin: 14vh auto 0;
-    }
-}
-
-    @media(max-width:500px) {
-        * {
-        font-size: 16px;
-        }
-        .contact--container {
-            flex-direction: column;
-            width: 80vw;
-        }
-        .accordion {
-            width: 80vw;
-        }
-        .panel {
-            width: 80vw;
-        }
-        input[type=text], textarea {
-            width: 80vw;
-        }
-        .faq--para {
-            width: 80vw;
-        }
-        .contact-us {
-            width: 80vw;
-        }
-        .contact-us > .form, .faq{ 
-            width: 80vw;
-        }
-        .faq {
-            width: 80vw;
-        }
-        .faq--container {
-            width: 80vw;
-        }
-        .hero {
         width: 80vw;
-        margin: 14vh auto 0;
-        }
-        .faq--para {
-            text-align: justify;
-        }
     }
-
-    #menu__hero {
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        margin: 0;
-        height: 60vh;
-        width: 100vw;
-        min-height:400px;
-        background-image: url("Images/img2.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-    }
-    
-    #menu__hero::before {
-        content: "";
-        position: absolute;
-        height: 60vh;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        pointer-events: none;
-    }
-    #menu__hero__text {
-        z-index: 2;
-        font-size: 3.8rem;
-        letter-spacing: 5px;
-        color: white;
-        font-family: 'PT Sans Narrow', sans-serif;
-        margin:25vh 0 0 11.5vw;
-        opacity: 1;
-    }
-    #menu__hero__subheading {
-        font-size: 1.4rem;
-        margin: 0 0 0 11.5vw;
-        color: white;
-        z-index: 2;
-        font-family: 'PT Sans Narrow', sans-serif;
-        width: 33vw;
-    }
-    #smallcover {
-    width: 3rem;
-    z-index: 2;
-    margin: auto;
-    }
-
 </style>
 <title>Contact Us</title>
 </head>
 
 <body>
-    
-    <!----------------------HEADER------------------------------------------------------------- -->
-    <header class="header">
-        <img class="header-logo" src="images/header-logo.png">
-        <img class="header-logo-mobile" src="images/losmo.png">
-        <nav>
-            <ul class="header-nav">
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">HOURS & LOCATION</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="event.html">EVENTS</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
-        <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-    </header>
-    <!----------------------HERO------------------------------------------------------- -->
-    <section id="menu__hero">
-            
-            <h1 id="menu__hero__text">Get in Touch</h1>
-            <h3 id="menu__hero__subheading">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below.</h3>
-        </section>
-    <!----------------------CONTACT--------------------------------------------------------- -->
+    <section class="hero">
+    <h1>CONTACT US</h1>
+    </section>
     <section class="contact--container">
     <section class="contact-us">
         <section class="contact--text">
-            <img id = "smallcover" src="Images/telephone.png">
-            <h1 class="contact--heading">Get in Touch</h1>
-            <p class="faq--para">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <h1>Get in Touch</h1>
+            <p>If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. You can also check out the FAQ section below for commonly asked questions (and avoid embarassing yourself with an email!). We hope to hear from you!</p>
         </section>
         <section class="form">
         <form>
@@ -370,9 +218,10 @@ article {
 
             <span class="accordion purpose">Purpose</span>
             <article class="panel purpose-form">
-                <span class = "purpose__choice" onclick="checkEvent(0)"> Inquiry </span>
+                <span onclick="checkEvent(0)"> Inquiry </span>
                 <hr>
-                <span class = "purpose__choice" onclick="checkEvent(1)"> Private Event </span>
+                <span onclick="checkEvent(1)"> Private Event </span>
+                <p></p>
             </article>
             <br>
 
@@ -388,9 +237,8 @@ article {
         </section>
         <section class = "faq--container">
         <section class="contact--text">
-            <img id = "smallcover" src="Images/faq.jpg">
-            <h1 class="contact--heading">Frequently Asked Questions</h1>
-            <p class="faq--para">Have a question? Already answered! Below are frequently asked questions. Please read the section thouroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <h1>Frequently Asked Questions</h1>
+            <p>Have a question? Already answered! Below are frequently asked questions. Please read the section thouroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
         </section>
         <section class="faq">
             <span class="accordion acc-faq" style="margin-top: 3px;">What are your modes of payment?</span>
@@ -417,17 +265,7 @@ article {
         </section>
     </section>
     </main>
-    <!----------------------FOOTER------------------------------------------------------------- -->
-  <footer>
-    <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
-    <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
-    <ul>
-      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg"></a></li>
-      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg"></a></li>
-      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg"></a></li>
-    </ul>
-    <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
-  </footer>
+
 <script>
 
     var acc = document.getElementsByClassName("accordion");
@@ -464,16 +302,6 @@ article {
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
         }
     }
-
-            const headerE1 = document.querySelector('.header');
-            window.addEventListener('scroll', () => {
-              if (window.scrollY > 200) {
-                headerE1.classList.add('header-scrolled');
-              }
-              else if (window.scrollY <= 200) {
-                headerE1.classList.remove('header-scrolled');
-              }
-            });
 </script>
 </body>
 </html>

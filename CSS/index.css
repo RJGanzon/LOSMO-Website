@@ -7,6 +7,9 @@
     transform: translateY(30px) scale(0.9);
   }
 }
+html {
+  font-size: 18px;
+}
 body {
     margin: 0px;
     background-color: black;
@@ -397,6 +400,11 @@ body {
   border-radius: 5%;
 }
 
+.drinkcontainer {
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
 .drinkies {
   height: 75.98vh;
@@ -428,18 +436,13 @@ body {
 /* Next & previous buttons */
 
 .prevnextbutt {
-  display: flex;
-  justify-content: center;
-}
-
-.prevnextbutt {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: flex-start;
 
 }
-.prev, .next {
+.prev, .next, .prevmobile, .nextmobile {
   cursor: pointer;
   margin-top: 22px;
   padding: 16px;
@@ -652,6 +655,9 @@ content: "\2212";
 
 
 @media(max-width:840px) {
+  .Upcoming-Events {
+    margin-top: 15vh;
+  }
   .drinkies .info {
     width: 20rem;
   }
@@ -669,7 +675,7 @@ content: "\2212";
   }
 
   .aboutus {
-    margin-bottom: 5vh;
+    margin-bottom: 30vh;
   }
 
   .paragraph {
@@ -924,13 +930,17 @@ content: "\2212";
   .drinkies h1 {
     font-size: 3rem;
     letter-spacing: 2px;
-    width: 18rem;
+    width: 16rem;
   }
   
   .drinkies p {
     font-size: .9rem;
     letter-spacing: 1.2px;
-    width: 18rem; 
+    width: 16rem; 
+  }
+
+  .drinkies .info {
+    width: 16rem;
   }
 
   .drinks-section img {
@@ -950,6 +960,14 @@ content: "\2212";
 
 @media(max-width:490px) {
 
+  .prev, .next {
+    display: none;
+  }
+
+  .prevnextbutt {
+    display:flex;
+  }
+
   .event-container .card {
     width: 90vw;
   }
@@ -960,12 +978,15 @@ content: "\2212";
     height: 1.2rem;
   }
   
+
+
   .aboutus p{
-  width:21.29rem;
+    font-size: 16px;
+    width:21.29rem;
   }
 
   .aboutus {
-    margin-bottom: 35vh;
+    margin-bottom: 40vh;
   }
 
   .image-opening {
@@ -988,21 +1009,30 @@ content: "\2212";
   }
 
   .drinkies {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .drinkies .info {
-    width: 14rem;
+    width: 13rem;
   }
 
+  .drinkies img {
+    height: 70%;
+  }
   .drinkies h1 {
+    font-size: 2.5rem;
     letter-spacing: 2px;
-    width: 15rem;
+    width: 13rem;
   }
   
   .drinkies p {
-    letter-spacing: 1.2px;
-    width: 15rem; 
+    letter-spacing: 1.1px;
+    font-size: 16px;
+    width: 13rem; 
+  }
+
+  .drinks-section {
+    margin-bottom: 30vh;
   }
 
 
@@ -1012,7 +1042,7 @@ content: "\2212";
   }
 
   .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-    font-size: 2.0rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -1033,7 +1063,6 @@ content: "\2212";
 
   .image-opening p {
     width: 280px;
-    font-size: .55rem;
     line-height: 15px;
   }
 
@@ -1043,32 +1072,26 @@ content: "\2212";
   }
 
   .drinkies h1 {
-    font-size: 2.3rem;
     letter-spacing: 2px;
     width: 12rem; 
   }
   
   .drinkies p {
-    font-size: .8rem;
     letter-spacing: 1.2px;
     width: 12rem; 
   }
 
   .drinks-section img {
-    height:53%;
+    height:70%;
   }
 
-  .prev, .next {
-    top: 608%;
-  }
 
   .aboutus {
     height: 60vh;
-    margin-bottom: 20vh;
+    margin-bottom: 40vh;
   }
 
   .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-    font-size: 1.5rem;
   }
 
   .aboutus h1 {
@@ -1076,8 +1099,7 @@ content: "\2212";
   }
 
   .aboutus p {
-    font-size: .8rem;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
   }
   
   .aboutus img {
@@ -1155,6 +1177,9 @@ content: "\2212";
 }
 
 @media screen and (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
   .contact__para {
     text-align: justify;
   }
