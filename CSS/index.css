@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 /*Keyframes*/
 @keyframes fade-up {
@@ -7,7 +7,6 @@
     transform: translateY(30px) scale(0.9);
   }
 }
-
 html {
   font-size: 18px;
 }
@@ -47,7 +46,7 @@ body {
     padding: 25px;
     position: absolute;
     margin-top: -400px;
-    width: fit-content;
+    width: 100%;
     text-align: left;
     margin-left:800px;
 
@@ -217,7 +216,7 @@ body {
 }
 
 .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-  font-size: 4rem;
+  font-size: 4.375rem;
   letter-spacing: 5px;
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
   color: white;
@@ -232,6 +231,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.875rem;
   width:38.75rem;
+  
 }
 
 
@@ -362,8 +362,7 @@ body {
 }
 
 .image-opening {
-  height: fit-content;
-  min-height: 500px;
+  height: 500px;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../Images/menuindex.jpg);
   background-position: center 40%;
   background-size: cover;
@@ -382,7 +381,7 @@ body {
 }
 
 .image-opening h1 {
-  font-size: 4rem;
+  font-size: 3.8rem;
 }
 
 .image-opening p {
@@ -404,7 +403,6 @@ body {
 .drinkcontainer {
   display:flex;
   justify-content: center;
-  overflow: hidden;
   align-items: flex-end;
 }
 
@@ -425,7 +423,7 @@ body {
 }
 
 .drinkies h1 {
-  font-size: 4rem;
+  font-size: 5.8rem;
   letter-spacing: 2px;
   margin-bottom: 0;
 }
@@ -487,46 +485,23 @@ body {
   color: white;
   background-color: black;
   width: 80vw;
-  height: 110vh;
-  min-height: 480px;
+  height: 66vh;
+  min-height: 500px;
   margin: auto;
-  letter-spacing: 1.2px;
 }
-.hours-and-location-container p {
-  font-size: 1.125rem;
-  line-height: 30px;
-}
-.hours-and-location-container h1 {
-  font-size: 3rem;
-  text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
-  color: white;
-  letter-spacing: 5px;
-}
-.hour {
-  border: #eb19b0 2px dashed;
+.hours-and-location-container ul, p {
+  line-height: 1.6;
 }
 
 .hours-and-location-item{
-  box-sizing: border-box;
   margin: 0 auto;
-  padding: 2rem;
-  width: 39vw;
-  height: fit-content;
+  width: 35.5vw;
+  height: 58vh;
   text-align: center;
   background-color: black;
   justify-content: center;
-}
-.day {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-.day + li {
-  font-family: 'Jost', sans-serif;
 
-  font-size: 0.9rem;
-  margin-bottom: 1.1rem;
 }
-
 .hours-and-location-item > ul{
   list-style-type: none;
   width: auto;
@@ -552,11 +527,6 @@ iframe.gmaps{
   margin-top:10vh;
   margin-bottom: 10vh;
 }
-#contact__faq p, span, .panel {
-  letter-spacing: 0.094rem;
-  font-size: 1.125rem;
-  line-height: 1.875rem;  
-}
 
 .contact-us {
   display: flex;
@@ -573,9 +543,6 @@ iframe.gmaps{
   text-align: left;
   color: white;
 }
-.faq {
-  padding-top: 0.7rem;
-}
 
 .accordion{
   box-sizing: border-box;
@@ -584,26 +551,27 @@ iframe.gmaps{
   color: black;
   cursor: pointer;
   height:fit-content;
-  padding: 1.2rem;
+  padding: 15px;
   width: 32vw;
   outline: none;
   text-align: left;
-  transition: all 0.4s;
+  transition: 0.4s;
+  font-family: 'PT Sans Narrow';
+    font-size: 1.15rem;
+    margin: auto;
 }
 
 .accordion:after {
-  content: '\002B';
-  font-weight: bold;
-  float: right;
-  transition: all 0.5s;
+content: '\002B';
+font-weight: bold;
+float: right;
+margin-left: 5px;
 }
-
 
 .active:after {
-  content: "\2212";
-  transition: all 0.5s;
+content: "\2212";
 }
-
+        
 .active, .accordion:hover {
   background-color: #ccc;
 }
@@ -620,8 +588,9 @@ iframe.gmaps{
   overflow: hidden;
 }
 .acc-faq{
-  margin: 0 0 1rem;
+  margin: 10px 0;
 }
+
 .contact--container {
   width:80vw;
   display: flex;
@@ -673,14 +642,10 @@ iframe.gmaps{
   background-color: #fff;
 }
 
-.contact__header { 
+.contact__header {
   color: white;
-  margin: 0;
-  padding: 0;
-  font-size: 3rem;
-  text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
-  color: white;
-  letter-spacing: 5px;
+    margin: 10px 0;
+    font-size: 26px;
 }
 .contact__para {
   line-height: 1.6;
@@ -1220,3 +1185,32 @@ iframe.gmaps{
   }
 }
 
+/*Laptop L*/
+@media screen and (max-width: 1440px) {
+
+}
+
+/*Laptop*/
+@media screen and (max-width: 1024px) {
+
+}
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+
+}
+
+/*Mobile L*/
+@media screen and (max-width: 425px) {
+
+}
+
+/*Mobile M*/
+@media screen and (max-width: 375) {
+
+}
+
+/*Mobile S*/
+@media screen and (max-width: 320) {
+
+}
