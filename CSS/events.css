@@ -373,13 +373,14 @@ h1 {
     align-items: center;
   }
 
-  .image-container,
-  .description-container {
+  .image-container {
     width: 100%;
+    order: 1;
   }
 
   .description-container {
     padding: 10px;
     text-align: center;
+    order: 0;
   }
 }
