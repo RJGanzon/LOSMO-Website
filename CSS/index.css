@@ -206,7 +206,8 @@ body {
   margin: 0%;
   width: 100%;
   height: 200px;
-  gap: 6.25rem;
+  gap: 1.5rem 6.25rem;  
+
 }
 
 .aboutus img {
@@ -546,7 +547,7 @@ body {
   margin: 1vh 8vw;
 }
 iframe.gmaps{
-  height: 40vh;
+  height: 45vh;
   border:0;
   background-color: black;
   margin-bottom: 5vh;
@@ -593,6 +594,7 @@ iframe.gmaps{
   outline: none;
   text-align: left;
   transition: all 0.4s;
+  
 }
 
 .accordion:after {
@@ -612,16 +614,20 @@ iframe.gmaps{
   background-color: #ccc;
 }
 
+
 .panel {
   box-sizing: border-box;
   left: 0;
   right: 0;
-  text-align: left;
-  padding: 0 18px;
   width: 32vw;
+  padding: 0 1.2rem;
+  color: black;
   background-color: black;
-  display: none;
+  text-align: left;    
+  max-height: 0.1rem;
+  transition: all 0.4s;
   overflow: hidden;
+  display: none;
 }
 .acc-faq{
   margin: 0 0 1rem;
@@ -692,324 +698,150 @@ iframe.gmaps{
   margin: 10px 0 20px;
 }
 
-
-
 /*
-@media(max-width:740px) {
-  .image-opening h1 {
-    width: 35rem;
+@media(max-width:1000px) {
+  .hours-and-location-container{
+    flex-direction: column;
+    height: fit-content;
   }
-
-  .image-opening p {
+  .hours-and-location-item {
+    width: 80vw;
   }
 }
-
-@media(max-width:690px) {
-
-  #contact__faq {
-    margin-top: 0px;
-  }
-
-  .aboutus {
-    margin-top:1vh;
-  }
-
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-    font-size: 3rem;
-
-  }
-
-  .aboutus p {
-    font-size: .95rem;
-    width: 80%;
-  }
-
-  .paragraph {
-  }
-
-  .drinkies {
-    gap: 1rem;
-  }
-
-  .drinkies h1 {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-  }
-  
-  .drinkies p {
-    font-size: .9rem;
-    letter-spacing: 1.2px;
-    width: 18rem; 
-  }
-
-  .drinks-section img {
-    height:60%;
-  }
-
-  .image-opening h1 {
-    font-size: 2.5rem;
-    width: 420px;
-    text-align: center;
-  }
-
-  .image-opening p {
-    font-size: 1rem;
-    line-height: 25px;
-  }
-
-  .event-container .card {
-    width: 75vw;
-  }
-
-  .event-container .card .read-more,
-  .event-container .card .reserve {
-    width:13rem;
-    height: 1.2rem;
-  }
-
+@media(max-width:840px) {
   .Upcoming-Events {
-    margin-bottom: 190vh;
+    margin-top: 15vh;
+  }
+  .drinkies .info {
+    width: 20rem;
   }
 
-  .prev, .next {
-    top: 640%;
-  }
-
-  #contact__faq {
-    margin-top: 0;
-  }
-}
-
-@media(max-width:590px) {
-
-  #contact__faq {
-    margin-top: 10vh;
-  }
-
-  .aboutus {
-    margin-bottom: 9rem;
+  .text {
+    margin-left:140px;
   }
   .aboutus p {
-    width:30.75rem; 
-  }
-
-  .event-container .card .read-more,
-  .event-container .card .reserve {
-    width:11rem;
-    height: 1.2rem;
-  }
-
-  .image-opening {
-    align-items: center;
-    margin-left: auto;
-  }
-
-  .image-opening h1 {
-    font-size: 2.2rem;
-    width: 400px;
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.575rem;
   }
-
-  .image-opening p {
-    font-size: .9rem;
-    line-height: 25px;
-  }
-
-  .drinks-section {
-    height:55vh;
-  }
-
-  .drinkies {   
-    
-    gap: .1rem;
-    height: 55vh;
-  }
-
-  .image-opening{
-    height: 60vh;
-  }
-
-  .drinkies h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    width: 16rem;
-  }
-  
-  .drinkies p {
-    font-size: .9rem;
-    letter-spacing: 1.2px;
-    width: 16rem; 
-  }
-
-  .drinkies .info {
-    width: 16rem;
-  }
-
-  .drinks-section img {
-    height:75%;
-  }
-
-  .prev, .next {
-    top: 655%;
-  }
-
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-    font-size: 2.5rem;
-  }
-  
-}
-
-
-@media(max-width:490px) {
-
-  .event-container .card {
-    width: 90vw;
-  }
-
-  .event-container .card .read-more,
-  .event-container .card .reserve {
-    width:11rem;
-    height: 1.2rem;
-  }
-  
-
-
-  .aboutus p{
-    font-size: 16px;
-    width:21.29rem;
+  .aboutus div {
+    gap: 3.125rem;
   }
 
   .aboutus {
-    margin-bottom: 40vh;
-  }
-
-  .image-opening {
-    align-items: center;
-    margin-left: auto;
-    height: 300px;
-  }
-
-  .image-opening h1 {
-    margin-top: 50px;
-    font-size: 1.8rem;
-    width: 320px;
-    text-align: center;
-  }
-
-  .image-opening p {
-    font-size: .70rem;
-    line-height: 17px;
-  }
-
-  .drinkies {
-    gap: 1rem;
-  }
-
-  .drinkies .info {
-    width: 13rem;
-  }
-
-  .drinkies img {
-    height: 70%;
-  }
-  .drinkies h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    width: 13rem;
-  }
-  
-  .drinkies p {
-    letter-spacing: 1.1px;
-    font-size: 16px;
-    width: 13rem; 
-  }
-
-  .drinks-section {
     margin-bottom: 30vh;
   }
 
-
-
-  .prev, .next {
-    top: 625%;
-  }
-
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media(max-width:390px) {
-  .image-opening {
-    align-items: center;
-    margin-left: auto;
-    height: 300px;
+  .paragraph {
+    margin-right: 11rem;
   }
 
   .image-opening h1 {
-    margin-top: 50px;
-    font-size: 1.6rem;
-    line-height: 30px;
-    width: 280px;
+    font-size: 3.5rem;
+    width: 37.5rem;
     text-align: center;
   }
 
   .image-opening p {
-    line-height: 15px;
+    width: 37.5rem;
+    font-size: 1.1rem;
   }
 
+  .drinkies {
+    gap: 3rem;
+  }
 
-  .drinkies .info {
-    width: 12rem;
+  .drinks-section .info {
+    gap: .1rem;
   }
 
   .drinkies h1 {
+    font-size: 4rem;
     letter-spacing: 2px;
-    width: 12rem; 
   }
   
   .drinkies p {
+    font-size: 1rem;
     letter-spacing: 1.2px;
-    width: 12rem; 
+    width: 20rem; 
   }
 
   .drinks-section img {
     height:70%;
   }
 
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+    font-size: 3.5rem;
 
-  .aboutus {
-    height: 60vh;
-    margin-bottom: 40vh;
   }
 
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+  .prev, .next {
+    top: 470%;
+  }
+
+
+}
+
+@media(max-width:790px) {
+
+  
+
+  .slideshow-container {
+    display:none;
+  }
+
+  .vidhero {
+    display:block;
+  }
+
+  .drinkies {
+    gap: 1.5rem;
+    
+  }
+  .prev, .next {
+    top: 595%;
+  }
+
+  .aboutus {
+    margin-top:5vh;
+    margin-bottom:25vh;
+  }
+
+  .aboutus div {
+    gap: 3.10rem;
   }
 
   .aboutus h1 {
-    margin-top:20px;
-  }
-
-  .aboutus p {
-    line-height: 1.5rem;
+    margin-bottom:35px;
   }
   
-  .aboutus img {
-    max-height: 50%;
-    max-width: 50%;
-    overflow: hidden;
-    margin: 0%;
+  .Upcoming-Events h1 {
+    text-align: center;
+  }
+  
+  .Upcoming-Events {
+    align-items: center;
+    margin-bottom:67rem;
+  }
+
+  .event-container {
+    justify-content: center;
+  }
+
+  .event-container .card {
+    width: 70vw;
+  }
+
+  .card-2 {
+    background-position: center;
   }
 
   .event-container .card .read-more,
   .event-container .card .reserve {
-    width:9rem;
-    height: 1.2rem;
+    width:8rem;
   }
 
-  .prev, .next {
-    top: 563%;
-  }
+  
 }
 */
 
