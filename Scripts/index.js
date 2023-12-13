@@ -114,12 +114,25 @@ var acc = document.getElementsByClassName("accordion");
         /* Toggle between adding and removing the "active" class,
         to highlight the button that controls the panel */
         this.classList.toggle("active");
-    
+        
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
-        if (panel.style.display === "inline-block") {
-          panel.style.display = "none";
+
+        if (panel.style.maxHeight === "fit-content") {
+            this.style.margin = "0 0 1rem";
+            panel.style.maxHeight = "0.1rem";
+            panel.style.padding = "0 1.2rem"; 
+            setTimeout(function () {
+            panel.style.display = "none";
+            }.bind(this), 1);
+
         } else {
           panel.style.display = "inline-block";
+          setTimeout(function () {
+          panel.style.maxHeight = "fit-content";
+          panel.style.padding = "1.2rem";
+          this.style.margin = "0";
+          panel.style.color = "white";  
+        }.bind(this), 1);
         }
     }

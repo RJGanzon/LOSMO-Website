@@ -7,6 +7,7 @@
     transform: translateY(30px) scale(0.9);
   }
 }
+
 html {
   font-size: 18px;
 }
@@ -46,7 +47,7 @@ body {
     padding: 25px;
     position: absolute;
     margin-top: -400px;
-    width: 100%;
+    width: fit-content;
     text-align: left;
     margin-left:800px;
 
@@ -362,7 +363,8 @@ body {
 }
 
 .image-opening {
-  height: 500px;
+  height: fit-content;
+  min-height: 500px;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../Images/menuindex.jpg);
   background-position: center 40%;
   background-size: cover;
@@ -403,6 +405,7 @@ body {
 .drinkcontainer {
   display:flex;
   justify-content: center;
+  overflow: hidden;
   align-items: flex-end;
 }
 
@@ -551,27 +554,26 @@ iframe.gmaps{
   color: black;
   cursor: pointer;
   height:fit-content;
-  padding: 15px;
+  padding: 1.2rem;
   width: 32vw;
   outline: none;
   text-align: left;
-  transition: 0.4s;
-  font-family: 'PT Sans Narrow';
-    font-size: 1.15rem;
-    margin: auto;
+  transition: all 0.4s;
 }
 
 .accordion:after {
-content: '\002B';
-font-weight: bold;
-float: right;
-margin-left: 5px;
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  transition: all 0.5s;
 }
 
+
 .active:after {
-content: "\2212";
+  content: "\2212";
+  transition: all 0.5s;
 }
-        
+
 .active, .accordion:hover {
   background-color: #ccc;
 }
@@ -588,9 +590,8 @@ content: "\2212";
   overflow: hidden;
 }
 .acc-faq{
-  margin: 10px 0;
+  margin: 0 0 1rem;
 }
-
 .contact--container {
   width:80vw;
   display: flex;
@@ -1184,3 +1185,4 @@ content: "\2212";
     text-align: justify;
   }
 }
+
