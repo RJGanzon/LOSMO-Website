@@ -21,7 +21,7 @@
             }
             body {
                 background-color: black;
-                line-height: 1.875rem;  
+                margin: 0px;
                 
             }
             .menu__nav {
@@ -94,10 +94,10 @@
             .menu__item__image__container {
                 grid-area: 1 / 1 / 3 / 2;
             }
-            p, li {
+            p{
                 font-family: PT Sans, sans-serif;
                 color:whitesmoke;
-                line-height: 1.6;
+                /*line-height: 1.6;*/
             }
             p.menu__item__description {
                 font-size: 0.9rem;
@@ -444,30 +444,34 @@
                     float: none;
                 }
             }
-        
+        .header {
+            font-family: 'PT Sans Narrow', sans-serif;
+        }
+
         </style>
     </head>
     <body>
         <!----------------------HEADER------------------------------------------------------------- -->
-    <header class="header">
-        <img class="header-logo" src="images/header-logo.png">
-        <img class="header-logo-mobile" src="images/losmo.png">
-        <nav>
-            <ul class="header-nav">
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">HOURS & LOCATION</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="event.html">EVENTS</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
-        <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-    </header>
+  <!----------------------HEADER------------------------------------------------------------- -->
+  <header class="header">
+    <img class="header-logo" src="images/header-logo.png">
+    <img class="header-logo-mobile" src="images/losmo.png">
+    <nav>
+        <ul class="header-nav">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">HOURS & LOCATION</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="event.html">EVENTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+</header>
     <!----------------------HERO------------------------------------------------------------- -->
         <section id="menu__hero">
             <h1 id="menu__hero__text">EXPLORE OUR MENU</h1>
