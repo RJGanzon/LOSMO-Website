@@ -147,7 +147,7 @@ input::placeholder {
     width:80vw;
     display: flex;
     margin: 0 auto;
-    translate: 0 -50px;
+
 }
 
 .contact--text {
@@ -155,7 +155,7 @@ input::placeholder {
     flex-direction: column;
     width: 32vw;
     justify-content: flex-start;
-    max-height: 500px;
+    height: 400px;
 }
 .contact--heading {
     color: white;
@@ -253,6 +253,10 @@ article {
     }
 #fname {
     margin: 0 0 0.5rem ;
+}
+.hours-and-location-border{
+  border: 1.5px solid #eb19b0;
+  margin: 1vh 3vw;
 }
 
 @media(max-width:1000px) {
@@ -390,7 +394,9 @@ article {
             <img id = "smallcover" src="Images/telephone.png">
             <h1 class="contact--heading">Get in Touch</h1>
             <p class="faq--para">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <hr class="hours-and-location-border">
         </section>
+        
         <section class="form">
         <form>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
@@ -419,6 +425,7 @@ article {
             <img id = "smallcover" src="Images/faq.png">
             <h1 class="contact--heading">Frequently Asked Questions</h1>
             <p class="faq--para">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <hr class="hours-and-location-border">
         </section>
         <section class="faq">
             <span class="accordion acc-faq">What are your modes of payment?</span>
