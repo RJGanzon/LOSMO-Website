@@ -452,27 +452,28 @@ article {
         </section>
         
         <section class="form">
-        <form>
+        <form onsubmit="checkSubmit()">
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
             <input type="text" id="email" name="Email" placeholder="Email*" required>
             <input type="text" id="num" name="Number" placeholder="Number*" required style="margin: 0.5rem 0 1rem;">
         
 
-            <span class="accordion purpose">Purpose</span>
+            <span class="accordion purpose" id = "Purpose1">Purpose</span>
             <article class="panel purpose-form">
                 <div class = "purpose__choice" id = "choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Inquiry </div>
                 <hr>
                 <div class = "purpose__choice" id = "choice" onclick="checkEvent(1)" style="padding-top:1rem"> Private Event </div>
             </article>
             <input type="text" id="Subject" name="Subject" placeholder="Subject*" required style="margin: 0.1rem 0 0.5rem;">
-            <input type="text" id="when" name="When" placeholder="When*" required>
-            <input type="text" id="pax" name="PAX" placeholder="PAX*" required>
+            <input type="text" id="when" name="When" placeholder="When*">
+            <input type="text" id="pax" name="PAX" placeholder="PAX*">
 
             <textarea id="message" id="message" name="Message" placeholder="Your Message"></textarea>
         
             <input type="submit" value="Submit">
         </form>
         </section>
+
         </section>
         <section class = "faq--container">
         <section class="contact--text">
@@ -553,11 +554,21 @@ article {
         }
     }
     
+    function checkSubmit(){
+        var check = document.getElementById("Purpose1").innerHTML;
+
+        if(check == "Purpose"){
+            alert("Bai mali imong impormasyon")
+            event.preventDefault();
+        }
+    }
 
     function checkEvent(num){
         if(num == 1){
             document.getElementById("when").style.display = "inline-block";
             document.getElementById("pax").style.display = "inline-block";
+            document.getElementById("when").required = true;
+            document.getElementById("pax").required = true;
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
             document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
@@ -568,6 +579,8 @@ article {
         } else {
             document.getElementById("when").style.display = "none"; 
             document.getElementById("pax").style.display = "none"; 
+            document.getElementById("when").required = false;
+            document.getElementById("pax").required = false;
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
             document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
