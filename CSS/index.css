@@ -370,8 +370,8 @@ body {
 .image-opening {
   height: fit-content;
   min-height: 500px;
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5) ), url(../Images/menuindex.jpg);
-  background-position: center center;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url(../Images/menuindex.jpg);
+  background-position: center 48%;
   background-size: cover;
   display: flex;
   flex-direction: row;
