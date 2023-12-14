@@ -726,6 +726,12 @@ iframe.gmaps{
 #reservation {
   margin: auto;
 }
+.panel {
+  display: none;
+}
+.purpose {
+  display: none;
+}
 #reservation h1 {
   text-align: center;
   padding-bottom: 2vh;
@@ -1217,7 +1223,6 @@ input[type=submit] {
 @media screen and (max-width: 425px) {
   .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, #reservation h1, .hours-and-location-item h1, .paragraph h1, .info h1, .contact__header {
     font-size: 2rem;
-  
   }
 }
 
@@ -1261,11 +1266,16 @@ input[type=submit] {
   .details {
     width: 84vw;
   }
+  #table {
+    display: none;
+  }
+  .reservation__info {
+    display: none;
+  }
   .drinkcontainer {
     padding-top: 30px;
     align-items: flex-start;
     height: 530px;
-    
   }
   .info {
     text-align: center ;
@@ -1278,6 +1288,34 @@ input[type=submit] {
   }
   .reservation__form input[type=submit] {
     width: fit-content;
+  }
+  .panel {
+    display: flex;
+    left: 0;
+    right: 0;
+    width: 84vw;
+    padding: 0 1.2rem;
+    color: black;
+    background-color: black;
+    text-align: left;    
+    max-height: 0.1rem;
+    transition: all 0.4s;
+    overflow: hidden;
+    display: none;
+}
+  .purpose {
+  display: flex;
+  margin: 0 0 0.9rem;
+  border: none;
+  padding:1rem;
+  }
+
+  .purpose::after {
+  content: "▾";
+  }
+
+  .purpose.active:after{
+  content: "▴";
   }
 
 }
