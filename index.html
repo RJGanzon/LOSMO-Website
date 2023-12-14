@@ -301,7 +301,7 @@
         </div>
         <article class="form">
             <h3>Details: </h3>
-            <form action="#" class="reservation__form">
+            <form action="#" class="reservation__form" onsubmit="checkReservation()">
  
                 <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
 
@@ -320,7 +320,7 @@
   
                 <input type="text" id="num" name="Number" placeholder="Number*" required>
             
-                <input type="submit" value="Confirm">
+                <input type="submit" value="Confirm" id="confirm">
             </form>
         </article>
     </section>
