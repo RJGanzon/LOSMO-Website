@@ -880,10 +880,11 @@ iframe.gmaps{
   .aboutus img {
     max-height: 70%;
     max-width: 70%;
+   
   }
 
   .aboutus div {
-    gap: 4.25rem;
+   
   }
 
   .hours-and-location-container p {
