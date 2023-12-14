@@ -16,7 +16,9 @@
 html {
   font-size: 18px;
 }
-
+main {
+  overflow: hidden;
+}
 body {
     margin: 0px;
     background-color: black;
