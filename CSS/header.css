@@ -35,8 +35,7 @@
 
 .header-logo {
     cursor: pointer;
-    margin-right: auto;
-    height: 50%;
+    height: 40px;
     width: auto;
 }
 
@@ -88,6 +87,7 @@
     width: 100%;
 }
 
+
 #header-reservation {
     margin: 0;
 }
@@ -133,6 +133,14 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
+}
+
+.imglink {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    display: inline-block;
 }
 
 @media(max-width:790px) {
@@ -184,7 +192,7 @@
 
 @media (max-width: 479px) {
     .header-logo {
-        height: 45%;
+        height: 30px;
     }
 
     #header-reservation button {
@@ -195,7 +203,7 @@
 /*Laptop L*/
 @media screen and (min-width: 1440px) {
     .header-logo {
-        height: 65%;
+        height: 65px;
     } 
     .header li, a, button {
         font-size: 1.02em;
