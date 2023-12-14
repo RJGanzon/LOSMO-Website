@@ -16,13 +16,29 @@
 <section class="reservation__container">
 <section class="floorplan__container">
     <img class="floorplan" src="/RESERVATION/layout.svg" alt="">
+    <img src="RESERVATION/round.svg" class="table sittingcircle" style="left: 20px; top:32px">
+    <img src="RESERVATION/round.svg" class="table sittingcircle" style="left: 20px; top:107px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:201px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:250px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:299px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:398px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:447px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:201px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:250px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:299px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:398px">
+    <img src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:447px">
+
+    <img src="RESERVATION/square.svg" class="table standingsquare" style="left: 226px; top:420px">
+    <img src="RESERVATION/square.svg" class="table standingsquare" style="left: 315px; top:420px">
+    <img src="RESERVATION/square.svg" class="table standingsquare" style="left: 226px; top:220px">
+    <img src="RESERVATION/square.svg" class="table standingsquare" style="left: 315px; top:220px">
+
 </section>
 
 <section class="details">
         <h1>RESERVATION</h1>
-        <p>
-            Want to ensure that you have a table? 
-        </p>
+        <p id="output">Want to ensure that you have a table?</p>
     </article>
     <article class="form">
         <h3>DETAILS</h3>
@@ -44,6 +60,24 @@
     </article>
 </section>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
 
+            var table = document.querySelectorAll('.table');
+            table.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    if (image.classList.contains('standingsquare')) {
+                        document.getElementById('output').innerText = ' Intimate and cozy, the seated cocktail table is perfect for small gatherings or date nights. With a limited seating capacity of 2 to 4 individuals, it offers an exclusive setting for guests to enjoy their drinks and conversation.';
+                    } else if (image.classList.contains('sittingcircle')) {
+                        document.getElementById('output').innerText = 'Designed for a more dynamic social experience, the standing cocktail table accommodates a slightly larger group of 4 to 5 guests. Ideal for mingling, this table encourages a lively atmosphere where attendees can enjoy drinks and snacks while standing comfortably.';
+                    } else if (image.classList.contains('sittingsquare')) {
+                        document.getElementById('output').innerText = 'The square table provides a versatile setting for groups of 5 to 6 individuals. Well-suited for both casual and formal occasions, it offers a balanced mix of intimacy and sociability. Guests can gather around this table to share a meal or engage in conversations, making it a flexible choice for various events.';
+                    }
+                });
+            });
+        });
+
+</script>
 </body>
+
 </html>
