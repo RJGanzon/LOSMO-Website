@@ -729,7 +729,7 @@ iframe.gmaps{
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
   width:32vw;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-align: justify;
   
 }
@@ -738,8 +738,9 @@ iframe.gmaps{
   line-height: 1.6;
   color:white;
   font-family: 'PT Sans Narrow';
-  font-size: 1rem;
-  
+}
+.reservation__info p {
+  font-size: 0.9rem;
 }
 
 .floorplan__container {
@@ -755,7 +756,7 @@ iframe.gmaps{
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 .form {
   display: flex;
