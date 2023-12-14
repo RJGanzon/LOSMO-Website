@@ -111,7 +111,7 @@ body {
     margin-top:10px;
     margin-bottom:10px;
   }
-  a {
+  .slideshow-container a{
     margin-left:0;
     margin-right:5px;
   }
@@ -193,10 +193,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 78.78vh;
+  height: fit-content;
   width: 100%;
   color: white;
   gap: 1.125rem;
+  padding: 16vh 0;
 }
 
 .aboutus p {
@@ -210,19 +211,18 @@ body {
   align-items: center;
   margin: 0%;
   width: 100%;
-  height: 200px;
+  height: fit-content;
   gap: 1.5rem 6.25rem;  
 
 }
 
 .aboutus img {
-  max-height: 75%;
-  max-width: 75%;
+  height: 9rem;
   overflow: hidden;
   margin: 0%;
 }
 
-.aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+.aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, #reservation h1 {
   font-size: 4rem;
   letter-spacing: 5px;
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
@@ -244,12 +244,12 @@ body {
 
 /* -----------------Upcoming Events------------------------------------------------------------------------*/
 .Upcoming-Events {
-  height: 650px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 20vh;
+  margin-bottom: 20px;
 }
 
 .Upcoming-Events h1 {
@@ -401,6 +401,7 @@ body {
 }
 
 .drinks-section {
+  padding: 4vh 0;
   color: whitesmoke;
 }
 
@@ -557,9 +558,28 @@ iframe.gmaps{
   background-color: black;
   margin-bottom: 5vh;
 }
+@media(max-width:1100px) {
+  .hours-and-location-container {
+    width: 88vw;
+  }
+  .hours-and-location-item {
+    width: 43vw;
+    padding: 1rem;
+  }
+}
+@media(max-width:784px) {
+  .hours-and-location-container {
+    margin:2rem auto;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .hours-and-location-item {
+    width: 88vw;
+  }
+}
 /*----------------------------------------contact Index----------------------------------------------*/
 #contact__faq {
-  margin-top:10vh;
+  margin-top:4vh;
   margin-bottom: 10vh;
 }
 #contact__faq p, span, .panel {
@@ -701,6 +721,112 @@ iframe.gmaps{
   line-height: 1.6;
   color:white;
   margin: 10px 0 20px;
+}
+/*----------------------------------------reservation--------------------------------------------*/
+#reservation {
+  margin: auto;
+}
+#reservation h1 {
+  text-align: center;
+  padding-bottom: 2vh;
+}
+.details{
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 505px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1rem;
+  width:32vw;
+  letter-spacing: 1px;
+  text-align: justify;
+  
+}
+.reservation__info {
+  height: 200px;
+  line-height: 1.6;
+  color:white;
+  font-family: 'PT Sans Narrow';
+}
+.reservation__info p {
+  font-size: 0.9rem;
+}
+
+.floorplan__container {
+  position: relative;
+}
+
+.floorplan {
+  vertical-align: middle;
+  width: 600px;
+}
+.reservation__container {
+  margin: auto auto 8vh;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+}
+.reservation__form {
+  box-sizing: border-box;
+}
+.reservation__form input::placeholder {
+  font-family: 'PT Sans Narrow';
+  font-size: 1rem;
+}
+
+.reservation__form input{
+  box-sizing: border-box;
+  color: white;
+  margin: 0.2rem 0;
+  width: 32vw;
+  border: none;
+  background-color: black;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1;
+  border: white solid 2px;
+  padding: 0.5rem 1rem;
+  font-family: 'PT Sans Narrow';
+}
+
+input[type=submit] {
+  background-color: #eb19b0;
+  color: whitesmoke;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:right;
+  width: fit-content;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.9px;
+  font-weight: 999;
+}
+.table {
+  z-index: 4;
+  position: absolute;
+  width: 56px;
+  cursor: pointer;
+}
+.table:hover {
+  transform: translate(-10px,-10px);
+  transition: all 0.5s ease;
+  width: 76px;      
+  z-index: 5;
+}
+#output {
+  height: fit-content;
+
 }
 
 /*
@@ -866,8 +992,12 @@ iframe.gmaps{
 
 /*Laptop*/
 @media screen and (max-width: 1024px) {
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .hours-and-location-container h1, .contact__header {
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .contact__header, #reservation h1 {
     font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  .hours-and-location-container h1 {
+    font-size: 2.5rem;
     letter-spacing: 2px;
   }
 
@@ -882,19 +1012,18 @@ iframe.gmaps{
     line-height: 1.6rem;
     letter-spacing: 0.094rem;
   }
-  .aboutus img {
-    max-height: 70%;
-    max-width: 70%;
-  }
-
   .aboutus div {
-    gap: 4.25rem;
+    box-sizing: border-box;
+    padding: 0 8vw;
+  }
+  .aboutus img {
+    max-height: 7rem;
   }
 
   .hours-and-location-container p {
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 0.094rem;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.05rem;
   }
 
   .image-opening .paragraph {
@@ -958,9 +1087,12 @@ iframe.gmaps{
     line-height: 1.6rem;
     letter-spacing: 0.094rem;
   }
+  .aboutus {
+    padding: 5vh 0;
+  }
 
   .Upcoming-Events {
-    margin-bottom:60em;
+    margin-bottom:30px;
     align-items: center;
   }
 
@@ -989,48 +1121,48 @@ iframe.gmaps{
   }
   .contact--container {
       flex-direction: column;
-      width: 80vw;
+      width: 84vw;
       gap: 0;
   }
   .contact__button--left {
     margin: auto;
   }
   .accordion {
-      width: 80vw;
+      width: 84vw;
   }
   .contact--text{
     text-align: center;
     margin: auto;
-    width: 80vw;
+    width: 84vw;
   }
   .panel {
-      width: 80vw;
+      width: 84vw;
   }
   input[type=text], textarea {
-      width: 80vw;
+      width: 84vw;
   }
   .contact__header {
-      width: 80vw;
+      width: 84vw;
   }
   .contact-us {
-      width: 80vw;
+      width: 84vw;
       margin: auto;
       justify-content: center;
       text-align: center;
   }
   .contact-us > .faq{ 
-      width: 80vw;
+      width: 84vw;
       margin: auto;
   }
   .faq {
-      width: 80vw;
+      width: 84vw;
       margin: auto;
   }
   .faq--container {
-      width: 80vw;
+      width: 84vw;
   }
   .hero__faq--container {
-      width: 80vw;
+      width: 84vw;
       margin: 4vh auto 0;
   }
   .contact__button {
@@ -1055,23 +1187,14 @@ iframe.gmaps{
   }
 }
 
-@media screen and (max-width: 660px) {
-  .aboutus p {
-    font-size: 18px;
-    width:530px;
-    line-height: 1.6rem;
-    letter-spacing: 0.094rem;
-  } 
-  .drinkies {
-    flex-direction: column;
-  }
 
-}
 
 @media screen and (max-width: 600px) {
   .image-opening .paragraph {
     width:400px;  
   }
+
+
 }
 
 @media screen and (max-width: 565px) {
@@ -1080,6 +1203,7 @@ iframe.gmaps{
     width:450px;
     line-height: 1.6rem;
     letter-spacing: 0.094rem;
+    text-align: justify;
   } 
 
 }
@@ -1091,6 +1215,10 @@ iframe.gmaps{
 
 /*Mobile L*/
 @media screen and (max-width: 425px) {
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, #reservation h1, .hours-and-location-item h1, .paragraph h1, .info h1, .contact__header {
+    font-size: 2rem;
+  
+  }
 }
 
 /*Mobile M*/
@@ -1099,4 +1227,57 @@ iframe.gmaps{
 
 /*Mobile S*/
 @media screen and (max-width: 320px) {
+}
+
+@media screen and (max-width: 920px) {
+  .reservation__container {
+    flex-direction: column;
+  }
+  .details {
+    height: fit-content;
+    width: 600px;
+  }
+  .reservation__info {
+    height: fit-content;
+  }
+  .reservation__form input {
+    width: 600px;
+  }
+  .reservation__form input[type=submit] {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .aboutus p {
+    font-size: 18px;
+    width:530px;
+    line-height: 1.6rem;
+    letter-spacing: 0.094rem;
+  } 
+  .drinkies {
+    flex-direction: column;
+  }
+  .details {
+    width: 84vw;
+  }
+  .drinkcontainer {
+    padding-top: 30px;
+    align-items: flex-start;
+    height: 530px;
+    
+  }
+  .info {
+    text-align: center ;
+  }
+  .floorplan__container {
+    display: none;
+  }
+  .reservation__form input {
+    width: 84vw;
+  }
+  .reservation__form input[type=submit] {
+    width: fit-content;
+  }
+
 }

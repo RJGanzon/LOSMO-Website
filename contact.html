@@ -14,7 +14,10 @@ html {
 * {
     box-sizing: border-box;
 }
-body{
+body {
+    background-color: black;
+}
+.contact--container{
     font-family: 'PT Sans Narrow';
     margin: 0;
     background-color: black;   
@@ -144,15 +147,15 @@ input::placeholder {
     width:80vw;
     display: flex;
     margin: 0 auto;
-    translate: 0 -50px;
+
 }
 
 .contact--text {
     display: flex;
     flex-direction: column;
     width: 32vw;
-    height: 46vh;
-    min-height: 300px;
+    justify-content: flex-start;
+    padding-bottom: 3vw;
 }
 .contact--heading {
     color: white;
@@ -162,10 +165,10 @@ input::placeholder {
 }
 .faq--para {
     color: white;
-    margin: 26px 0;
+    margin: 0 0;
     line-height: 1.6;
     text-align: center;
-    min-height: 120px;
+    height: fit-content;
 }
 
 .hero {
@@ -184,6 +187,11 @@ header {
 .purpose::after {
     content: "▾";
 }
+
+.purpose.active:after{
+    content: "▴";
+}
+
 article {
     line-height: 1.6;
 }
@@ -193,13 +201,79 @@ article {
     cursor: pointer;
 } 
 
+#menu__hero {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        margin: 0;
+        height: 60vh;
+        min-height:400px;
+        background-image: url("Images/img2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    
+    #menu__hero::before {
+        content: "";
+        position: absolute;
+        height: 60vh;
+        min-height:400px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        pointer-events: none;
+    }
+    #menu__hero__text {
+        width: fit-content;
+        z-index: 2;
+        font-size: 3.8rem;
+        letter-spacing: 5px;
+        color: white;
+        font-family: 'PT Sans Narrow', sans-serif;
+        margin:8rem 0 1.5rem 11.5vw;
+        opacity: 1;
+    }
+    #menu__hero__subheading {
+        font-size: 1.4rem;
+        margin: 0 0 0 11.5vw;
+        color: white;
+        z-index: 2;
+        font-family: 'PT Sans Narrow', sans-serif;
+        width: 33vw;
+    }
+    #smallcover {
+    height: 3rem;
+    z-index: 2;
+    margin: 0 auto;
+    }
+#fname {
+    margin: 0 0 0.5rem ;
+}
+.hours-and-location-border{
+  border: 1.5px solid #eb19b0;
+  margin: 1vh 3vw;
+}
 
+@media(max-width:1000px) {
+    .contact--heading {
+        font-size: 1.2rem;
+    }
+    #smallcover {
+        height: 2rem;
 
-@media screen and (max-width: 768px) {
+    }
+    
+}
+@media screen and (max-width: 780px) {
     .contact--text {
         width: 67vw;
     }
     .contact--container {
+        gap: 1.3rem;
         flex-direction: column;
         width: 73vw;
     }
@@ -280,55 +354,60 @@ article {
         }
     }
 
-    #menu__hero {
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        margin: 0;
-        height: 60vh;
-        width: 100vw;
-        min-height:400px;
-        background-image: url("Images/img2.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
+    @media(max-width: 875px) {
+        #menu__hero__subheading{
+            width: 45vw;
+        }
     }
-    
-    #menu__hero::before {
-        content: "";
-        position: absolute;
-        height: 60vh;
-        min-height:400px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        pointer-events: none;
+
+    @media(max-width: 580px) {
+        #menu__hero__subheading{
+            width: 65vw;
+        }
     }
-    #menu__hero__text {
-        z-index: 2;
-        font-size: 3.8rem;
-        letter-spacing: 5px;
-        color: white;
-        font-family: 'PT Sans Narrow', sans-serif;
-        margin:25vh 0 0 11.5vw;
-        opacity: 1;
+
+    @media(max-width: 645px) {
+        #menu__hero__subheading{
+            width: 70vw;
+        }
     }
-    #menu__hero__subheading {
-        font-size: 1.4rem;
-        margin: 0 0 0 11.5vw;
-        color: white;
-        z-index: 2;
-        font-family: 'PT Sans Narrow', sans-serif;
-        width: 33vw;
+
+    @media(max-width: 450px) {
+        #menu__hero__text{
+            margin-left: 20px;
+        }
+        #menu__hero__subheading{
+            margin-left: 25px;
+            width: 70vw;
+        }
     }
-    #smallcover {
-    height: 3rem;
-    z-index: 2;
-    margin: 0 auto;
+
+    @media(max-width: 415px) {
+        #menu__hero__text{
+            margin-left: 20px;
+        }
+        #menu__hero__subheading{
+            margin-left: 25px;
+            width: 80vw;
+        }
     }
+
+    @media(max-width: 390px){
+        #menu__hero__text{
+            width: 80vw;
+        }
+
+        #menu__hero{
+            height: 500px;
+        }
+    }
+
+    @media(max-width: 360px){
+        #menu__hero{
+            height: 530px;
+        }
+    }
+
 
 </style>
 <title>Contact Us</title>
@@ -358,7 +437,6 @@ article {
     </header>
     <!----------------------HERO------------------------------------------------------- -->
     <section id="menu__hero">
-            
             <h1 id="menu__hero__text">Get in Touch</h1>
             <h3 id="menu__hero__subheading">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below.</h3>
         </section>
@@ -368,8 +446,11 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/telephone.png">
             <h1 class="contact--heading">Get in Touch</h1>
-            <p class="faq--para">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <p class="faq--para" id="para--small">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <br>
+            <hr class="hours-and-location-border">
         </section>
+        
         <section class="form">
         <form>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
@@ -397,7 +478,9 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/faq.png">
             <h1 class="contact--heading">Frequently Asked Questions</h1>
-            <p class="faq--para">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We WILL still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <p class="faq--para" id="para--big">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <br>
+            <hr class="hours-and-location-border">
         </section>
         <section class="faq">
             <span class="accordion acc-faq">What are your modes of payment?</span>
@@ -429,9 +512,9 @@ article {
     <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
     <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
     <ul>
-      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg"></a></li>
-      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg"></a></li>
-      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg"></a></li>
+      <li><a href="https://www.facebook.com/losmo.ph"><img src="Images/fbIcon.svg"></a></li>
+      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="Images/tiktokIcon.svg"></a></li>
+      <li><a href="https://www.instagram.com/losmo.ph/"><img src="Images/igIcon.svg"></a></li>
     </ul>
     <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
   </footer>
@@ -504,6 +587,16 @@ article {
                 headerE1.classList.remove('header-scrolled');
               }
             });
+
+    function setHeight() {
+        var small = document.getElementById('para--small');
+        var big = document.getElementById('para--big');
+        if (big) {
+            small.style.height = big.clientHeight + 'px';
+        }
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
 </script>
 </body>
 </html>
