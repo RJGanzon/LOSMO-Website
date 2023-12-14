@@ -725,8 +725,9 @@ iframe.gmaps{
   display: flex;
   flex-direction: column;
   height: 71vh;
-  font-family: 'PT Sans Narrow';
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
+  letter-spacing: 1.2px;
   
 }
 .reservation__info {
