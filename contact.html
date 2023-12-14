@@ -452,7 +452,7 @@ article {
         </section>
         
         <section class="form">
-        <form onsubmit="checkSubmit()">
+        <form onsubmit="checkPurpose()">
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
             <input type="text" id="email" name="Email" placeholder="Email*" required>
             <input type="text" id="num" name="Number" placeholder="Number*" required style="margin: 0.5rem 0 1rem;">
@@ -554,11 +554,11 @@ article {
         }
     }
     
-    function checkSubmit(){
+    function checkPurpose(){
         var check = document.getElementById("Purpose1").innerHTML;
 
         if(check == "Purpose"){
-            alert("Bai mali imong impormasyon")
+            alert("Please Select your Purpose")
             event.preventDefault();
         }
     }
