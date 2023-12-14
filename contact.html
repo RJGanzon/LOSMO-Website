@@ -155,7 +155,7 @@ input::placeholder {
     flex-direction: column;
     width: 32vw;
     justify-content: flex-start;
-    height: 400px;
+    padding-bottom: 3vw;
 }
 .contact--heading {
     color: white;
@@ -168,8 +168,7 @@ input::placeholder {
     margin: 0 0;
     line-height: 1.6;
     text-align: center;
-    height: 30vh;
-    min-height: 120px;
+    height: fit-content;
 }
 
 .hero {
@@ -393,7 +392,8 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/telephone.png">
             <h1 class="contact--heading">Get in Touch</h1>
-            <p class="faq--para">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <p class="faq--para" id="para--small">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <br>
             <hr class="hours-and-location-border">
         </section>
         
@@ -424,7 +424,8 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/faq.png">
             <h1 class="contact--heading">Frequently Asked Questions</h1>
-            <p class="faq--para">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <p class="faq--para" id="para--big">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <br>
             <hr class="hours-and-location-border">
         </section>
         <section class="faq">
@@ -532,6 +533,16 @@ article {
                 headerE1.classList.remove('header-scrolled');
               }
             });
+
+    function setHeight() {
+        var small = document.getElementById('para--small');
+        var big = document.getElementById('para--big');
+        if (big) {
+            small.style.height = big.clientHeight + 'px';
+        }
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
 </script>
 </body>
 </html>
