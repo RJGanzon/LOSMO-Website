@@ -724,11 +724,19 @@ iframe.gmaps{
   background-color: black;
   display: flex;
   flex-direction: column;
+  height: 71vh;
+  font-family: 'PT Sans Narrow';
+  font-size: 1rem;
+  
 }
 .reservation__info {
   height: 300px;
+  line-height: 1.6;
+  color:white;
+  font-family: 'PT Sans Narrow';
+  font-size: 1rem;
+  
 }
-
 input{
   width: 30vw;
 }
@@ -741,6 +749,10 @@ input[type=submit] {
   cursor: pointer;
   width: fit-content;
 }
+.floorplan__parent_container{
+  display:flex;
+  margin: auto auto;
+}
 .floorplan__container {
   position: relative;
 }
@@ -750,15 +762,16 @@ input[type=submit] {
   width: 600px;
 }
 .reservation__container {
-  
-  margin: auto;
+  margin: auto auto 8vh;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .form {
   display: flex;
   flex-direction: column;
+
 }
 .reservation__form {
   display: flex;

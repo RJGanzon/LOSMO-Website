@@ -273,6 +273,7 @@
   </section>
    <!-----------------------reservation---------------------------------------------------------------------------->
   <section class="reservation__container">
+    <div class="floorplan_parent_container">
     <section class="floorplan__container">
         <img class="floorplan" src="RESERVATION/layout.svg" alt="">
         <img src="RESERVATION/round.svg" class="table sittingcircle" style="left: 20px; top:32px">
@@ -294,25 +295,23 @@
         <img src="RESERVATION/square.svg" class="table standingsquare" style="left: 315px; top:220px">
     
     </section>
+    </div>
     
     <section class="details">
       <div class="reservation__info">
             <h1>RESERVATION</h1>
-            <p id="output">Worried you won't have a table? Book one in advance! Fill up the information needed below and click on your preferred table. Vibe & Enjoy the party without worrying about your seats, Welcome to Losmo!</p>
+            <p id="output">Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!</p>
         </div>
         <article class="form">
             <h3>DETAILS</h3>
             <form action="#" class="reservation__form">
-                <label for="fname">Name</label>
+ 
                 <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
-            
-                <label for="time">Time</label>
+
                 <input type="time" id="time" name="Time" min="00:00" max="24:59" value="22:00" required>
     
-                <label for="pax">PAX</label>
                 <input type="number" id="pax" name="PAX" placeholder="PAX*" required>
-    
-                <label for="num">Number </label>
+  
                 <input type="text" id="num" name="Number" placeholder="Number*" required>
             
                 <input type="submit" value="Confirm">
