@@ -147,7 +147,7 @@ input::placeholder {
     width:80vw;
     display: flex;
     margin: 0 auto;
-    translate: 0 -50px;
+
 }
 
 .contact--text {
@@ -155,7 +155,7 @@ input::placeholder {
     flex-direction: column;
     width: 32vw;
     justify-content: flex-start;
-    max-height: 500px;
+    padding-bottom: 3vw;
 }
 .contact--heading {
     color: white;
@@ -168,8 +168,7 @@ input::placeholder {
     margin: 0 0;
     line-height: 1.6;
     text-align: center;
-    height: 30vh;
-    min-height: 120px;
+    height: fit-content;
 }
 
 .hero {
@@ -188,6 +187,11 @@ header {
 .purpose::after {
     content: "▾";
 }
+
+.purpose.active:after{
+    content: "▴";
+}
+
 article {
     line-height: 1.6;
 }
@@ -248,6 +252,10 @@ article {
     }
 #fname {
     margin: 0 0 0.5rem ;
+}
+.hours-and-location-border{
+  border: 1.5px solid #eb19b0;
+  margin: 1vh 3vw;
 }
 
 @media(max-width:1000px) {
@@ -384,8 +392,11 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/telephone.png">
             <h1 class="contact--heading">Get in Touch</h1>
-            <p class="faq--para">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <p class="faq--para" id="para--small">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <br>
+            <hr class="hours-and-location-border">
         </section>
+        
         <section class="form">
         <form>
             <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
@@ -413,7 +424,9 @@ article {
         <section class="contact--text">
             <img id = "smallcover" src="Images/faq.png">
             <h1 class="contact--heading">Frequently Asked Questions</h1>
-            <p class="faq--para">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <p class="faq--para" id="para--big">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <br>
+            <hr class="hours-and-location-border">
         </section>
         <section class="faq">
             <span class="accordion acc-faq">What are your modes of payment?</span>
@@ -445,9 +458,9 @@ article {
     <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
     <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
     <ul>
-      <li><a href="https://www.facebook.com/losmo.ph"><img src="images/fbIcon.svg"></a></li>
-      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="images/tiktokIcon.svg"></a></li>
-      <li><a href="https://www.instagram.com/losmo.ph/"><img src="images/igIcon.svg"></a></li>
+      <li><a href="https://www.facebook.com/losmo.ph"><img src="Images/fbIcon.svg"></a></li>
+      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="Images/tiktokIcon.svg"></a></li>
+      <li><a href="https://www.instagram.com/losmo.ph/"><img src="Images/igIcon.svg"></a></li>
     </ul>
     <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
   </footer>
@@ -520,6 +533,16 @@ article {
                 headerE1.classList.remove('header-scrolled');
               }
             });
+
+    function setHeight() {
+        var small = document.getElementById('para--small');
+        var big = document.getElementById('para--big');
+        if (big) {
+            small.style.height = big.clientHeight + 'px';
+        }
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
 </script>
 </body>
 </html>

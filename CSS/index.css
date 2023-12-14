@@ -239,12 +239,12 @@ body {
 
 /* -----------------Upcoming Events------------------------------------------------------------------------*/
 .Upcoming-Events {
-  height: 650px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 20vh;
+  margin-bottom: 20px;
 }
 
 .Upcoming-Events h1 {
@@ -396,6 +396,7 @@ body {
 }
 
 .drinks-section {
+  padding: 4vh 0;
   color: whitesmoke;
 }
 
@@ -552,9 +553,28 @@ iframe.gmaps{
   background-color: black;
   margin-bottom: 5vh;
 }
+@media(max-width:1100px) {
+  .hours-and-location-container {
+    width: 88vw;
+  }
+  .hours-and-location-item {
+    width: 43vw;
+    padding: 1rem;
+  }
+}
+@media(max-width:784px) {
+  .hours-and-location-container {
+    margin:2rem auto;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .hours-and-location-item {
+    width: 88vw;
+  }
+}
 /*----------------------------------------contact Index----------------------------------------------*/
 #contact__faq {
-  margin-top:10vh;
+  margin-top:4vh;
   margin-bottom: 10vh;
 }
 #contact__faq p, span, .panel {
@@ -704,11 +724,20 @@ iframe.gmaps{
   background-color: black;
   display: flex;
   flex-direction: column;
+  height: 71vh;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  
 }
 .reservation__info {
   height: 300px;
+  line-height: 1.6;
+  color:white;
+  font-family: 'PT Sans Narrow';
+  font-size: 1rem;
+  
 }
-
 input{
   width: 30vw;
 }
@@ -721,6 +750,10 @@ input[type=submit] {
   cursor: pointer;
   width: fit-content;
 }
+.floorplan__parent_container{
+  display:flex;
+  margin: auto auto;
+}
 .floorplan__container {
   position: relative;
 }
@@ -730,15 +763,16 @@ input[type=submit] {
   width: 600px;
 }
 .reservation__container {
-  
-  margin: auto;
+  margin: auto auto 8vh;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .form {
   display: flex;
   flex-direction: column;
+
 }
 .reservation__form {
   display: flex;
@@ -767,7 +801,7 @@ input[type=submit] {
 
 input[type=submit] {
   background-color: #eb19b0;
-  color: white;
+  color: whitesmoke;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -775,8 +809,10 @@ input[type=submit] {
   margin: 0 0;
   float:right;
   width: fit-content;
-  font-family: 'PT Sans Narrow';
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
+  letter-spacing: 0.9px;
+  font-weight: 999;
  
 }
 .table {
@@ -959,8 +995,12 @@ input[type=submit] {
 
 /*Laptop*/
 @media screen and (max-width: 1024px) {
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .hours-and-location-container h1, .contact__header {
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .contact__header {
     font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  .hours-and-location-container h1 {
+    font-size: 2.5rem;
     letter-spacing: 2px;
   }
 
@@ -981,14 +1021,10 @@ input[type=submit] {
    
   }
 
-  .aboutus div {
-   
-  }
-
   .hours-and-location-container p {
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 0.094rem;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.05rem;
   }
 
   .image-opening .paragraph {
@@ -1054,7 +1090,7 @@ input[type=submit] {
   }
 
   .Upcoming-Events {
-    margin-bottom:60em;
+    margin-bottom:30px;
     align-items: center;
   }
 
@@ -1159,6 +1195,18 @@ input[type=submit] {
   .drinkies {
     flex-direction: column;
   }
+  .drinkcontainer {
+    padding-top: 30px;
+    align-items: flex-start;
+    height: 530px;
+    
+  }
+  .info {
+    text-align: center ;
+  }
+  .floorplan__container {
+    display: none;
+  }
 
 }
 
@@ -1166,6 +1214,8 @@ input[type=submit] {
   .image-opening .paragraph {
     width:400px;  
   }
+
+
 }
 
 @media screen and (max-width: 565px) {
@@ -1193,4 +1243,9 @@ input[type=submit] {
 
 /*Mobile S*/
 @media screen and (max-width: 320px) {
+}
+@media screen and (max-width: 820px) {
+  .reservation__container {
+    flex-direction: column;
+  }
 }
