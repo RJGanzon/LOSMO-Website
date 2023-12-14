@@ -724,36 +724,24 @@ iframe.gmaps{
   background-color: black;
   display: flex;
   flex-direction: column;
-  height: 71vh;
+  justify-content: space-between;
+  height: 505px;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
+  width:32vw;
   letter-spacing: 1.2px;
+  text-align: justify;
   
 }
 .reservation__info {
-  height: 300px;
+  height: 200px;
   line-height: 1.6;
   color:white;
   font-family: 'PT Sans Narrow';
   font-size: 1rem;
   
 }
-input{
-  width: 30vw;
-}
-input[type=submit] {
-  background-color: #eb19b0;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: fit-content;
-}
-.floorplan__parent_container{
-  display:flex;
-  margin: auto auto;
-}
+
 .floorplan__container {
   position: relative;
 }
@@ -767,7 +755,7 @@ input[type=submit] {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .form {
   display: flex;
@@ -775,8 +763,6 @@ input[type=submit] {
 
 }
 .reservation__form {
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
 }
 .reservation__form input::placeholder {
@@ -785,9 +771,10 @@ input[type=submit] {
 }
 
 .reservation__form input{
+  box-sizing: border-box;
   color: white;
-  width: 20vw;
-  margin:0.5rem auto;
+  margin: 0.2rem 0;
+  width: 32vw;
   border: none;
   background-color: black;
   resize: none;
@@ -795,7 +782,7 @@ input[type=submit] {
   font-size: 1rem;
   line-height: 1;
   border: white solid 2px;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-family: 'PT Sans Narrow';
 }
 
@@ -806,14 +793,12 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin: 0 0;
   float:right;
   width: fit-content;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.9px;
   font-weight: 999;
- 
 }
 .table {
   z-index: 4;
@@ -829,7 +814,7 @@ input[type=submit] {
 }
 #output {
   height: fit-content;
-  width: 20vw;
+
 }
 
 /*

@@ -143,7 +143,7 @@ var acc = document.getElementsByClassName("accordion");
 
             var table = document.querySelectorAll('.table');
             table.forEach(function (image) {
-                image.addEventListener('click', function () {
+                image.addEventListener('click', function (e) {
                     if (image.classList.contains('standingsquare')) {
                         document.getElementById('output').innerText = ' Intimate and cozy, the seated cocktail table is perfect for small gatherings or date nights. With a limited seating capacity of 2 to 4 individuals, it offers an exclusive setting for guests to enjoy their drinks and conversation.';
                     } else if (image.classList.contains('sittingcircle')) {
@@ -151,6 +151,8 @@ var acc = document.getElementsByClassName("accordion");
                     } else if (image.classList.contains('sittingsquare')) {
                         document.getElementById('output').innerText = 'The square table provides a versatile setting for groups of 5 to 6 individuals. Well-suited for both casual and formal occasions, it offers a balanced mix of intimacy and sociability. Guests can gather around this table to share a meal or engage in conversations, making it a flexible choice for various events.';
                     }
+                    var number = e.target.id;
+                    document.getElementById('table').innerHTML = "Reservation: Table # " + number;
                 });
             });
         });
