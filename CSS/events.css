@@ -235,7 +235,7 @@ a {
   
   .media:hover .layer p {
     transform: scale(1);
-    transition: all 1s ease;
+    transition: all 0.8s ease;
   }
 
 /* -----------------FADE ANIMATIONS------------------------------------------------------------------------*/
@@ -392,7 +392,10 @@ h1 {
   }
 
   .description p {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height:normal;
   }
 
   h1, h2 {
