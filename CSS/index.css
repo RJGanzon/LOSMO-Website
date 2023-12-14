@@ -490,6 +490,7 @@ body {
 /*---------------------------------------hours and loc index----------------------------------------------*/
 
 #hours-and-location-container{
+  scroll-margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -724,6 +725,7 @@ iframe.gmaps{
 }
 /*----------------------------------------reservation--------------------------------------------*/
 #reservation {
+  scroll-margin-top: 70px;
   margin: auto;
 }
 .panel {
