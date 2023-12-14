@@ -16,14 +16,13 @@
       <img class="header-logo-mobile" src="images/losmo.png">
       <nav>
           <ul class="header-nav">
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">HOURS & LOCATION</a></li>
+              <li><a href="index.html#hours-and-location-container">HOURS & LOCATION</a></li>
               <li><a href="menu.html">MENU</a></li>
               <li><a href="event.html">EVENTS</a></li>
-              <li><a href="#">CONTACT</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
           </ul>
       </nav>
-      <a href="#" id="header-reservation"><button>GET A TABLE</button></a>
+      <a href="index.html#reservation" id="header-reservation"><button>GET A TABLE</button></a>
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -75,7 +74,7 @@
     </div>
   </section>
   <!-----------------------Upcoming Events----------------------------------------------------------------------------->
-  <section class="hours-and-location-container">
+  <section id="hours-and-location-container">
     <section class="hours-and-location-item hour">
         <h1>HOURS & LOCATION</h1>
         <hr class="hours-and-location-border">
@@ -301,7 +300,7 @@
         </div>
         <article class="form">
             <h3>Details: </h3>
-            <form action="#" class="reservation__form">
+            <form action="#" class="reservation__form" onsubmit="checkReservation()">
  
                 <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
 
@@ -320,7 +319,7 @@
   
                 <input type="text" id="num" name="Number" placeholder="Number*" required>
             
-                <input type="submit" value="Confirm">
+                <input type="submit" value="Confirm" id="confirm">
             </form>
         </article>
     </section>

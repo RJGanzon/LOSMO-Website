@@ -489,7 +489,7 @@ body {
 }
 /*---------------------------------------hours and loc index----------------------------------------------*/
 
-.hours-and-location-container{
+#hours-and-location-container{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -503,11 +503,11 @@ body {
   margin: auto;
   letter-spacing: 1.2px;
 }
-.hours-and-location-container p {
+#hours-and-location-container p {
   font-size: 1.125rem;
   line-height: 30px;
 }
-.hours-and-location-container h1 {
+#hours-and-location-container h1 {
   font-size: 3rem;
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
   color: white;
@@ -559,7 +559,7 @@ iframe.gmaps{
   margin-bottom: 5vh;
 }
 @media(max-width:1100px) {
-  .hours-and-location-container {
+  #hours-and-location-container {
     width: 88vw;
   }
   .hours-and-location-item {
@@ -568,7 +568,7 @@ iframe.gmaps{
   }
 }
 @media(max-width:784px) {
-  .hours-and-location-container {
+  #hours-and-location-container {
     margin:2rem auto;
     flex-direction: column;
     height: fit-content;
@@ -1002,7 +1002,7 @@ input[type=submit] {
     font-size: 3rem;
     letter-spacing: 2px;
   }
-  .hours-and-location-container h1 {
+  #hours-and-location-container h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
   }
@@ -1026,7 +1026,7 @@ input[type=submit] {
     max-height: 7rem;
   }
 
-  .hours-and-location-container p {
+  #hours-and-location-container p {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.05rem;

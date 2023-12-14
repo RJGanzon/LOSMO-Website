@@ -194,3 +194,12 @@ var acc = document.getElementsByClassName("accordion");
         document.getElementById('table').innerHTML = "Reservation: ";
         document.getElementById('output').innerHTML = "Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!";
     }
+    
+    function checkReservation(){
+        var check = document.getElementById("output").innerHTML;
+
+        if(check == "Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!"){
+          alert("Please Select a Table");
+          event.preventDefault();
+        }
+    }
