@@ -299,17 +299,17 @@ body {
 
 .card-1 {
   background-position: center center;
-  background-image: url(../Images/losmoween.jpg);
+  background-image: url(Images/losmoween.jpg);
 }
 
 .card-2 {
   background-position: 75% 10% ;
-  background-image: url(../Images/midnights.PNG);
+  background-image: url(Images/midnights.PNG);
 }
 
 .card-3 {
   background-position: center center;
-  background-image: url(../Images/netflix.jpg);
+  background-image: url(Images/netflix.jpg);
 }
 
 .event-container .card h1 {
