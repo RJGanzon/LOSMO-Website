@@ -704,7 +704,9 @@ iframe.gmaps{
   background-color: black;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+}
+.reservation__info {
+  height: 300px;
 }
 
 input{
@@ -736,7 +738,7 @@ input[type=submit] {
 }
 .form {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
 .reservation__form {
   display: flex;
