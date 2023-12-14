@@ -12,6 +12,11 @@
 html {
   font-size: 18px;
 }
+
+* {
+  margin: 0%;
+}
+
 body {
     margin: 0px;
     background-color: black;
@@ -188,10 +193,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 78.78vh;
+  height: fit-content;
   width: 100%;
   color: white;
   gap: 1.125rem;
+  padding: 16vh 0;
 }
 
 .aboutus p {
@@ -205,19 +211,18 @@ body {
   align-items: center;
   margin: 0%;
   width: 100%;
-  height: 200px;
+  height: fit-content;
   gap: 1.5rem 6.25rem;  
 
 }
 
 .aboutus img {
-  max-height: 75%;
-  max-width: 75%;
+  height: 9rem;
   overflow: hidden;
   margin: 0%;
 }
 
-.aboutus h1, .Instagram-widget h1, .Upcoming-Events h1 {
+.aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, #reservation h1 {
   font-size: 4rem;
   letter-spacing: 5px;
   text-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF;
@@ -299,17 +304,17 @@ body {
 
 .card-1 {
   background-position: center center;
-  background-image: url(../Images/losmoween.jpg);
+  background-image: url(Images/losmoween.jpg);
 }
 
 .card-2 {
   background-position: 75% 10% ;
-  background-image: url(../Images/midnights.PNG);
+  background-image: url(Images/midnights.PNG);
 }
 
 .card-3 {
   background-position: center center;
-  background-image: url(../Images/netflix.jpg);
+  background-image: url(Images/netflix.jpg);
 }
 
 .event-container .card h1 {
@@ -718,7 +723,19 @@ iframe.gmaps{
   margin: 10px 0 20px;
 }
 /*----------------------------------------reservation--------------------------------------------*/
-
+#reservation {
+  margin: auto;
+}
+.panel {
+  display: none;
+}
+.purpose {
+  display: none;
+}
+#reservation h1 {
+  text-align: center;
+  padding-bottom: 2vh;
+}
 .details{
   color: white;
   background-color: black;
@@ -981,7 +998,7 @@ input[type=submit] {
 
 /*Laptop*/
 @media screen and (max-width: 1024px) {
-  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .contact__header {
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, .image-opening h1 ,.drinkies h1, .contact__header, #reservation h1 {
     font-size: 3rem;
     letter-spacing: 2px;
   }
@@ -1001,10 +1018,12 @@ input[type=submit] {
     line-height: 1.6rem;
     letter-spacing: 0.094rem;
   }
+  .aboutus div {
+    box-sizing: border-box;
+    padding: 0 8vw;
+  }
   .aboutus img {
-    max-height: 70%;
-    max-width: 70%;
-   
+    max-height: 7rem;
   }
 
   .hours-and-location-container p {
@@ -1074,6 +1093,9 @@ input[type=submit] {
     line-height: 1.6rem;
     letter-spacing: 0.094rem;
   }
+  .aboutus {
+    padding: 5vh 0;
+  }
 
   .Upcoming-Events {
     margin-bottom:30px;
@@ -1105,48 +1127,48 @@ input[type=submit] {
   }
   .contact--container {
       flex-direction: column;
-      width: 80vw;
+      width: 84vw;
       gap: 0;
   }
   .contact__button--left {
     margin: auto;
   }
   .accordion {
-      width: 80vw;
+      width: 84vw;
   }
   .contact--text{
     text-align: center;
     margin: auto;
-    width: 80vw;
+    width: 84vw;
   }
   .panel {
-      width: 80vw;
+      width: 84vw;
   }
   input[type=text], textarea {
-      width: 80vw;
+      width: 84vw;
   }
   .contact__header {
-      width: 80vw;
+      width: 84vw;
   }
   .contact-us {
-      width: 80vw;
+      width: 84vw;
       margin: auto;
       justify-content: center;
       text-align: center;
   }
   .contact-us > .faq{ 
-      width: 80vw;
+      width: 84vw;
       margin: auto;
   }
   .faq {
-      width: 80vw;
+      width: 84vw;
       margin: auto;
   }
   .faq--container {
-      width: 80vw;
+      width: 84vw;
   }
   .hero__faq--container {
-      width: 80vw;
+      width: 84vw;
       margin: 4vh auto 0;
   }
   .contact__button {
@@ -1171,30 +1193,7 @@ input[type=submit] {
   }
 }
 
-@media screen and (max-width: 660px) {
-  .aboutus p {
-    font-size: 18px;
-    width:530px;
-    line-height: 1.6rem;
-    letter-spacing: 0.094rem;
-  } 
-  .drinkies {
-    flex-direction: column;
-  }
-  .drinkcontainer {
-    padding-top: 30px;
-    align-items: flex-start;
-    height: 530px;
-    
-  }
-  .info {
-    text-align: center ;
-  }
-  .floorplan__container {
-    display: none;
-  }
 
-}
 
 @media screen and (max-width: 600px) {
   .image-opening .paragraph {
@@ -1210,6 +1209,7 @@ input[type=submit] {
     width:450px;
     line-height: 1.6rem;
     letter-spacing: 0.094rem;
+    text-align: justify;
   } 
 
 }
@@ -1221,6 +1221,9 @@ input[type=submit] {
 
 /*Mobile L*/
 @media screen and (max-width: 425px) {
+  .aboutus h1, .Instagram-widget h1, .Upcoming-Events h1, #reservation h1, .hours-and-location-item h1, .paragraph h1, .info h1, .contact__header {
+    font-size: 2rem;
+  }
 }
 
 /*Mobile M*/
@@ -1230,8 +1233,89 @@ input[type=submit] {
 /*Mobile S*/
 @media screen and (max-width: 320px) {
 }
-@media screen and (max-width: 820px) {
+
+@media screen and (max-width: 920px) {
   .reservation__container {
     flex-direction: column;
   }
+  .details {
+    height: fit-content;
+    width: 600px;
+  }
+  .reservation__info {
+    height: fit-content;
+  }
+  .reservation__form input {
+    width: 600px;
+  }
+  .reservation__form input[type=submit] {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .aboutus p {
+    font-size: 18px;
+    width:530px;
+    line-height: 1.6rem;
+    letter-spacing: 0.094rem;
+  } 
+  .drinkies {
+    flex-direction: column;
+  }
+  .details {
+    width: 84vw;
+  }
+  #table {
+    display: none;
+  }
+  .reservation__info {
+    display: none;
+  }
+  .drinkcontainer {
+    padding-top: 30px;
+    align-items: flex-start;
+    height: 530px;
+  }
+  .info {
+    text-align: center ;
+  }
+  .floorplan__container {
+    display: none;
+  }
+  .reservation__form input {
+    width: 84vw;
+  }
+  .reservation__form input[type=submit] {
+    width: fit-content;
+  }
+  .panel {
+    display: flex;
+    left: 0;
+    right: 0;
+    width: 84vw;
+    padding: 0 1.2rem;
+    color: black;
+    background-color: black;
+    text-align: left;    
+    max-height: 0.1rem;
+    transition: all 0.4s;
+    overflow: hidden;
+    display: none;
+}
+  .purpose {
+  display: flex;
+  margin: 0 0 0.9rem;
+  border: none;
+  padding:1rem;
+  }
+
+  .purpose::after {
+  content: "▾";
+  }
+
+  .purpose.active:after{
+  content: "▴";
+  }
+
 }

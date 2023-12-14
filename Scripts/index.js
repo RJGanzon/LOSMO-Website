@@ -156,3 +156,41 @@ var acc = document.getElementsByClassName("accordion");
                 });
             });
         });
+
+        function checkEvent(num){
+          if(num == 0){
+              document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+              document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+              document.getElementsByClassName("accordion purpose")[0].innerHTML = "Seated Cocktail Table: 2-4 PAX";
+              document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+              document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+  
+          } else if (num == 1) { 
+              document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+              document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+              document.getElementsByClassName("accordion purpose")[0].innerHTML = "Standing Cocktail Table: 4-5 PAX";
+              document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+              document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+          } else { 
+            document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Seated Table: 5-6 PAX";
+            document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+        }
+      }
+
+
+      function changeWindowsize() {
+        if (window.innerWidth < 660) {
+            resetoutput();
+        }  else {
+        }
+    }
+
+    window.addEventListener("resize", changeWindowsize);
+
+    function resetoutput() { 
+        document.getElementById('table').innerHTML = "Reservation: ";
+        document.getElementById('output').innerHTML = "Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!";
+    }

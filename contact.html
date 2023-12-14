@@ -573,9 +573,8 @@ article {
             document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
             document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
-            setTimeout(function () {
             document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
-            }.bind(this), 300);
+
         } else {
             document.getElementById("when").style.display = "none"; 
             document.getElementById("pax").style.display = "none"; 
@@ -585,9 +584,7 @@ article {
             document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
             document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
-            setTimeout(function () {
             document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
-            }.bind(this), 300);
         }
     }
 
