@@ -307,6 +307,15 @@
                 <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
 
                 <input type="time" id="time" name="Time" min="00:00" max="24:59" value="22:00" required>
+
+                <span class="accordion purpose">Choose a table:</span>
+                <article class="panel purpose-form">
+                  <div class = "purpose__choice" id = "choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Seated Cocktail Table</div>
+                  <hr>
+                  <div class = "purpose__choice" id = "choice" onclick="checkEvent(1)" style="padding:1rem 0"> Standing Cocktail Table</div>
+                  <hr>
+                  <div class = "purpose__choice" id = "choice" onclick="checkEvent(2)" style="padding-top:1rem"> Seated Table </div>
+                </article>
     
                 <input type="number" id="pax" name="PAX" placeholder="PAX*" required>
   
