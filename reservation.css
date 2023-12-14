@@ -97,3 +97,7 @@ input[type=submit] {
     width: 76px;      
     z-index: 5;
 }
+#output {
+    height: fit-content;
+    width: 20vw;
+}
