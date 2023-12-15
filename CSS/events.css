@@ -40,8 +40,7 @@ body {
     overflow: hidden;
     width: 100%;
     position: relative;
-    display: inline-block;
-    margin: auto;
+    margin-top: 0%;
 }
 
 /* Caption text */
