@@ -28,10 +28,11 @@ body {
 
 /* -----------------HERO------------------------------------------------------------------------*/
 
-.hero {
+img.hero {
     vertical-align: middle;
     height: 630px;
     object-fit:cover;
+    filter: brightness(55%);
   }
 
 
