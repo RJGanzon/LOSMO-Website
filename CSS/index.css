@@ -1319,10 +1319,12 @@ input[type=submit] {
 
   .purpose::after {
   content: "▾";
+
   }
 
   .purpose.active:after{
   content: "▴";
+
   }
 
 }

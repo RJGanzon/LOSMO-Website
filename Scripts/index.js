@@ -201,12 +201,17 @@ var acc = document.getElementsByClassName("accordion");
             document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
         }
       }
+      function resettable() {
+        document.getElementById("choosetable").innerHTML = "Choose a table:";
+   
+      }
 
 
       function changeWindowsize() {
         if (window.innerWidth < 660) {
             resetoutput();
         }  else {
+            resettable();
         }
     }
 
@@ -222,10 +227,11 @@ var acc = document.getElementsByClassName("accordion");
     }
     
     function checkReservation(){
-        var check = document.getElementById("output").innerHTML;
+        var check = document.getElementById("choosetable").innerHTML;
 
-        if(check == "Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!"){
-          alert("Please Select a Table");
+        if(check == "Choose a table:"); {
+          alert("Please Select your table.")
           event.preventDefault();
         }
-    }
+      }
+    
