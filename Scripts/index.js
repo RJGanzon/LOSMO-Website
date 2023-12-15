@@ -117,8 +117,28 @@ var acc = document.getElementsByClassName("accordion");
         
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
+        if(this.id === 'choosetable') {
+          
+          if (panel.style.maxHeight === "fit-content") {
+            this.style.margin = "0.2rem 0";
+            panel.style.maxHeight = "0.1rem";
+            panel.style.padding = "0 1.2rem"; 
+            setTimeout(function () {
+            panel.style.display = "none";
+            }.bind(this), 1);
 
-        if (panel.style.maxHeight === "fit-content") {
+        } else {
+          panel.style.display = "inline-block";
+          setTimeout(function () {
+          panel.style.maxHeight = "fit-content";
+          panel.style.padding = "1.2rem";
+          this.style.margin = "0.2rem 0";
+          panel.style.color = "white";  
+        }.bind(this), 1);
+        }
+
+        } else {
+          if (panel.style.maxHeight === "fit-content") {
             this.style.margin = "0 0 1rem";
             panel.style.maxHeight = "0.1rem";
             panel.style.padding = "0 1.2rem"; 
@@ -135,6 +155,8 @@ var acc = document.getElementsByClassName("accordion");
           panel.style.color = "white";  
         }.bind(this), 1);
         }
+        }
+        
     }
 
 //reservation
@@ -162,20 +184,20 @@ var acc = document.getElementsByClassName("accordion");
               document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
               document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
               document.getElementsByClassName("accordion purpose")[0].innerHTML = "Seated Cocktail Table: 2-4 PAX";
-              document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+              document.getElementsByClassName("accordion purpose")[0].style.margin = "0.2rem 0";
               document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
   
           } else if (num == 1) { 
               document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
               document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
               document.getElementsByClassName("accordion purpose")[0].innerHTML = "Standing Cocktail Table: 4-5 PAX";
-              document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+              document.getElementsByClassName("accordion purpose")[0].style.margin = "0.2rem 0";
               document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
           } else { 
             document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
             document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
             document.getElementsByClassName("accordion purpose")[0].innerHTML = "Seated Table: 5-6 PAX";
-            document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+            document.getElementsByClassName("accordion purpose")[0].style.margin = "0.2rem 0";
             document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
         }
       }
@@ -195,7 +217,7 @@ var acc = document.getElementsByClassName("accordion");
         document.getElementById('output').innerHTML = "Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!";
         document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
         document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
-        document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+        document.getElementsByClassName("accordion purpose")[0].style.margin = "0.2rem 0";
         document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
     }
     

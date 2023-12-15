@@ -49,8 +49,8 @@
     <p>Here everyday's a party. Home for great food,<br>
     game-changing drinks,and good vibes.</p><br>
     <div class="button__flex">
-    <div class="hero__button" id="loc"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link"><img class = "hero__img--button" src="Images/loc.png"><span class="hero-link--text">Location</span></a> </div>
-    <div class="hero__button" id="reserve"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link"><img class = "hero__img--button" src="Images/reserve.png"><span class="hero-link--text">Get a Table</span></a></div>
+    <div class="hero__button" id="loc"><a href="index.html#maps" class="hero-link"><img class = "hero__img--button" src="Images/loc.png"><span class="hero-link--text">Location</span></a> </div>
+    <div class="hero__button" id="reserve"><a href="index.html#reservation" class="hero-link"><img class = "hero__img--button" src="Images/reserve.png"><span class="hero-link--text">Get a Table</span></a></div>
    </div>
   </article>
   <article class ="slide">
@@ -113,7 +113,7 @@
         <hr class="hours-and-location-border">
     </section>
 </section>
-<iframe class="gmaps" src="https://maps.google.com/maps?q=losmo&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
+<iframe id="maps" class="gmaps" src="https://maps.google.com/maps?q=losmo&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
 </iframe>
   <!-----------------------Upcoming Events----------------------------------------------------------------------------->
   <section class="Upcoming-Events">
@@ -307,7 +307,7 @@
 
                 <input type="time" id="time" name="Time" min="00:00" max="24:59" value="22:00" required>
 
-                <span class="accordion purpose">Choose a table:</span>
+                <span class="accordion purpose" id="choosetable">Choose a table:</span>
                 <article class="panel purpose-form">
                   <div class = "purpose__choice" id = "choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Seated Cocktail Table</div>
                   <hr>
