@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events</title>
+  <link rel="stylesheet" href="CSS/events.css">
+  <link rel="stylesheet" href="CSS/header.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+  <link rel="shortcut icon" href="Images/losmologo.png" type="image/x-icon" />
+</head>
+<body>
+<!----------------------HEADER------------------------------------------------------------- -->
+<header class="header">
+  <a href="index.html" class="imglink"><img class="header-logo" src="images/header-logo.png"></a>
+  <img class="header-logo-mobile" src="images/losmo.png">
+  <nav>
+      <ul class="header-nav">
+        <li><a href="index.html#hours-and-location-container">HOURS & LOCATION</a></li>
+        <li><a href="menu.html">MENU</a></li>
+          <li><a href="event.html">EVENTS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+  </nav>
+  <a href="index.html#reservation" id="header-reservation"><button>GET A TABLE</button></a>
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</header>
+<main>
+  <!-- HERO SECTION: Netflix N’ Kill -->
+  <section class="slideshow-container">
+    <article class="mySlides fade">
+      <img class="hero" src="Images/netflixKill1.jpg" style="width:100%">
+    </article>
+    <article class="mySlides fade">
+      <img class="hero" src="Images/netflixkill2.jpg" style="width:100%">
+    </article>
+    <article class="mySlides fade">
+      <img class="hero" src="Images/netflixKill3.jpg" style="width:100%">
+    </article> 
+
+    <article class="text">
+      <h2>NETFLIX N'KILL</h2>
+      <p id="p1">October 30, 2022</p>
+      <a href="index.html#reservation" id="header-reservation" class="hero-link">Get a Table</a>
+    </article>
+
+    <article class="slide">
+      <span class="dot" onclick="currentSlide(0);"></span>
+      <span class="dot" onclick="currentSlide(1);"></span>
+      <span class="dot" onclick="currentSlide(2);"></span>
+    </article>
+  </section>
+
+  <!-- HERO SECTION: Midnights at Losmo -->
+  <section class="slideshow-container">
+    <article class="mySlides fade">
+      <img class="hero" src="Images/midnights1.jpg" style="width:100%">
+    </article>
+    <article class="mySlides fade">
+      <img class="hero" src="Images/midnights2.jpg" style="width:100%">
+    </article>
+    <article class="mySlides fade">
+      <img class="hero" src="Images/midnights3.jpg" style="width:100%">
+    </article>
+
+    <article class="text">
+      <h2>MIDNIGHTS AT LOSMO</h2>
+      <p id="p1">March 22, 2023</p>
+      <a href="index.html#reservation" id="header-reservation" class="hero-link">Get a Table</a>
+    </article>
+
+    <article class="slide">
+      <span class="dot" onclick="currentSlide(3);"></span>
+      <span class="dot" onclick="currentSlide(4);"></span>
+      <span class="dot" onclick="currentSlide(5);"></span>
+    </article>
+  </section>
+
+  <!-- HERO SECTION: Losmoween -->
+  <section class="slideshow-container">
+    <article class="mySlides fade">
+      <img class="hero" src="Images/losmoween1.jpg" style="width:100%">
+    </article>
+    <article class="mySlides fade">
+      <img class="hero" src="Images/losmoween2.jpg" style="width:100%">
+    </article>
+    <article class="mySlides fade">
+      <img class="hero" src="Images/losmoween3.jpg" style="width:100%">
+    </article>
+
+    <article class="text">
+      <h2>LOSMOWEEN</h2>
+      <p id="p1">October 31, 2023</p>
+      <a href="index.html#reservation" id="header-reservation" class="hero-link">Get a Table</a>
+    </article>
+
+    <article class="slide">
+      <span class="dot" onclick="currentSlide(6);"></span>
+      <span class="dot" onclick="currentSlide(7);"></span>
+      <span class="dot" onclick="currentSlide(8);"></span>
+    </article>
+  </section>
+
+  <br><br>
+
+<!----------------------FEATURED EVENTS DESCRIPTION--------------------------------------------------------------->
+    <h1 class="header1 fadeIn">FEATURED EVENTS</h1>
+
+  <br>
+  <div class="container fadeIn">
+    <!-- Image Container -->
+    <div class="image-container fadeIn">
+      <img class="image" src="Images/netflix.jpg" alt="Nefllix N' Kill">
+    </div>
+    <!-- Description Container -->
+    <div class="description-container fadeIn">
+      <div class="description">
+        <h2 class="header2 fadeIn">Netflix N' Kill</h2>
+        <p class="para fadeIn">The chilling atmosphere of Losmo's NETFLIX N' KILL will send shivers down your spine and keep you on the 
+          edge of your seat. The dimly lit scenes and music will leave you partying, while the suspenseful fun will keep 
+          you hyped up until the very end. This is not a movie for the faint of heart, as it will surely give you 
+          (good) nightmares for days to come.</p>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  
+  <div class="container fadeIn header2">
+    <!-- Description Container -->
+    <div class="description-container fadeIn">
+      <div class="description">
+        <h2 class="header2 fadeIn">Midnights at LOSMO</h2>
+        <p class="para fadeIn"><i>Best believe I'm still bejeweled, when I walk in the room, I can still make the whole place shimmer~</i><br><br>
+          Losmo's first-ever themed party was a celebration of all things Taylor Swift! From the décor to the music, 
+          everything was expertly planned to bring the party to life. The night was filled with joyous 
+          laughter and remarkable fun shared by all the Swifties in attendance. It was an incredible encounter 
+          that perfectly encapsulated Taylor's sound and fashion sense.</p>
+      </div>
+    </div>
+    <!-- Image Container -->
+    <div class="image-container fadeIn">
+      <img class="image" src="Images/midnights2.jpg" alt="Midnights at LOSMO">
+    </div>
+  </div>
+  
+  <br>
+  
+  <div class="container fadeIn">
+    <!-- Image Container -->
+    <div class="image-container fadeIn">
+    <img class="image" src="Images/losmoween2.jpg" alt="LOSMOween">
+    </div>
+    <!-- Description Container -->
+    <div class="description-container fadeIn">
+      <div class="description">
+        <h2 class="header2 fadeIn">LOSMOween</h2>
+        <p class="para fadeIn">Losmo pulsated with an electric energy as vibrant costumes and lively spirits filled the space. 
+          The atmosphere was charged with excitement as the DJ spun hauntingly catchy tunes, 
+          and the dance floor became a kaleidoscope of colors from the glow of lights. Ghostly cocktails flowed freely, 
+          and laughter echoed through the air as the party-goers reveled in the unforgettable, 
+          spooktacular celebration.</p>
+      </div>
+    </div>
+  </div>  
+
+  <br><br>
+
+<!----------------------Gallery Hover effect--------------------------------------------------------------->
+    <div class="animate fadeInUp header1">
+      <h1 class="header1 fadeIn">LOSMO EVENTS GALLERY</h1>
+    </div>
+
+  <br><br><br>
+
+  <div class="wrapper fadeIn">
+    <div class="media fadeIn">
+      <img src="Images/gallery1.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery2.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery3.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery4.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery5.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery6.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery7.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery8.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery9.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery10.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery11.jpg" alt="" />
+    </div>
+    <div class="media fadeIn">
+      <img src="Images/gallery12.jpg" alt="" />
+    </div>
+  </div>
+
+  <br><br><br>
+  </main>
+<!----------------------FOOTER--------------------------------------------------------------->
+<footer>
+  <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
+  <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
+  <ul>
+    <li><a href="https://www.facebook.com/losmo.ph"><img src="Images/fbIcon.svg" width="24" height="24"></a></li>
+    <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="Images/tiktokIcon.svg" width="24" height="24"></a></li>
+    <li><a href="https://www.instagram.com/losmo.ph/"><img src="Images/igIcon.svg" width="24" height="24"></a></li>
+  </ul>
+  <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
+</footer>
+
+  <script src="Scripts/index.js"></script>
+  <script src="Scripts/event.js"></script>
+  <script src="Scripts/header.js"></script>
+
+</body>
+</html>

@@ -1,47 +1,357 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Losmo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="CSS/index.css">
+<link rel="stylesheet" href="CSS/header.css">
+<link rel="stylesheet" href="CSS/footer.css">
+<link rel="shortcut icon" href="Images/losmologo.png" type="image/x-icon" />
 </head>
 <body>
-<section class="slideshow-container">
-
-<article class="mySlides fade">
-  <img class="hero" src="Images/img1.jpg" style="width:100%">
-</article>
-
-<article class="mySlides fade">
-  <img class="hero" src="Images/img2.jpg" style="width:100%">
-</article>
-
-<article class="mySlides fade">
-  <img class="hero" src="Images/img3.jpg" style="width:100%">
-</article>
-
-<article class="text">
-  <p>LOSMO FOOD & DRINKS</p>
-  <h2>
-  READY TO GET LOST <br>
-  IN THE MOMENT? <br>
-  </h2>
-  <p>Here everyday's a party. Home for great food,<br>
-  game-changing drinks,and good vibes.</p><br>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link"><img src="Images/loc.png" style="height: 18px; width: 15px;"> Location</a> 
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hero-link">Get a Table</a>
-</article>
-
-<article class = "slide">
+  
+  <!----------------------HEADER------------------------------------------------------------- -->
+    <header class="header">
+      <a href="index.html" class="imglink"><img class="header-logo" src="images/header-logo.png"></a>
+      <img class="header-logo-mobile" src="images/losmo.png">
+      <nav>
+          <ul class="header-nav">
+              <li><a href="index.html#hours-and-location-container">HOURS & LOCATION</a></li>
+              <li><a href="menu.html">MENU</a></li>
+              <li><a href="event.html">EVENTS</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+      </nav>
+      <a href="index.html#reservation" id="header-reservation"><button>GET A TABLE</button></a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+  </header>
+    <!----------------------HERO------------------------------------------------------------- -->
+  <section class="slideshow-container">
+      <article class="mySlides fade">
+        <img class="hero" src="Images/img1.jpg" style="width:100%">
+      </article>
+      <article class="mySlides fade">
+        <img class="hero" src="Images/img2.jpg" style="width:100%">
+      </article>
+      <article class="mySlides fade">
+        <img class="hero" src="Images/img3.jpg" style="width:100%">
+      </article>
+  <article class="text">
+    <p>LOSMO FOOD & DRINKS</p>
+    <h2>
+    READY TO GET LOST <br>
+    IN THE MOMENT? <br>
+    </h2>
+    <p>Here everyday's a party. Home for great food,<br>
+    game-changing drinks, and good vibes.</p><br>
+    <div class="button__flex">
+    <div class="hero__button" id="loc"><a href="index.html#maps" class="hero-link"><img class = "hero__img--button" src="Images/loc.png"><span class="hero-link--text">Location</span></a> </div>
+    <div class="hero__button" id="reserve"><a href="index.html#reservation" class="hero-link"><img class = "hero__img--button" src="Images/reserve.png"><span class="hero-link--text">Get a Table</span></a></div>
+   </div>
+  </article>
+  <article class ="slide">
     <span class="dot" onclick="currentSlide(0);"></span> 
     <span class="dot" onclick="currentSlide(1);"></span> 
     <span class="dot" onclick="currentSlide(2);"></span> 
-</article>
-</section>
+  </article>
+  </section>
 
-<!-- Hero Function -->
-<script src="Scripts/index.js"></script>
-<script type="Scripts/index.js">
-  externalFunction();
-</script>
+  <section class="vidhero">
+  <video autoplay muted loop id="myVideo">
+    <source src="Images/herovid.mp4" type="video/mp4">
+  </video>
+  </section>
+  <!-----------------------About us----------------------------------------------------------------------------->
+  <section class="aboutus">
+    <h1>Lost in the Moment</h1>
+    <div>
+      <img src="Images/losmo.png">
+      <p>A vibrant space buzzing with energy and adorned with neon lights, the bar features an array of colorful and inventive mocktails and craft sodas, with names that pay homage to internet memes and pop culture references. There are also specialty drinks made with unique ingredients and garnishes that are both aesthetically pleasing and delicious. </p>
+    </div>
+  </section>
+  <!-----------------------Upcoming Events----------------------------------------------------------------------------->
+
+  <section id="hours-and-location-container">
+    <section class="hours-and-location-item hour">
+        <h1>HOURS & LOCATION</h1>
+        <hr class="hours-and-location-border">
+        <hr class="hours-and-location-border">
+        <p class="address">Unit F, Orchard: A Community Place,<br>Telebastagan, City of San Fernando, Pampanga
+            <br>
+            contact.losmo@gmail.com
+        </p><br>
+        <ul>
+            <li class="day">MONDAY</li>
+            <li class="time">CLOSED</li>
+            
+            <li class="day">TUESDAY - THURSDAY</li>
+            <li class="time">5:00pm - 2:00am</li>
+            
+            <li class="day">FRIDAY - SATURDAY</li>
+            <li class="time">5:00pm - 4:00am</li>
+            
+            <li class="day">SUNDAY</li>
+            <li class="time">5:00pm - 3:00am</li>
+            </ul>
+    </section>
+    <section class="hours-and-location-item">
+        <hr class="hours-and-location-border">
+        <br>
+        <p>Losmo is located at San Fernando City, a city known for its rich history and
+             extravagant festivities. The bar itself is nestled away from the city's hustle and bustle,
+             situated near its outskirts. It presents its patrons the ability to seek vibrant experiences
+             outside the urban landscape. The thoughtful architecture further capitalizes on these advantages. 
+             It features both an indoor and outdoor setting, suited for when you want to have chill night out or
+             have an energy-filled rave. Losmo is the perfect blend of tranquility and vivacious energy,<br> a Shangri-La for bar-goers. <br><br>
+             Drink. Converse. Get Lost in the Moment.
+        </p>
+        <br>
+        <hr class="hours-and-location-border">
+    </section>
+</section>
+<iframe id="maps" class="gmaps" src="https://maps.google.com/maps?q=losmo&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
+</iframe>
+  <!-----------------------Upcoming Events----------------------------------------------------------------------------->
+  <section class="Upcoming-Events">
+    <h1>Featured Events</h1>
+    <section class="event-container">
+      <div class="card">
+        <div class="card-image card-1"></div>
+        <p class="date">MON October 30, 2023</p>
+        <p class="title">Losmoween</p>
+        <div class="butts">
+          <a href="event.html" class="read-more">View Details</a>
+          <a href="index.html#reservation" class="reserve">Get a Table</a>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-image card-2"></div>
+        <p class="date">WED March 22, 2023</p>
+        <p class="title">Midnights at LOSMO</p>
+        <div class="butts">
+          <a href="event.html" class="read-more">View Details</a>
+          <a href="index.html#reservation" class="reserve">Get a Table</a>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-image card-3"></div>
+        <p class="date">MON October 31, 2022</p>
+        <p class="title">Netflix N' Kill</p>
+        <div class="butts">
+        <a href="event.html" class="read-more">View Details</a>
+        <a href="index.html#reservation" class="reserve">Get a Table</a>
+        </div>
+      </div>
+    </section>
+  </section>
+<!----------------------Menu------------------------------------------------------------- -->
+<section class="Menu-section">
+
+  <div class="image-opening">
+    <div class="paragraph">
+    <h1>HAPPY HOUR : 50% from 5PM to 8PM</h1>
+    <p>Sip into Savings with Our Cocktail Extravaganza!<br>
+      Indulge in the ultimate cocktail experience without breaking
+      the bank! Join us everyday for our handcrafted 
+      cocktails, meticulously mixed to perfection. Enjoy a delightful
+      array of flavors that will tantalize your taste buds and elevate 
+      your evenings.
+      </p>
+    </div>
+  </div>
+  <div class="drinks-section">
+      <!--Lost moment-->
+    <div class="drinkcontainer">
+      <div class="drinkies fade"id="lostmoment">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="info">
+        <h1>Lost moment</h1>
+        <p>A tropical and strong drink that 
+          includes rum-infused blue pea, rum, special syrups, lychee, lemon, and pineapple.</p>
+      </div>
+      <img src="Images/lostmoment.PNG"> 
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!--Red flag-->
+    <div class="drinkies fade"id="redflag">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="info">
+        <h1>Red Flag</h1>
+        <p>Tart, sweet, and creamy. This delicious drink
+          Includes bourbon whiskey, flavored liquor, 
+          vermouth, fruit juice, and special syrup. Topped with an orange peel.</p>
+      </div>
+      <img src="Images/redflag.PNG">
+      <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+    </div>
+    <!--Sincerely YOurs-->
+    <div class="drinkies fade"id="sincerelyyours">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="info">
+        <h1>Sincerely Yours</h1>
+        <p>A refreshing, fruity, and bubbly drink that
+          includes strawberry puree, vodka, and daiquiri. Topped with sparkling wine.</p>
+      </div>
+      <img src="Images/sincerelyyours.PNG"> 
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!--Sunkissed-->
+    <div class="drinkies fade"id="sunkissed">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="info">
+        <h1>Sunkissed</h1>
+        <p>A fruity, herbal, and refreshing drink that
+          includes rum, fruit liquer, fruit juice, and herbs. Garnished with dried pineapples and pineapple leaves.</p>
+      </div>
+      <img src="Images/sunkissed.PNG"> 
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!--Sweettalk-->
+    <div class="drinkies fade"id="sweettalk">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="info">
+        <h1>Sweet Talk</h1>
+        <p>A sweet, strong, and sexy drink that
+          includes flavored vodka, fruit juice, strawberry, lemon, and cranberry. Topped with and orange peel.</p>
+      </div>
+      <img src="Images/sweettalk.PNG">
+      <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+    </div>
+    <!--Wakeup Call-->
+    <div class="drinkies fade"id="wakeupcall"> 
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="info">
+        <h1>Wake Up Call</h1>
+        <p>A buttery, smooth, and creamy drink that
+          includes Biscoff cookie butter, vodka, espresso, coffee liquer, and cinnamon syrup</p>
+      </div>
+    <img src="Images/wakeupcall.PNG">
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+      </div>    
+          <!-- Next and previous buttons -->
+      <div class="prevnextbutt">
+        <a class="prevmobile" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="nextmobile" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+  </div> 
+</section>
+  <!----------------------CONTACT------------------------------------------------------------------>
+<section id="contact__faq">
+<section class="hero__faq--container">
+  <h1 class="contact__header">WANT TO HOST YOUR OWN PRIVATE EVENT?</h1>
+  <p class="contact__para">Host your very own private event with Losmo! We now offer our dear patrons to have Losmo for themselves and for however many nights they'd like. Any and all kinds of parties are welcome, be it either themed or not. Style your parties the way you imagined it and leave it to us to make it a reality. Inquire below for the full details and rates, Catch a drink with us soon!</p>
+  <button class="contact__button" onclick="location.href='contact.html'" type="button">Inquire Now</button>
+  </section>
+
+  <section class="contact--container">
+      <section class="contact-us">
+      <section class="contact--text">
+          <h1 class= "contact__header">FREQUENTLY ASKED QUESTIONS</h1>
+          <p class="contact__para">Have a question? Already answered! Here are some of our faqs. If you haven't found what you are looking for click the link below to read all of our faqs, you can also contact us if your questions are not answered.</p>
+      </section>
+      <button class="contact__button contact__button--left" onclick="location.href='contact.html'" type="button">ALL FAQS</button>
+      </section>
+      
+      <section class="faq">
+          <span class="accordion acc-faq">Is there a dress code?</span>
+          <article class="panel panel-faq">• Slippers are not allowed for safety purposes. No loungewear please, always dress your best! ;)</article>
+
+          <span class="accordion acc-faq">Do I need to make a reservation?</span>
+          <article class="panel panel-faq">• We accept walk-in customers but you can make a reservation to guarantee seats.</article>
+
+          <span class="accordion acc-faq">Is there an entrance fee?</span>
+          <article class="panel panel-faq">• There is no entrance fee.</article>
+      </section>
+      </section>
+  </section>
+   <!-----------------------reservation---------------------------------------------------------------------------->
+  <section id="reservation">
+  <h1>GET A TABLE</h1>
+  <section class="reservation__container">
+    <section class="floorplan__container">
+        <img class="floorplan" src="RESERVATION/layout.svg" alt="">
+        <img id = "1" src="RESERVATION/round.svg" class="table sittingcircle" style="left: 20px; top:32px">
+        <img id = "2" src="RESERVATION/round.svg" class="table sittingcircle" style="left: 20px; top:107px">
+        <img id = "3" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:201px">
+        <img id = "4" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:250px">
+        <img id = "5" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:299px">
+        <img id = "6" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:398px">
+        <img id = "7" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 58px; top:447px">
+        <img id = "8" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:201px">
+        <img id = "9" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:250px">
+        <img id = "10" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:299px">
+        <img id = "11" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:398px">
+        <img id = "12" src="RESERVATION/square.svg" class="table sittingsquare" style="left: 485px; top:447px">
+        <img id = "15" src="RESERVATION/square.svg" class="table standingsquare" style="left: 226px; top:420px">
+        <img id = "16" src="RESERVATION/square.svg" class="table standingsquare" style="left: 315px; top:420px">
+        <img id = "13" src="RESERVATION/square.svg" class="table standingsquare" style="left: 226px; top:220px">
+        <img id = "14" src="RESERVATION/square.svg" class="table standingsquare" style="left: 315px; top:220px">
+    </section>
+    
+    <section class="details">
+      <h3 id="table">Reservation: </h3>
+      <div class="reservation__info">
+            <p id="output">Want to Avoid the Hassle? Get a Table in Advance! Provide the needed details below and pick your preferred table. Enjoy the Night without waiting, Welcome to Losmo!</p>
+        </div>
+        <article class="form">
+            <h3>Details: </h3>
+            <form action="#" class="reservation__form" onsubmit="checkReservation()">
+ 
+                <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
+
+                <input type="time" id="time" name="Time" min="00:00" max="24:59" value="22:00" required>
+
+                <span class="accordion purpose" id="choosetable">Choose a table:</span>
+                <article class="panel purpose-form">
+                  <div class = "purpose__choice" id = "choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Seated Cocktail Table</div>
+                  <hr>
+                  <div class = "purpose__choice" id = "choice" onclick="checkEvent(1)" style="padding:1rem 0"> Standing Cocktail Table</div>
+                  <hr>
+                  <div class = "purpose__choice" id = "choice" onclick="checkEvent(2)" style="padding-top:1rem"> Seated Table </div>
+                </article>
+    
+                <input type="number" id="pax" name="PAX" placeholder="PAX*" required>
+  
+                <input type="text" id="num" name="Number" placeholder="Number*" required>
+            
+                <input type="submit" value="Confirm" id="confirm">
+            </form>
+        </article>
+    </section>
+    </section>
+    </section>
+  <!-----------------------Instagram Widget----------------------------------------------------------------------------->
+  <section class="Instagram-widget">
+    <h1>Follow LOSMO on Instagram</h1>
+    <br><br>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-1031e9fc-57a5-46cc-a69d-ae26436d8367" data-elfsight-app-lazy></div>
+    </section>
+    <!----------------------FOOTER------------------------------------------------------------- -->
+  <footer>
+    <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
+    <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
+    <ul>
+      <li><a href="https://www.facebook.com/losmo.ph"><img src="Images/fbIcon.svg"></a></li>
+      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="Images/tiktokIcon.svg"></a></li>
+      <li><a href="https://www.instagram.com/losmo.ph/"><img src="Images/igIcon.svg"></a></li>
+    </ul>
+    <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
+  </footer>
+  <!-- Hero Function -->
+  <script src="Scripts/index.js"></script>
+  <script type="Scripts/index.js">
+    externalFunction();
+  </script>
+  <script src="Scripts/header.js"></script>
+  <script type="Scripts/header.js">
+    externalFunction();
+  </script>
 </body>
 </html>

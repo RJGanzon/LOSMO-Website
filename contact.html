@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Losmo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans Narrow">
+<link rel="stylesheet" href="CSS/header.css">
+<link rel="stylesheet" href="CSS/footer.css">
+<link rel="shortcut icon" href="Images/losmologo.png" type="image/x-icon" />
+<style>
+html {
+    font-size: 18px;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.contact--container{
+    font-family: 'PT Sans Narrow';
+    margin: 0;
+    background-color: black;   
+    letter-spacing: 0.094rem;
+    font-size: 1.125rem;
+    line-height: 1.875rem;  
+}
+
+.contact-us, .faq--container {
+    width: 38vw;
+    background-color: black;
+    padding: 3vw 3vw;
+    margin: 0 auto;
+    z-index: 5;
+    border: 1px solid rgba(235, 25, 176, .9);
+}
+
+.contact-us > .form, .faq{ 
+    position: static;
+    left: 0;
+    right: 0;
+    width: 32vw;
+    text-align: left;
+    color: white;
+}
+
+
+.accordion{
+    display: inline-block;
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    height:fit-content;
+    padding: 1.2rem;
+    width: 32vw;
+    outline: none;
+    text-align: left;
+    transition: height 0.4s;
+}
+
+.accordion:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  transition: all 0.5s;
+}
+
+.active:after {
+  content: "\2212";
+  transition: all 0.5s;
+}
+          
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    left: 0;
+    right: 0;
+    width: 32vw;
+    padding: 0 1.2rem;
+    color: black;
+    background-color: black;
+    text-align: left;    
+    max-height: 0.1rem;
+    transition: all 0.4s;
+    overflow: hidden;
+    display: none;
+}
+
+
+input[type=text], textarea {
+    color: white;
+    width: 32vw;
+    margin:0.5rem 0;
+    border: none;
+    background-color: black;
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+    padding:1rem;
+    line-height: 1.6;
+    border: white solid 2px;
+}
+
+input[type=text]{
+    padding: 1rem;
+    font-family: 'PT Sans Narrow';
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+textarea{
+    height: 150px;
+    font-family: 'PT Sans Narrow';
+    font-size: 1rem;
+    padding:1rem;
+    line-height: 1.6;
+}   
+
+input[type=submit] {
+  background-color: #eb19b0;
+  color: whitesmoke;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:right;
+  width: fit-content;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.9px;
+  font-weight: 999;
+}
+input::placeholder {
+    font-family: 'PT Sans Narrow';
+    font-size: 1rem;
+}
+
+.acc-faq{
+    margin: 0 0 1rem;
+}
+
+#when, #pax{
+    display: none;
+}
+
+.contact--container {
+    width:80vw;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.contact--text {
+    display: flex;
+    flex-direction: column;
+    width: 32vw;
+    justify-content: flex-start;
+    padding-bottom: 3vw;
+}
+.contact--heading {
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.faq--para {
+    color: white;
+    margin: 0 0;
+    line-height: 1.6;
+    text-align: center;
+    height: fit-content;
+}
+
+.hero {
+    width: 72vw;
+    margin: 14vh auto 0;
+}
+header {
+    top: 0%;
+}   
+.purpose {
+    margin: 0 0 0.9rem;
+    border: none;
+    padding:1rem;
+}
+
+.purpose::after {
+    content: "▾";
+}
+
+.purpose.active:after{
+    content: "▴";
+}
+
+article {
+    line-height: 1.6;
+}
+.purpose__choice {
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+} 
+
+#menu__hero {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        margin: 0;
+        height: 60vh;
+        min-height:400px;
+        background-image: url("Images/img2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    
+    #menu__hero::before {
+        content: "";
+        position: absolute;
+        height: 60vh;
+        min-height:400px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        pointer-events: none;
+    }
+    #menu__hero__text {
+        width: fit-content;
+        z-index: 2;
+        font-size: 3.8rem;
+        letter-spacing: 5px;
+        color: white;
+        font-family: 'PT Sans Narrow', sans-serif;
+        margin:8rem 0 1.5rem 11.5vw;
+        opacity: 1;
+    }
+    #menu__hero__subheading {
+        font-size: 1.4rem;
+        margin: 0 0 0 11.5vw;
+        color: white;
+        z-index: 2;
+        font-family: 'PT Sans Narrow', sans-serif;
+        width: 33vw;
+    }
+    #smallcover {
+    height: 3rem;
+    z-index: 2;
+    margin: 0 auto;
+    }
+#fname {
+    margin: 0 0 0.5rem ;
+}
+.hours-and-location-border{
+  border: 1.5px solid #eb19b0;
+  margin: 1vh 3vw;
+
+  
+}
+.header {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+@media(max-width:1000px) {
+    .contact--heading {
+        font-size: 1.2rem;
+    }
+    #smallcover {
+        height: 2rem;
+
+    }
+    
+}
+@media screen and (max-width: 780px) {
+    .contact--text {
+        width: 67vw;
+    }
+    .contact--container {
+        gap: 1.3rem;
+        flex-direction: column;
+        width: 73vw;
+    }
+    .accordion {
+        width: 67vw;
+    }
+    .panel {
+        width: 67vw;
+    }
+    input[type=text], textarea {
+        width: 67vw;
+    }
+    .faq--para {
+        width: 67vw;
+    }
+    .contact-us {
+        width: 73vw;
+    }
+    .contact-us > .form, .faq{ 
+        width: 67vw;
+    }
+    .faq {
+        width: 67vw;
+    }
+    .faq--container {
+        width: 73vw;
+    }
+    .hero {
+    width: 67vw;
+    margin: 14vh auto 0;
+    }
+}
+
+    @media(max-width:500px) {
+        html {
+            font-size: 18px;
+        }
+        * {
+        font-size: 16px;
+        }
+        .contact--text {
+        width: 80vw;
+        }
+        .contact--container {
+            flex-direction: column;
+            width: 86vw;
+        }
+        .accordion {
+            width: 80vw;
+        }
+        .panel {
+            width: 80vw;
+        }
+        input[type=text], textarea {
+            width: 80vw;
+        }
+        .faq--para {
+            width: 80vw;
+        }
+        .contact-us {
+            width: 86vw;
+        }
+        .contact-us > .form, .faq{ 
+            width: 80vw;
+        }
+        .faq {
+            width: 80vw;
+        }
+        .faq--container {
+            width: 86vw;
+        }
+        .hero {
+        width: 86vw;
+        margin: 14vh auto 0;
+        }
+        .faq--para {
+            text-align: justify;
+        }
+    }
+
+    @media(max-width: 875px) {
+        #menu__hero__subheading{
+            width: 45vw;
+        }
+    }
+
+    @media(max-width: 580px) {
+        #menu__hero__subheading{
+            width: 65vw;
+        }
+    }
+
+    @media(max-width: 645px) {
+        #menu__hero__subheading{
+            width: 70vw;
+        }
+    }
+
+    @media(max-width: 450px) {
+        #menu__hero__text{
+            margin-left: 20px;
+        }
+        #menu__hero__subheading{
+            margin-left: 25px;
+            width: 70vw;
+        }
+    }
+
+    @media(max-width: 415px) {
+        #menu__hero__text{
+            margin-left: 20px;
+        }
+        #menu__hero__subheading{
+            margin-left: 25px;
+            width: 80vw;
+        }
+    }
+
+    @media(max-width: 390px){
+        #menu__hero__text{
+            width: 80vw;
+        }
+
+        #menu__hero{
+            height: 500px;
+        }
+    }
+
+    @media(max-width: 360px){
+        #menu__hero{
+            height: 530px;
+        }
+    }
+
+
+</style>
+<title>Contact Us</title>
+</head>
+
+<body>
+    
+    <!----------------------HEADER------------------------------------------------------------- -->
+    <header class="header">
+        <a href="index.html" class="imglink"><img class="header-logo" src="images/header-logo.png"></a>
+        <img class="header-logo-mobile" src="images/losmo.png">
+        <nav>
+            <ul class="header-nav">
+                <li><a href="index.html#hours-and-location-container">HOURS & LOCATION</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="event.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <a href="index.html#reservation" id="header-reservation"><button>GET A TABLE</button></a>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </header>
+    <!----------------------HERO------------------------------------------------------- -->
+    <section id="menu__hero">
+            <h1 id="menu__hero__text">Get in Touch</h1>
+            <h3 id="menu__hero__subheading">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below.</h3>
+        </section>
+    <!----------------------CONTACT--------------------------------------------------------- -->
+    <section class="contact--container">
+    <section class="contact-us">
+        <section class="contact--text">
+            <img id = "smallcover" src="Images/telephone.png">
+            <h1 class="contact--heading">Get in Touch</h1>
+            <p class="faq--para" id="para--small">If you have any further inquiries or looking to book a private event, feel free to reach out using the form below. Just provide the information needed and we'll respond as soon as possible. We hope to hear from you!</p>
+            <br>
+            <hr class="hours-and-location-border">
+        </section>
+        
+        <section class="form">
+        <form onsubmit="checkPurpose()">
+            <input type="text" id="fname" name="Full Name" placeholder="Name*" required>
+            <input type="text" id="email" name="Email" placeholder="Email*" required>
+            <input type="text" id="num" name="Number" placeholder="Number*" required style="margin: 0.5rem 0 1rem;">
+        
+
+            <span class="accordion purpose" id = "Purpose1">Purpose</span>
+            <article class="panel purpose-form">
+                <div class = "purpose__choice" id = "choice" onclick="checkEvent(0)" style="padding-bottom:1rem"> Inquiry </div>
+                <hr>
+                <div class = "purpose__choice" id = "choice" onclick="checkEvent(1)" style="padding-top:1rem"> Private Event </div>
+            </article>
+            <input type="text" id="Subject" name="Subject" placeholder="Subject*" required style="margin: 0.1rem 0 0.5rem;">
+            <input type="text" id="when" name="When" placeholder="When*">
+            <input type="text" id="pax" name="PAX" placeholder="PAX*">
+
+            <textarea id="message" id="message" name="Message" placeholder="Your Message"></textarea>
+        
+            <input type="submit" value="Submit">
+        </form>
+        </section>
+
+        </section>
+        <section class = "faq--container">
+        <section class="contact--text">
+            <img id = "smallcover" src="Images/faq.png">
+            <h1 class="contact--heading">Frequently Asked Questions</h1>
+            <p class="faq--para" id="para--big">Have a question? Already answered! Please read the section thoroughly to avoid asking questions that have already been answered. We will still answer your queries even though they are in the FAQ section (but not before judging you very, very, very silently).</p>
+            <br>
+            <hr class="hours-and-location-border">
+        </section>
+        <section class="faq">
+            <span class="accordion acc-faq">What are your modes of payment?</span>
+            <article class="panel panel-faq">• We accept cash, Gcash, bank transfers, and debit/credit cards.</article>
+
+            <span class="accordion acc-faq">Is there a dress code?</span>
+            <article class="panel panel-faq">• Slippers are not allowed for safety purposes. No loungewear please, always dress your best! ;)</article>
+
+            <span class="accordion acc-faq">Is there an entrance fee?</span>
+            <article class="panel panel-faq">• There is no entrance fee</article>
+
+            <span class="accordion acc-faq">Are your tables consumable?</span>
+            <article class="panel panel-faq">• Yes! tables are consumable every friday and saturday only. we have no table rates from tuesday to thursday and sunday.</article>
+
+            <span class="accordion acc-faq">Do you offer towers?</span>
+            <article class="panel panel-faq">• No, our menu can be found on our social media accounts.</article>
+
+            <span class="accordion acc-faq">Do i need to make a reservation?</span>
+            <article class="panel panel-faq">• We accept walk-in customers but you can make a reservation to guarantee seats.</article>
+
+            <span class="accordion acc-faq">Should I bring my id?</span>
+            <article class="panel panel-faq">• Persons under 18 years of age are not allowed. Please bring a valid id for verification</article>
+        </section>
+        </section>
+    </section>
+    </main>
+    <!----------------------FOOTER------------------------------------------------------------- -->
+  <footer>
+    <p class="footertext">Unit F, Orchard: A Community Place, Telebastagan, City of San Fernando, Pampanga</p>
+    <p class="footertext">Please email contact.losmo@gmail.com for inquiries</p>
+    <ul>
+      <li><a href="https://www.facebook.com/losmo.ph"><img src="Images/fbIcon.svg"></a></li>
+      <li><a href="https://www.tiktok.com/@partyatlosmo"><img src="Images/tiktokIcon.svg"></a></li>
+      <li><a href="https://www.instagram.com/losmo.ph/"><img src="Images/igIcon.svg"></a></li>
+    </ul>
+    <p id="copyright">&#169; 2023 LOSMO FOOD & DRINKS</p>
+  </footer>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", panelDisplay);
+    }
+
+    function panelDisplay() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+
+        if (panel.style.maxHeight === "fit-content") {
+            this.style.margin = "0 0 1rem";
+            panel.style.maxHeight = "0.1rem";
+            panel.style.padding = "0 1.2rem"; 
+            setTimeout(function () {
+            panel.style.display = "none";
+            }.bind(this), 1);
+
+        } else {
+          panel.style.display = "inline-block";
+          setTimeout(function () {
+          panel.style.maxHeight = "fit-content";
+          panel.style.padding = "1.2rem";
+          this.style.margin = "0";
+          panel.style.color = "white";  
+        }.bind(this), 1);
+        }
+    }
+    
+    function checkPurpose(){
+        var check = document.getElementById("Purpose1").innerHTML;
+
+        if(check == "Purpose"){
+            alert("Please Select your Purpose")
+            event.preventDefault();
+        }
+    }
+
+    function checkEvent(num){
+        if(num == 1){
+            document.getElementById("when").style.display = "inline-block";
+            document.getElementById("pax").style.display = "inline-block";
+            document.getElementById("when").required = true;
+            document.getElementById("pax").required = true;
+            document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Private Event";
+            document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+
+        } else {
+            document.getElementById("when").style.display = "none"; 
+            document.getElementById("pax").style.display = "none"; 
+            document.getElementById("when").required = false;
+            document.getElementById("pax").required = false;
+            document.getElementsByClassName("panel purpose-form")[0].style.maxHeight = "0.1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.padding = "0 1rem";
+            document.getElementsByClassName("accordion purpose")[0].innerHTML = "Inquiry";
+            document.getElementsByClassName("accordion purpose")[0].style.margin = "0 0 1rem";
+            document.getElementsByClassName("panel purpose-form")[0].style.display = "none";
+        }
+    }
+
+            const headerE1 = document.querySelector('.header');
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 200) {
+                headerE1.classList.add('header-scrolled');
+              }
+              else if (window.scrollY <= 200) {
+                headerE1.classList.remove('header-scrolled');
+              }
+            });
+
+    function setHeight() {
+        var small = document.getElementById('para--small');
+        var big = document.getElementById('para--big');
+        if (big) {
+            small.style.height = big.clientHeight + 'px';
+        }
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
+</script>
+
+<script src="Scripts/header.js"></script>
+</body>
+</html>
